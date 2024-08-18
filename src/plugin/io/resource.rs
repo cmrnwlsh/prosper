@@ -1,3 +1,4 @@
+use better_panic::Settings;
 use bevy::prelude::*;
 use delegate::delegate;
 use ratatui::{
@@ -8,12 +9,22 @@ use ratatui::{
     },
     CompletedFrame, Frame,
 };
-use std::io::{stdout, Stdout};
+use std::{
+    io::{stdout, Stdout},
+    panic::set_hook,
+};
 
 #[derive(Resource)]
 pub struct Terminal(ratatui::Terminal<CrosstermBackend<Stdout>>);
 impl Terminal {
     pub fn init() -> Self {
+        set_hook(Box::new(move |panic_info| {
+            Self::restore();
+            Settings::auto()
+                .most_recent_first(false)
+                .lineno_suffix(true)
+                .create_panic_handler()(panic_info)
+        }));
         (|| -> std::io::Result<Terminal> {
             enable_raw_mode()?;
             stdout().execute(EnterAlternateScreen)?;

@@ -3,20 +3,16 @@ name = "tui_bevy"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies.bevy]
-version = "0.14.1"
-default-features = false
-features = ["dynamic_linking", "multi_threaded", "async-io"]
-
-[dependencies.log]
-version = "*"
-features = ["max_level_debug", "release_max_level_warn"]
-
-[dependecies.tui-logger]
-version = "0.11.2"
-features = ["tracing-support", "crossterm"]
-
 [dependencies]
+bevy = { version = "0.14.1", default-features = false, features = [
+  "dynamic_linking",
+  "multi_threaded",
+  "async-io",
+] }
+log = { version = "*", features = [
+  "max_level_debug",
+  "release_max_level_info",
+] }
 better-panic = "0.3.0"
 delegate = "0.12.0"
 ratatui = "0.28.0"

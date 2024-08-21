@@ -3,8 +3,6 @@ mod layer;
 pub mod resource;
 mod system;
 
-use std::sync::mpsc::channel;
-
 use bevy::{
     app::Plugin,
     log::tracing_subscriber::{layer::SubscriberExt, registry, util::SubscriberInitExt},
@@ -13,6 +11,7 @@ use bevy::{
 use event::{CapturedLogEvents, LogEvent};
 use layer::CaptureLayer;
 use resource::LogStore;
+use std::sync::mpsc::channel;
 use system::{store_logs, transfer_log_events};
 
 pub struct LogPlugin;

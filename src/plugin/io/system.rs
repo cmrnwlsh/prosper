@@ -13,9 +13,12 @@ use crate::plugin::log::resource::LogStore;
 pub fn render(mut term: ResMut<Terminal>, diagnostics: Res<DiagnosticsStore>, logs: Res<LogStore>) {
     term.draw(|frame: &mut Frame| {
         frame.render_widget(
-            Paragraph::new(logs.0.join("\n")).block(Block::bordered().title(format!("FPS: {:.2}",
-                        diagnostics.get(&FrameTimeDiagnosticsPlugin::FPS)
-                        .and_then(|fps| fps.smoothed()).unwrap_or(f64::NAN)
+            Paragraph::new(logs.0.join("\n")).block(Block::bordered().title(format!(
+                    "FPS: {:.2}",
+                    diagnostics
+                        .get(&FrameTimeDiagnosticsPlugin::FPS)
+                        .and_then(|fps| fps.smoothed())
+                        .unwrap_or(f64::NAN)
                 ))),
             frame.area(),
         )
@@ -45,11 +48,6 @@ pub fn on_input(trigger: Trigger<Input>, mut exit: EventWriter<AppExit>) {
         } => {
             exit.send(AppExit::Success);
         }
-        KeyEvent {
-            code: KeyCode::Char(' '),
-            kind: KeyEventKind::Press,
-            ..
-        } => info!("spacebar pressed"),
-        _ => (),
+        ev => info!("{:#?}", ev),
     }
 }

@@ -19,7 +19,9 @@ impl<S: Subscriber> Layer<S> for CaptureLayer {
         if let Some(message) = message {
             let metadata = event.metadata();
             if *metadata.level() <= Level::DEBUG {
-                self.0.send(LogEvent(format!("{}", message))).unwrap();
+                self.0
+                    .send(LogEvent(format!("[{}] {}", metadata.target(), message)))
+                    .unwrap();
             }
         }
     }

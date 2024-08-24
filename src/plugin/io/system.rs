@@ -45,7 +45,6 @@ pub fn on_input(trigger: Trigger<Input>, mut exit: EventWriter<AppExit>) {
             modifiers: KeyModifiers::CONTROL,
             ..
         } => {
-            panic!();
             exit.send(AppExit::Success);
         }
         ev => info!("{:#?}", ev),

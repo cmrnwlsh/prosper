@@ -1,3 +1,5 @@
+use super::{event::Input, resource::Terminal};
+use crate::plugin::log::resource::LogStore;
 use bevy::diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin};
 use bevy::prelude::*;
 use ratatui::{
@@ -6,9 +8,6 @@ use ratatui::{
     Frame,
 };
 use std::time::Duration;
-
-use super::{event::Input, resource::Terminal};
-use crate::plugin::log::resource::LogStore;
 
 pub fn render(mut term: ResMut<Terminal>, diagnostics: Res<DiagnosticsStore>, logs: Res<LogStore>) {
     term.draw(|frame: &mut Frame| {
@@ -46,6 +45,7 @@ pub fn on_input(trigger: Trigger<Input>, mut exit: EventWriter<AppExit>) {
             modifiers: KeyModifiers::CONTROL,
             ..
         } => {
+            panic!();
             exit.send(AppExit::Success);
         }
         ev => info!("{:#?}", ev),

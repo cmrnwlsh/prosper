@@ -12,7 +12,7 @@ impl Plugin for IoPlugin {
     fn build(&self, app: &mut App) {
         app.insert_resource(Terminal::init())
             .add_event::<Input>()
-            .add_systems(Update, (read_events, render))
+            .add_systems(Update, read_events)
             .observe(on_input);
     }
 }

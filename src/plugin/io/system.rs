@@ -1,29 +1,7 @@
-use super::{event::Input, resource::Terminal};
-use crate::plugin::log::resource::LogStore;
-use bevy::diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin};
+use super::event::Input;
 use bevy::prelude::*;
-use ratatui::{
-    crossterm::event::{self, KeyCode, KeyEvent, KeyEventKind, KeyModifiers},
-    widgets::{Block, Paragraph},
-    Frame,
-};
+use ratatui::crossterm::event::{self, KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
 use std::time::Duration;
-
-pub fn render(mut term: ResMut<Terminal>, diagnostics: Res<DiagnosticsStore>, logs: Res<LogStore>) {
-    term.draw(|frame: &mut Frame| {
-        frame.render_widget(
-            Paragraph::new(logs.0.join("\n")).block(Block::bordered().title(format!(
-                    "FPS: {:.2}",
-                    diagnostics
-                        .get(&FrameTimeDiagnosticsPlugin::FPS)
-                        .and_then(|fps| fps.smoothed())
-                        .unwrap_or(f64::NAN)
-                ))),
-            frame.area(),
-        )
-    })
-    .unwrap();
-}
 
 pub fn read_events(mut commands: Commands) {
     (|| -> std::io::Result<()> {

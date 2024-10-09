@@ -3,8 +3,6 @@ mod io;
 mod log;
 mod ui;
 
-use std::time::Duration;
-
 use bevy::{
     app::{PluginGroup, PluginGroupBuilder, ScheduleRunnerPlugin},
     asset::AssetPlugin,
@@ -16,6 +14,7 @@ use bevy_embedded_assets::EmbeddedAssetPlugin;
 use data::DataPlugin;
 use io::IoPlugin;
 use log::LogPlugin;
+use std::time::Duration;
 use ui::UiPlugin;
 
 pub struct TuiPlugins;

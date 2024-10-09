@@ -12,6 +12,7 @@ use bevy::{
     hierarchy::HierarchyPlugin,
     MinimalPlugins,
 };
+use bevy_embedded_assets::EmbeddedAssetPlugin;
 use data::DataPlugin;
 use io::IoPlugin;
 use log::LogPlugin;
@@ -21,6 +22,7 @@ pub struct TuiPlugins;
 impl PluginGroup for TuiPlugins {
     fn build(self) -> bevy::app::PluginGroupBuilder {
         PluginGroupBuilder::start::<Self>()
+            .add(EmbeddedAssetPlugin::default())
             .add_group(
                 MinimalPlugins.set(ScheduleRunnerPlugin::run_loop(Duration::from_micros(16670))),
             )

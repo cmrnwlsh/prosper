@@ -5,7 +5,7 @@ use bevy_common_assets::json::JsonAssetPlugin;
 pub struct DataPlugin;
 impl Plugin for DataPlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugins(JsonAssetPlugin::<Items>::new(&["items.json"]))
+        app.add_plugins(JsonAssetPlugin::<Items>::new(&["embedded://items.json"]))
             .init_state::<LoadState>()
             .add_systems(Startup, load_items)
             .add_systems(Update, await_items.run_if(in_state(LoadState::Loading)));
@@ -13,7 +13,7 @@ impl Plugin for DataPlugin {
 }
 
 fn load_items(mut commands: Commands, asset_server: Res<AssetServer>) {
-    let handle = ItemsAsset(asset_server.load("items.json"));
+    let handle = ItemsAsset(asset_server.load("embedded://items.json"));
     commands.insert_resource(handle);
 }
 

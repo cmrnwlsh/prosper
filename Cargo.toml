@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+bevy_common_assets = { version = "0.11.0", features = ["json"] }
 bevy = { version = "0.14.2", default-features = false, features = [
   "bevy_state",
   "multi_threaded",
@@ -16,6 +17,7 @@ log = { version = "*", features = [
 better-panic = "0.3.0"
 delegate = "0.13.0"
 ratatui = "0.28.0"
+serde = "1.0.210"
 
 [profile.dev]
 opt-level = 1

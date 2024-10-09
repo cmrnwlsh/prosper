@@ -32,7 +32,7 @@ pub mod initial {
         prelude::*,
     };
     use ratatui::{
-        widgets::{Block, Paragraph},
+        widgets::{Block, Paragraph, Wrap},
         Frame,
     };
 
@@ -59,6 +59,7 @@ pub mod initial {
             frame.render_widget(
                 Paragraph::new(logs.0.join("\n"))
                     .scroll((scroll.0, 0))
+                    .wrap(Wrap { trim: true })
                     .block(Block::bordered().title(format!(
                     "FPS: {:.2}",
                     diagnostics

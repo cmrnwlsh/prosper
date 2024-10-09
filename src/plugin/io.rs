@@ -60,8 +60,6 @@ impl Terminal {
 
     delegate!( to self.0 {
         pub fn draw<F: FnOnce(&mut Frame<'_>)>(&mut self, render_callback: F) -> std::io::Result<CompletedFrame<'_>>;
-        fn backend(&self) -> &CrosstermBackend<Stdout>;
-        fn backend_mut(&mut self) -> &mut CrosstermBackend<Stdout>;
     });
 }
 

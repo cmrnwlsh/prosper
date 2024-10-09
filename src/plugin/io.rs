@@ -4,6 +4,7 @@ use delegate::delegate;
 use ratatui::{
     backend::CrosstermBackend,
     crossterm::{
+        event::KeyEvent,
         terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
         ExecutableCommand,
     },
@@ -14,10 +15,26 @@ use std::{
     panic::set_hook,
 };
 
+use ratatui::crossterm::event::{self, KeyCode, KeyEventKind, KeyModifiers};
+use std::time::Duration;
+
+pub struct IoPlugin;
+impl Plugin for IoPlugin {
+    fn build(&self, app: &mut App) {
+        app.insert_resource(Terminal::init())
+            .add_event::<Input>()
+            .add_systems(Update, read_events)
+            .observe(on_input);
+    }
+}
+
+#[derive(Event)]
+pub struct Input(pub KeyEvent);
+
 #[derive(Resource)]
 pub struct Terminal(ratatui::Terminal<CrosstermBackend<Stdout>>);
 impl Terminal {
-    pub fn init() -> Self {
+    fn init() -> Self {
         set_hook(Box::new(move |panic_info| {
             Self::restore();
             Settings::auto()
@@ -35,7 +52,7 @@ impl Terminal {
         .unwrap()
     }
 
-    pub fn restore() {
+    fn restore() {
         let _ = (|| -> std::io::Result<()> {
             disable_raw_mode()?;
             stdout().execute(LeaveAlternateScreen).map(|_| ())
@@ -44,13 +61,39 @@ impl Terminal {
 
     delegate!( to self.0 {
         pub fn draw<F: FnOnce(&mut Frame<'_>)>(&mut self, render_callback: F) -> std::io::Result<CompletedFrame<'_>>;
-        pub fn backend(&self) -> &CrosstermBackend<Stdout>;
-        pub fn backend_mut(&mut self) -> &mut CrosstermBackend<Stdout>;
+        fn backend(&self) -> &CrosstermBackend<Stdout>;
+        fn backend_mut(&mut self) -> &mut CrosstermBackend<Stdout>;
     });
 }
 
 impl Drop for Terminal {
     fn drop(&mut self) {
         Self::restore();
+    }
+}
+
+fn read_events(mut commands: Commands) {
+    (|| -> std::io::Result<()> {
+        if event::poll(Duration::from_secs(0))? {
+            if let event::Event::Key(key) = event::read()? {
+                commands.add(move |w: &mut World| w.trigger(Input(key)))
+            };
+        }
+        Ok(())
+    })()
+    .unwrap()
+}
+
+fn on_input(trigger: Trigger<Input>, mut exit: EventWriter<AppExit>) {
+    match trigger.event().0 {
+        KeyEvent {
+            code: KeyCode::Char('c'),
+            kind: KeyEventKind::Press,
+            modifiers: KeyModifiers::CONTROL,
+            ..
+        } => {
+            exit.send(AppExit::Success);
+        }
+        ev => info!("{:#?}", ev),
     }
 }

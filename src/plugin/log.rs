@@ -1,15 +1,27 @@
-use super::event::LogEvent;
 use bevy::{
+    app::Plugin,
     log::{
-        tracing_subscriber::{layer::Context, Layer},
+        tracing_subscriber::{
+            layer::Context, layer::SubscriberExt, registry, util::SubscriberInitExt, Layer,
+        },
         Level,
     },
+    prelude::*,
     utils::tracing::{
         field::{Field, Visit},
         Event, Subscriber,
     },
 };
-use std::sync::mpsc::Sender;
+use std::sync::mpsc::{channel, Receiver, Sender};
+
+#[derive(Debug, Event)]
+struct LogEvent(pub String);
+
+#[derive(Deref, DerefMut)]
+struct CapturedLogEvents(pub Receiver<LogEvent>);
+
+#[derive(Resource)]
+pub struct LogStore(pub Vec<String>);
 
 pub struct CaptureLayer(pub Sender<LogEvent>);
 impl<S: Subscriber> Layer<S> for CaptureLayer {
@@ -40,4 +52,29 @@ impl Visit for CaptureLayerVisitor<'_> {
             *self.0 = Some(format!("{value:?}"));
         }
     }
+}
+
+pub struct LogPlugin;
+impl Plugin for LogPlugin {
+    fn build(&self, app: &mut App) {
+        let (sender, receiver) = channel();
+        app.insert_resource(LogStore(vec![]));
+        app.insert_non_send_resource(CapturedLogEvents(receiver));
+        app.add_event::<LogEvent>();
+        app.add_systems(Update, (transfer_log_events, store_logs));
+        registry().with(Some(CaptureLayer(sender))).init();
+    }
+}
+
+pub fn store_logs(mut events: EventReader<LogEvent>, mut log_store: ResMut<LogStore>) {
+    for event in events.read() {
+        log_store.0.push(event.0.clone());
+    }
+}
+
+pub fn transfer_log_events(
+    receiver: NonSend<CapturedLogEvents>,
+    mut log_events: EventWriter<LogEvent>,
+) {
+    log_events.send_batch(receiver.try_iter());
 }

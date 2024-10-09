@@ -95,8 +95,9 @@ mod items {
         handle: Res<ItemsAsset>,
         asset: Res<Assets<Items>>,
     ) {
-        if asset.get(&handle.0).is_some() {
-            state.set(LoadState::Loaded)
+        if let Some(items) = asset.get(&handle.0) {
+            state.set(LoadState::Loaded);
+            info!("{}:\n{:#?}", items.0.len(), items);
         }
     }
 }

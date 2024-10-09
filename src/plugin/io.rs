@@ -23,8 +23,7 @@ impl Plugin for IoPlugin {
     fn build(&self, app: &mut App) {
         app.insert_resource(Terminal::init())
             .add_event::<Input>()
-            .add_systems(Update, read_events)
-            .observe(on_input);
+            .add_systems(Update, (read_events, listen_exit));
     }
 }
 
@@ -72,11 +71,11 @@ impl Drop for Terminal {
     }
 }
 
-fn read_events(mut commands: Commands) {
+fn read_events(mut event: EventWriter<Input>) {
     (|| -> std::io::Result<()> {
         if event::poll(Duration::from_secs(0))? {
             if let event::Event::Key(key) = event::read()? {
-                commands.add(move |w: &mut World| w.trigger(Input(key)))
+                event.send(Input(key));
             };
         }
         Ok(())
@@ -84,8 +83,8 @@ fn read_events(mut commands: Commands) {
     .unwrap()
 }
 
-fn on_input(trigger: Trigger<Input>, mut exit: EventWriter<AppExit>) {
-    match trigger.event().0 {
+fn listen_exit(mut event: EventReader<Input>, mut exit: EventWriter<AppExit>) {
+    event.read().for_each(|ev| match ev.0 {
         KeyEvent {
             code: KeyCode::Char('c'),
             kind: KeyEventKind::Press,
@@ -95,5 +94,5 @@ fn on_input(trigger: Trigger<Input>, mut exit: EventWriter<AppExit>) {
             exit.send(AppExit::Success);
         }
         ev => info!("{:#?}", ev),
-    }
+    })
 }

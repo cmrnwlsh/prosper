@@ -33,9 +33,11 @@ pub mod initial {
     pub struct Initial;
     impl Plugin for Initial {
         fn build(&self, app: &mut App) {
-            app.add_systems(Update, render.run_if(in_state(super::Context::Initial)))
-                .insert_resource(ScrollState(0))
-                .observe(on_input);
+            app.add_systems(
+                Update,
+                (render, listen_scroll).run_if(in_state(super::Context::Initial)),
+            )
+            .insert_resource(ScrollState(0));
         }
     }
 
@@ -62,12 +64,14 @@ pub mod initial {
         .unwrap();
     }
 
-    fn on_input(trigger: Trigger<Input>, mut scroll: ResMut<ScrollState>) {
+    fn listen_scroll(mut event: EventReader<Input>, mut scroll: ResMut<ScrollState>) {
         use ratatui::crossterm::event::KeyCode;
-        scroll.0 = match trigger.event().0.code {
-            KeyCode::Up => scroll.0.saturating_sub(1),
-            KeyCode::Down => scroll.0.saturating_add(1),
-            _ => scroll.0,
-        }
+        event.read().for_each(|ev| {
+            scroll.0 = match ev.0.code {
+                KeyCode::Up => scroll.0.saturating_sub(1),
+                KeyCode::Down => scroll.0.saturating_add(1),
+                _ => scroll.0,
+            }
+        })
     }
 }

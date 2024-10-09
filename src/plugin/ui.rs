@@ -1,6 +1,15 @@
 use bevy::{app::PluginGroupBuilder, prelude::*};
 use initial::Initial;
 
+pub struct UiPlugin;
+impl Plugin for UiPlugin {
+    fn build(&self, app: &mut App) {
+        app.add_plugins(bevy::state::app::StatesPlugin)
+            .add_plugins(ContextPlugin)
+            .insert_state(Context::Initial);
+    }
+}
+
 #[derive(States, Debug, Clone, PartialEq, Eq, Hash)]
 pub enum Context {
     Initial,

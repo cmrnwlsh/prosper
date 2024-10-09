@@ -41,7 +41,7 @@ struct Items(Vec<Item>);
 #[derive(serde::Deserialize, Asset, TypePath, Debug)]
 struct Item {
     #[serde(alias = "MaterialId")]
-    material_id: String,
+    item_id: String,
     #[serde(alias = "CategoryName")]
     category_name: String,
     #[serde(alias = "CategoryId")]
@@ -54,10 +54,6 @@ struct Item {
     weight: f32,
     #[serde(alias = "Volume")]
     volume: f32,
-    #[serde(alias = "UserNameSubmitted")]
-    username: String,
-    #[serde(alias = "Timestamp")]
-    timestamp: String,
 }
 
 #[derive(Resource)]

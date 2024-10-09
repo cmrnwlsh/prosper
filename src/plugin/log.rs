@@ -14,11 +14,23 @@ use bevy::{
 };
 use std::sync::mpsc::{channel, Receiver, Sender};
 
+pub struct LogPlugin;
+impl Plugin for LogPlugin {
+    fn build(&self, app: &mut App) {
+        let (sender, receiver) = channel();
+        app.insert_resource(LogStore(vec![]));
+        app.insert_non_send_resource(CapturedLogEvents(receiver));
+        app.add_event::<LogEvent>();
+        app.add_systems(Update, (transfer_log_events, store_logs));
+        registry().with(Some(CaptureLayer(sender))).init();
+    }
+}
+
 #[derive(Debug, Event)]
-struct LogEvent(pub String);
+pub struct LogEvent(pub String);
 
 #[derive(Deref, DerefMut)]
-struct CapturedLogEvents(pub Receiver<LogEvent>);
+pub struct CapturedLogEvents(pub Receiver<LogEvent>);
 
 #[derive(Resource)]
 pub struct LogStore(pub Vec<String>);
@@ -51,18 +63,6 @@ impl Visit for CaptureLayerVisitor<'_> {
         if field.name() == "message" {
             *self.0 = Some(format!("{value:?}"));
         }
-    }
-}
-
-pub struct LogPlugin;
-impl Plugin for LogPlugin {
-    fn build(&self, app: &mut App) {
-        let (sender, receiver) = channel();
-        app.insert_resource(LogStore(vec![]));
-        app.insert_non_send_resource(CapturedLogEvents(receiver));
-        app.add_event::<LogEvent>();
-        app.add_systems(Update, (transfer_log_events, store_logs));
-        registry().with(Some(CaptureLayer(sender))).init();
     }
 }
 

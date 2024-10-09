@@ -2,8 +2,8 @@ mod context;
 use bevy::prelude::*;
 use context::{Context, ContextPlugin};
 
-pub struct StatesPlugin;
-impl Plugin for StatesPlugin {
+pub struct UiPlugin;
+impl Plugin for UiPlugin {
     fn build(&self, app: &mut App) {
         app.add_plugins(bevy::state::app::StatesPlugin)
             .add_plugins(ContextPlugin)

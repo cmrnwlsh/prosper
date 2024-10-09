@@ -84,15 +84,15 @@ fn read_events(mut event: EventWriter<Input>) {
 }
 
 fn listen_exit(mut event: EventReader<Input>, mut exit: EventWriter<AppExit>) {
-    event.read().for_each(|ev| match ev.0 {
-        KeyEvent {
+    event.read().for_each(|ev| {
+        if let KeyEvent {
             code: KeyCode::Char('c'),
             kind: KeyEventKind::Press,
             modifiers: KeyModifiers::CONTROL,
             ..
-        } => {
+        } = ev.0
+        {
             exit.send(AppExit::Success);
         }
-        ev => info!("{:#?}", ev),
     })
 }

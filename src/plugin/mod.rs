@@ -1,6 +1,6 @@
 mod io;
 mod log;
-mod state;
+mod ui;
 
 use std::time::Duration;
 
@@ -12,7 +12,7 @@ use bevy::{
 };
 use io::IoPlugin;
 use log::LogPlugin;
-use state::StatesPlugin;
+use ui::UiPlugin;
 
 pub struct TuiPlugins;
 impl PluginGroup for TuiPlugins {
@@ -21,7 +21,7 @@ impl PluginGroup for TuiPlugins {
             .add_group(
                 MinimalPlugins.set(ScheduleRunnerPlugin::run_loop(Duration::from_micros(16670))),
             )
-            .add(StatesPlugin)
+            .add(UiPlugin)
             .add(LogPlugin)
             .add(DiagnosticsPlugin)
             .add(FrameTimeDiagnosticsPlugin)

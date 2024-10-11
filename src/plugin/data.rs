@@ -1,37 +1,32 @@
-use bevy::prelude::*;
-use bevy_common_assets::json::JsonAssetPlugin;
-use buildings::Buildings;
-use items::Items;
-use recipes::Recipes;
+use bevy::{app::PluginGroupBuilder, prelude::*};
+use buildings::BuildingsPlugin;
+use items::ItemsPlugin;
+use recipes::RecipesPlugin;
 
-pub struct DataPlugin;
-impl Plugin for DataPlugin {
-    fn build(&self, app: &mut App) {
-        app.init_state::<items::LoadState>()
-            .init_state::<buildings::LoadState>()
-            .init_state::<recipes::LoadState>()
-            .add_plugins(JsonAssetPlugin::<Items>::new(&["embedded://items.json"]))
-            .add_plugins(JsonAssetPlugin::<Recipes>::new(&[
-                "embedded://recipes.json",
-            ]))
-            .add_plugins(JsonAssetPlugin::<Buildings>::new(&[
-                "embedded://buildings.json",
-            ]))
-            .add_systems(Startup, (items::load, buildings::load, recipes::load))
-            .add_systems(
-                Update,
-                (
-                    items::wait.run_if(in_state(items::LoadState::Loading)),
-                    buildings::wait.run_if(in_state(buildings::LoadState::Loading)),
-                    recipes::wait.run_if(in_state(recipes::LoadState::Loading)),
-                ),
-            );
+pub struct DataPlugins;
+impl PluginGroup for DataPlugins {
+    fn build(self) -> PluginGroupBuilder {
+        PluginGroupBuilder::start::<Self>()
+            .add(ItemsPlugin)
+            .add(BuildingsPlugin)
+            .add(RecipesPlugin)
     }
 }
 
 mod items {
     use bevy::prelude::*;
+    use bevy_common_assets::json::JsonAssetPlugin;
     use serde::{Deserialize, Serialize};
+
+    pub struct ItemsPlugin;
+    impl Plugin for ItemsPlugin {
+        fn build(&self, app: &mut App) {
+            app.init_state::<LoadState>()
+                .add_plugins(JsonAssetPlugin::<Items>::new(&["embedded://items.json"]))
+                .add_systems(Startup, load)
+                .add_systems(Update, wait.run_if(in_state(LoadState::Loading)));
+        }
+    }
 
     #[derive(Debug, Clone, Copy, Default, Eq, PartialEq, Hash, States)]
     pub enum LoadState {
@@ -80,10 +75,22 @@ mod items {
 }
 
 mod buildings {
+    use super::{items::Item, recipes::Recipe};
     use bevy::prelude::*;
+    use bevy_common_assets::json::JsonAssetPlugin;
     use serde::{Deserialize, Serialize};
 
-    use super::{items::Item, recipes::Recipe};
+    pub struct BuildingsPlugin;
+    impl Plugin for BuildingsPlugin {
+        fn build(&self, app: &mut App) {
+            app.init_state::<LoadState>()
+                .add_plugins(JsonAssetPlugin::<Buildings>::new(&[
+                    "embedded://buildings.json",
+                ]))
+                .add_systems(Startup, load)
+                .add_systems(Update, wait.run_if(in_state(LoadState::Loading)));
+        }
+    }
 
     #[derive(Debug, Clone, Copy, Default, Eq, PartialEq, Hash, States)]
     pub enum LoadState {
@@ -92,7 +99,7 @@ mod buildings {
         Loaded,
     }
 
-    #[derive(serde::Deserialize, Asset, TypePath, Debug)]
+    #[derive(Deserialize, Asset, TypePath, Debug)]
     pub struct Buildings(Vec<Building>);
 
     #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -149,7 +156,20 @@ mod recipes {
         prelude::*,
         reflect::TypePath,
     };
+    use bevy_common_assets::json::JsonAssetPlugin;
     use serde::{Deserialize, Serialize};
+
+    pub struct RecipesPlugin;
+    impl Plugin for RecipesPlugin {
+        fn build(&self, app: &mut App) {
+            app.init_state::<LoadState>()
+                .add_plugins(JsonAssetPlugin::<Recipes>::new(&[
+                    "embedded://recipes.json",
+                ]))
+                .add_systems(Startup, load)
+                .add_systems(Update, wait.run_if(in_state(LoadState::Loading)));
+        }
+    }
 
     #[derive(Debug, Clone, Copy, Default, Eq, PartialEq, Hash, States)]
     pub enum LoadState {
@@ -158,7 +178,7 @@ mod recipes {
         Loaded,
     }
 
-    #[derive(serde::Deserialize, Asset, TypePath, Debug)]
+    #[derive(Deserialize, Asset, TypePath, Debug)]
     pub struct Recipes(Vec<Recipe>);
 
     #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -171,25 +191,16 @@ mod recipes {
         #[serde(rename = "StandardRecipeName")]
         pub standard_recipe_name: String,
         #[serde(rename = "Inputs")]
-        pub inputs: Vec<Input>,
+        pub inputs: Vec<Commodity>,
         #[serde(rename = "Outputs")]
-        pub outputs: Vec<Output>,
+        pub outputs: Vec<Commodity>,
         #[serde(rename = "TimeMs", alias = "DurationMs")]
         pub time_ms: i64,
     }
 
     #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
     #[serde(rename_all = "camelCase")]
-    pub struct Input {
-        #[serde(rename = "Ticker", alias = "CommodityTicker")]
-        pub ticker: String,
-        #[serde(rename = "Amount")]
-        pub amount: i64,
-    }
-
-    #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
-    #[serde(rename_all = "camelCase")]
-    pub struct Output {
+    pub struct Commodity {
         #[serde(rename = "Ticker", alias = "CommodityTicker")]
         pub ticker: String,
         #[serde(rename = "Amount")]

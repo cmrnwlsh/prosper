@@ -2,56 +2,31 @@ use bevy::prelude::*;
 use bevy_common_assets::json::JsonAssetPlugin;
 use buildings::Buildings;
 use items::Items;
-use serde::{Deserialize, Serialize};
+use recipes::Recipes;
 
 pub struct DataPlugin;
 impl Plugin for DataPlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugins(JsonAssetPlugin::<Items>::new(&["embedded://items.json"]))
+        app.init_state::<items::LoadState>()
+            .init_state::<buildings::LoadState>()
+            .init_state::<recipes::LoadState>()
+            .add_plugins(JsonAssetPlugin::<Items>::new(&["embedded://items.json"]))
+            .add_plugins(JsonAssetPlugin::<Recipes>::new(&[
+                "embedded://recipes.json",
+            ]))
             .add_plugins(JsonAssetPlugin::<Buildings>::new(&[
                 "embedded://buildings.json",
             ]))
-            .init_state::<items::LoadState>()
-            .init_state::<buildings::LoadState>()
-            .add_systems(Startup, (items::load, buildings::load))
+            .add_systems(Startup, (items::load, buildings::load, recipes::load))
             .add_systems(
                 Update,
                 (
                     items::wait.run_if(in_state(items::LoadState::Loading)),
                     buildings::wait.run_if(in_state(buildings::LoadState::Loading)),
+                    recipes::wait.run_if(in_state(recipes::LoadState::Loading)),
                 ),
             );
     }
-}
-
-#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
-pub struct Commodity {
-    #[serde(rename = "CommodityName")]
-    pub commodity_name: String,
-    #[serde(rename = "CommodityTicker")]
-    pub commodity_ticker: String,
-    #[serde(rename = "Weight")]
-    pub weight: f64,
-    #[serde(rename = "Volume")]
-    pub volume: f64,
-    #[serde(rename = "Amount")]
-    pub amount: i64,
-}
-
-#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
-pub struct Recipe {
-    #[serde(rename = "Inputs")]
-    pub inputs: Vec<Commodity>,
-    #[serde(rename = "Outputs")]
-    pub outputs: Vec<Commodity>,
-    #[serde(rename = "DurationMs")]
-    pub duration_ms: i64,
-    #[serde(rename = "RecipeName")]
-    pub recipe_name: String,
-    #[serde(rename = "StandardRecipeName")]
-    pub standard_recipe_name: String,
 }
 
 mod items {
@@ -72,15 +47,17 @@ mod items {
     #[serde(rename_all = "camelCase")]
     pub struct Item {
         #[serde(rename = "CategoryName")]
-        pub category_name: String,
-        #[serde(rename = "Name")]
+        pub category_name: Option<String>,
+        #[serde(rename = "Name", alias = "CommodityName")]
         pub name: String,
-        #[serde(rename = "Ticker")]
+        #[serde(rename = "Ticker", alias = "CommodityTicker")]
         pub ticker: String,
         #[serde(rename = "Weight")]
         pub weight: f64,
         #[serde(rename = "Volume")]
         pub volume: f64,
+        #[serde(rename = "Amount")]
+        pub amount: Option<i64>,
     }
 
     #[derive(Resource)]
@@ -97,7 +74,7 @@ mod items {
     ) {
         if let Some(items) = asset.get(&handle.0) {
             state.set(LoadState::Loaded);
-            info!("{}:\n{:#?}", items.0.len(), items);
+            //info!("{}:\n{:#?}", items.0.len(), items);
         }
     }
 }
@@ -106,7 +83,7 @@ mod buildings {
     use bevy::prelude::*;
     use serde::{Deserialize, Serialize};
 
-    use super::{Commodity, Recipe};
+    use super::{items::Item, recipes::Recipe};
 
     #[derive(Debug, Clone, Copy, Default, Eq, PartialEq, Hash, States)]
     pub enum LoadState {
@@ -122,7 +99,7 @@ mod buildings {
     #[serde(rename_all = "camelCase")]
     pub struct Building {
         #[serde(rename = "BuildingCosts")]
-        pub building_costs: Vec<Commodity>,
+        pub building_costs: Vec<Item>,
         #[serde(rename = "Recipes")]
         pub recipes: Vec<Recipe>,
         #[serde(rename = "Name")]
@@ -161,7 +138,79 @@ mod buildings {
     ) {
         if let Some(buildings) = asset.get(&handle.0) {
             state.set(LoadState::Loaded);
-            info!("{}:\n{:#?}", buildings.0.len(), buildings)
+            //info!("{}:\n{:#?}", buildings.0.len(), buildings)
+        }
+    }
+}
+
+mod recipes {
+    use bevy::{
+        asset::{Asset, Handle},
+        prelude::*,
+        reflect::TypePath,
+    };
+    use serde::{Deserialize, Serialize};
+
+    #[derive(Debug, Clone, Copy, Default, Eq, PartialEq, Hash, States)]
+    pub enum LoadState {
+        #[default]
+        Loading,
+        Loaded,
+    }
+
+    #[derive(serde::Deserialize, Asset, TypePath, Debug)]
+    pub struct Recipes(Vec<Recipe>);
+
+    #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+    #[serde(rename_all = "camelCase")]
+    pub struct Recipe {
+        #[serde(rename = "BuildingTicker")]
+        pub building_ticker: Option<String>,
+        #[serde(rename = "RecipeName")]
+        pub recipe_name: String,
+        #[serde(rename = "StandardRecipeName")]
+        pub standard_recipe_name: String,
+        #[serde(rename = "Inputs")]
+        pub inputs: Vec<Input>,
+        #[serde(rename = "Outputs")]
+        pub outputs: Vec<Output>,
+        #[serde(rename = "TimeMs", alias = "DurationMs")]
+        pub time_ms: i64,
+    }
+
+    #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+    #[serde(rename_all = "camelCase")]
+    pub struct Input {
+        #[serde(rename = "Ticker", alias = "CommodityTicker")]
+        pub ticker: String,
+        #[serde(rename = "Amount")]
+        pub amount: i64,
+    }
+
+    #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+    #[serde(rename_all = "camelCase")]
+    pub struct Output {
+        #[serde(rename = "Ticker", alias = "CommodityTicker")]
+        pub ticker: String,
+        #[serde(rename = "Amount")]
+        pub amount: i64,
+    }
+
+    #[derive(Resource)]
+    pub struct RecipesAsset(Handle<Recipes>);
+
+    pub fn load(mut commands: Commands, asset_server: Res<AssetServer>) {
+        commands.insert_resource(RecipesAsset(asset_server.load("embedded://recipes.json")));
+    }
+
+    pub fn wait(
+        mut state: ResMut<NextState<LoadState>>,
+        handle: Res<RecipesAsset>,
+        asset: Res<Assets<Recipes>>,
+    ) {
+        if let Some(recipes) = asset.get(&handle.0) {
+            state.set(LoadState::Loaded);
+            info!("{}:\n{:#?}", recipes.0.len(), recipes)
         }
     }
 }

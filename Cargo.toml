@@ -29,3 +29,9 @@ opt-level = 3
 [profile.release]
 codegen-units = 1
 lto = "thin"
+
+[target.'cfg(windows)'.build-dependencies]
+cross = "0.2.5"
+
+[workspace.metadata.cross.target.x86_64-pc-windows-gnu]
+pre-build = ["apt-get update && apt-get --assume-yes install clang"]

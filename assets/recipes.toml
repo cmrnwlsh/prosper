@@ -1,0 +1,7445 @@
+[[recipes]]
+building_ticker = "RIG"
+recipe_name = "=>"
+standard_recipe_name = "RIG:=>"
+inputs = []
+outputs = []
+time_ms = 17_280_000
+
+[[recipes]]
+building_ticker = "TNP"
+recipe_name = "1xTC 4xREA 4xFLX=>1xETC"
+standard_recipe_name = "TNP:4xFLX-4xREA-1xTC=>1xETC"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "REA"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "TC"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FLX"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "ETC"
+amount = 1
+
+[[recipes]]
+building_ticker = "TNP"
+recipe_name = "1xTCO=>1xTC 1xO"
+standard_recipe_name = "TNP:1xTCO=>1xO-1xTC"
+time_ms = 58_752_000
+
+[[recipes.inputs]]
+ticker = "TCO"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "TC"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "O"
+amount = 1
+
+[[recipes]]
+building_ticker = "TNP"
+recipe_name = "1xTC=>3xTCS"
+standard_recipe_name = "TNP:1xTC=>3xTCS"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "TC"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "TCS"
+amount = 3
+
+[[recipes]]
+building_ticker = "PP1"
+recipe_name = "150xPE=>1xBDE"
+standard_recipe_name = "PP1:150xPE=>1xBDE"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 150
+
+[[recipes.outputs]]
+ticker = "BDE"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP1"
+recipe_name = "1xFE 2xLST=>1xBSE"
+standard_recipe_name = "PP1:1xFE-2xLST=>1xBSE"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BSE"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP1"
+recipe_name = "1xFE 50xPE=>1xBTA"
+standard_recipe_name = "PP1:1xFE-50xPE=>1xBTA"
+time_ms = 12_960_000
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 50
+
+[[recipes.outputs]]
+ticker = "BTA"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP1"
+recipe_name = "2xFE 1xLST=>1xBBH"
+standard_recipe_name = "PP1:2xFE-1xLST=>1xBBH"
+time_ms = 28_512_000
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BBH"
+amount = 1
+
+[[recipes]]
+building_ticker = "CLF"
+recipe_name = "1xNL 1xIND 6xGC=>10xHMS"
+standard_recipe_name = "CLF:6xGC-1xIND-1xNL=>10xHMS"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "GC"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "IND"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "HMS"
+amount = 10
+
+[[recipes]]
+building_ticker = "CLF"
+recipe_name = "2xSIL 1xBLE 10xHD 10xPCB=>10xLC"
+standard_recipe_name = "CLF:1xBLE-10xHD-10xPCB-2xSIL=>10xLC"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "SIL"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "HD"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "PCB"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "BLE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "LC"
+amount = 10
+
+[[recipes]]
+building_ticker = "CLF"
+recipe_name = "5xNL 1xBLE 5xSEN 5xPCB=>20xHSS"
+standard_recipe_name = "CLF:1xBLE-5xNL-5xPCB-5xSEN=>20xHSS"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "BLE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NL"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "PCB"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "SEN"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "HSS"
+amount = 20
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "10xH2O 1xPG=>10xDW"
+standard_recipe_name = "FP:10xH2O-1xPG=>10xDW"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "DW"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "10xH2O=>7xDW"
+standard_recipe_name = "FP:10xH2O=>7xDW"
+time_ms = 8_640_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "DW"
+amount = 7
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xALG 1xH2O 1xBEA=>6xPPA"
+standard_recipe_name = "FP:1xALG-1xBEA-1xH2O=>6xPPA"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ALG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BEA"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "PPA"
+amount = 6
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xCAF 3xDW=>3xCOF"
+standard_recipe_name = "FP:1xCAF-3xDW=>3xCOF"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "DW"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "CAF"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "COF"
+amount = 3
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xGRN 1xALG 1xNUT=>10xRAT"
+standard_recipe_name = "FP:1xALG-1xGRN-1xNUT=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "NUT"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ALG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xGRN 1xALG 1xVEG=>10xRAT"
+standard_recipe_name = "FP:1xALG-1xGRN-1xVEG=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "VEG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ALG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xGRN 1xBEA 1xNUT=>10xRAT"
+standard_recipe_name = "FP:1xBEA-1xGRN-1xNUT=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "BEA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NUT"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xGRN 1xBEA 1xVEG=>10xRAT"
+standard_recipe_name = "FP:1xBEA-1xGRN-1xVEG=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "VEG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BEA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xMAI 1xALG 1xNUT=>10xRAT"
+standard_recipe_name = "FP:1xALG-1xMAI-1xNUT=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "NUT"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ALG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xMAI 1xALG 1xVEG=>10xRAT"
+standard_recipe_name = "FP:1xALG-1xMAI-1xVEG=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "MAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ALG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "VEG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xMAI 1xBEA 1xNUT=>10xRAT"
+standard_recipe_name = "FP:1xBEA-1xMAI-1xNUT=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "MAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BEA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NUT"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xMAI 1xBEA 1xVEG=>10xRAT"
+standard_recipe_name = "FP:1xBEA-1xMAI-1xVEG=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "MAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "VEG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BEA"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xMUS 1xNUT 1xGRN=>10xRAT"
+standard_recipe_name = "FP:1xGRN-1xMUS-1xNUT=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "NUT"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MUS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xMUS 1xNUT 1xMAI=>10xRAT"
+standard_recipe_name = "FP:1xMAI-1xMUS-1xNUT=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "NUT"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MUS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MAI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xMUS 1xVEG 1xGRN=>10xRAT"
+standard_recipe_name = "FP:1xGRN-1xMUS-1xVEG=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "VEG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MUS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "1xMUS 1xVEG 1xMAI=>10xRAT"
+standard_recipe_name = "FP:1xMAI-1xMUS-1xVEG=>10xRAT"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "VEG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MUS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MAI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAT"
+amount = 10
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "2xALG 1xH2O=>4xPPA"
+standard_recipe_name = "FP:2xALG-1xH2O=>4xPPA"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ALG"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "PPA"
+amount = 4
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "2xBEA 1xH2O=>4xPPA"
+standard_recipe_name = "FP:2xBEA-1xH2O=>4xPPA"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "BEA"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "PPA"
+amount = 4
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "2xFIM 1xMTP=>2xMEA"
+standard_recipe_name = "FP:2xFIM-1xMTP=>2xMEA"
+time_ms = 56_160_000
+
+[[recipes.inputs]]
+ticker = "MTP"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FIM"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "MEA"
+amount = 2
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "2xRAT 1xHER=>2xFIM"
+standard_recipe_name = "FP:1xHER-2xRAT=>2xFIM"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "RAT"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "HER"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "FIM"
+amount = 2
+
+[[recipes]]
+building_ticker = "FP"
+recipe_name = "5xNUT 5xMAI 5xVEG=>16xFOD"
+standard_recipe_name = "FP:5xMAI-5xNUT-5xVEG=>16xFOD"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "NUT"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "MAI"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "VEG"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "FOD"
+amount = 16
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "10xAL 4xSTL=>1xFLO"
+standard_recipe_name = "FS:10xAL-4xSTL=>1xFLO"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "FLO"
+amount = 1
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "1xAL 2xCU=>3xBRO"
+standard_recipe_name = "FS:1xAL-2xCU=>3xBRO"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "CU"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BRO"
+amount = 3
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "1xBGO 300xPE=>10xBGC"
+standard_recipe_name = "FS:1xBGO-300xPE=>10xBGC"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 300
+
+[[recipes.inputs]]
+ticker = "BGO"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BGC"
+amount = 10
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "1xCU 300xPE=>10xBCO"
+standard_recipe_name = "FS:1xCU-300xPE=>10xBCO"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "CU"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 300
+
+[[recipes.outputs]]
+ticker = "BCO"
+amount = 10
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "1xFE=>16xSFK"
+standard_recipe_name = "FS:1xFE=>16xSFK"
+time_ms = 10_368_000
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SFK"
+amount = 16
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "1xRGO 300xPE=>10xHCC"
+standard_recipe_name = "FS:300xPE-1xRGO=>10xHCC"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "RGO"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 300
+
+[[recipes.outputs]]
+ticker = "HCC"
+amount = 10
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "1xSTL 1xAL=>1xBFR"
+standard_recipe_name = "FS:1xAL-1xSTL=>1xBFR"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BFR"
+amount = 1
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "1xSTL=>8xMFK"
+standard_recipe_name = "FS:1xSTL=>8xMFK"
+time_ms = 10_368_000
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "MFK"
+amount = 8
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "1xZR 1xAL=>1xAFR"
+standard_recipe_name = "FS:1xAL-1xZR=>1xAFR"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ZR"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "AFR"
+amount = 1
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "2xSFK 6xFE=>1xUTS"
+standard_recipe_name = "FS:6xFE-2xSFK=>1xUTS"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 6
+
+[[recipes.outputs]]
+ticker = "UTS"
+amount = 1
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "2xSTL 2xTI 1xHOG=>1xSEQ"
+standard_recipe_name = "FS:1xHOG-2xSTL-2xTI=>1xSEQ"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "HOG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "SEQ"
+amount = 1
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "4xAU 1xCU=>5xRGO"
+standard_recipe_name = "FS:4xAU-1xCU=>5xRGO"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "CU"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AU"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "RGO"
+amount = 5
+
+[[recipes]]
+building_ticker = "FS"
+recipe_name = "4xAU 1xFE=>5xBGO"
+standard_recipe_name = "FS:4xAU-1xFE=>5xBGO"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AU"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "BGO"
+amount = 5
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "1xH2O=>12xNUT"
+standard_recipe_name = "FRM:1xH2O=>12xNUT"
+time_ms = 129_600_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "NUT"
+amount = 12
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "1xH2O=>2xBEA"
+standard_recipe_name = "FRM:1xH2O=>2xBEA"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BEA"
+amount = 2
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "1xH2O=>4xGRN"
+standard_recipe_name = "FRM:1xH2O=>4xGRN"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "GRN"
+amount = 4
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "2xH2O 4xNS=>2xRCO"
+standard_recipe_name = "FRM:2xH2O-4xNS=>2xRCO"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "RCO"
+amount = 2
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "2xH2O=>1xRCO"
+standard_recipe_name = "FRM:2xH2O=>1xRCO"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "RCO"
+amount = 1
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "2xH2O=>4xHCP"
+standard_recipe_name = "FRM:2xH2O=>4xHCP"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "HCP"
+amount = 4
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "3xH2O=>4xVEG"
+standard_recipe_name = "FRM:3xH2O=>4xVEG"
+time_ms = 38_880_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "VEG"
+amount = 4
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "4xH2O 1xDDT=>4xHER"
+standard_recipe_name = "FRM:1xDDT-4xH2O=>4xHER"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "DDT"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "HER"
+amount = 4
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "4xH2O=>12xMAI"
+standard_recipe_name = "FRM:4xH2O=>12xMAI"
+time_ms = 120_960_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "MAI"
+amount = 12
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "4xH2O=>4xGRN"
+standard_recipe_name = "FRM:4xH2O=>4xGRN"
+time_ms = 32_400_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "GRN"
+amount = 4
+
+[[recipes]]
+building_ticker = "FRM"
+recipe_name = "6xH2O=>4xBEA"
+standard_recipe_name = "FRM:6xH2O=>4xBEA"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 6
+
+[[recipes.outputs]]
+ticker = "BEA"
+amount = 4
+
+[[recipes]]
+building_ticker = "WEL"
+recipe_name = "10xBOS 1xGV 1xHE=>1xCHA"
+standard_recipe_name = "WEL:10xBOS-1xGV-1xHE=>1xCHA"
+time_ms = 38_880_000
+
+[[recipes.inputs]]
+ticker = "BOS"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GV"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "CHA"
+amount = 1
+
+[[recipes]]
+building_ticker = "WEL"
+recipe_name = "1xAL 1xBSE 1xHE=>1xFC"
+standard_recipe_name = "WEL:1xAL-1xBSE-1xHE=>1xFC"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "BSE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "FC"
+amount = 1
+
+[[recipes]]
+building_ticker = "WEL"
+recipe_name = "1xAL 1xHE=>1xGV"
+standard_recipe_name = "WEL:1xAL-1xHE=>1xGV"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "GV"
+amount = 1
+
+[[recipes]]
+building_ticker = "WEL"
+recipe_name = "1xFE 1xAL 1xHE=>10xGC"
+standard_recipe_name = "WEL:1xAL-1xFE-1xHE=>10xGC"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "GC"
+amount = 10
+
+[[recipes]]
+building_ticker = "WEL"
+recipe_name = "1xFE 1xAL 1xHE=>6xFLP"
+standard_recipe_name = "WEL:1xAL-1xFE-1xHE=>6xFLP"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "FLP"
+amount = 6
+
+[[recipes]]
+building_ticker = "WEL"
+recipe_name = "1xI 1xFE 1xHE=>1xMHL"
+standard_recipe_name = "WEL:1xFE-1xHE-1xI=>1xMHL"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "I"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "MHL"
+amount = 1
+
+[[recipes]]
+building_ticker = "WEL"
+recipe_name = "20xNFI 2xAL 1xHE=>6xSSC"
+standard_recipe_name = "WEL:2xAL-1xHE-20xNFI=>6xSSC"
+time_ms = 8_640_000
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NFI"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "SSC"
+amount = 6
+
+[[recipes]]
+building_ticker = "WEL"
+recipe_name = "2xAL 1xHE=>6xTRU"
+standard_recipe_name = "WEL:2xAL-1xHE=>6xTRU"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "TRU"
+amount = 6
+
+[[recipes]]
+building_ticker = "WEL"
+recipe_name = "2xBE 2xCF 1xHE=>4xTHP"
+standard_recipe_name = "WEL:2xBE-2xCF-1xHE=>4xTHP"
+time_ms = 15_552_000
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CF"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "BE"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "THP"
+amount = 4
+
+[[recipes]]
+building_ticker = "WEL"
+recipe_name = "6xAL 1xHE=>1xDRF"
+standard_recipe_name = "WEL:6xAL-1xHE=>1xDRF"
+time_ms = 8_640_000
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 6
+
+[[recipes.outputs]]
+ticker = "DRF"
+amount = 1
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "100xPE 25xPG=>20xOVE"
+standard_recipe_name = "BMP:100xPE-25xPG=>20xOVE"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 100
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 25
+
+[[recipes.outputs]]
+ticker = "OVE"
+amount = 20
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "10xOVE 1xAL 1xMFK=>10xEXO"
+standard_recipe_name = "BMP:1xAL-1xMFK-10xOVE=>10xEXO"
+time_ms = 14_688_000
+
+[[recipes.inputs]]
+ticker = "OVE"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "EXO"
+amount = 10
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "10xOVE 1xAL 1xSWF=>10xEXO"
+standard_recipe_name = "BMP:1xAL-10xOVE-1xSWF=>10xEXO"
+time_ms = 12_960_000
+
+[[recipes.inputs]]
+ticker = "OVE"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "SWF"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "EXO"
+amount = 10
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "10xOVE 1xAL=>10xEXO"
+standard_recipe_name = "BMP:1xAL-10xOVE=>10xEXO"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "OVE"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "EXO"
+amount = 10
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xC 2xH=>200xPE"
+standard_recipe_name = "BMP:1xC-2xH=>200xPE"
+time_ms = 24_192_000
+
+[[recipes.inputs]]
+ticker = "H"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "PE"
+amount = 200
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xCOT 10xPG=>30xOVE"
+standard_recipe_name = "BMP:1xCOT-10xPG=>30xOVE"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "COT"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "OVE"
+amount = 30
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xCOT 50xPG=>20xPWO"
+standard_recipe_name = "BMP:1xCOT-50xPG=>20xPWO"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "COT"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 50
+
+[[recipes.outputs]]
+ticker = "PWO"
+amount = 20
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xMFK 1xSFK 10xINS=>4xREP"
+standard_recipe_name = "BMP:10xINS-1xMFK-1xSFK=>4xREP"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "INS"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "REP"
+amount = 4
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xMGS=>6xMG"
+standard_recipe_name = "BMP:1xMGS=>6xMG"
+time_ms = 10_368_000
+
+[[recipes.inputs]]
+ticker = "MGS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "MG"
+amount = 6
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xRCO 50xPE=>20xOVE"
+standard_recipe_name = "BMP:50xPE-1xRCO=>20xOVE"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "RCO"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 50
+
+[[recipes.outputs]]
+ticker = "OVE"
+amount = 20
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xS 1xSI 30xPG=>30xSEA"
+standard_recipe_name = "BMP:30xPG-1xS-1xSI=>30xSEA"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "S"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 30
+
+[[recipes.outputs]]
+ticker = "SEA"
+amount = 30
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xSTL 1xTRN=>7xPT"
+standard_recipe_name = "BMP:1xSTL-1xTRN=>7xPT"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "TRN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "PT"
+amount = 7
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xSTL 1xW=>10xPT"
+standard_recipe_name = "BMP:1xSTL-1xW=>10xPT"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "W"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "PT"
+amount = 10
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xSTL 2xSFK=>6xPT"
+standard_recipe_name = "BMP:2xSFK-1xSTL=>6xPT"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "PT"
+amount = 6
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "1xSTL=>5xPT"
+standard_recipe_name = "BMP:1xSTL=>5xPT"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "PT"
+amount = 5
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "20xOVE 10xC=>20xSUN"
+standard_recipe_name = "BMP:10xC-20xOVE=>20xSUN"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "OVE"
+amount = 20
+
+[[recipes.outputs]]
+ticker = "SUN"
+amount = 20
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "20xPG 20xEPO=>50xOFF"
+standard_recipe_name = "BMP:20xEPO-20xPG=>50xOFF"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "EPO"
+amount = 20
+
+[[recipes.outputs]]
+ticker = "OFF"
+amount = 50
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "3xCLI=>1xI"
+standard_recipe_name = "BMP:3xCLI=>1xI"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "CLI"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "I"
+amount = 1
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "4xLST 2xSIO=>50xMCG"
+standard_recipe_name = "BMP:4xLST-2xSIO=>50xMCG"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "SIO"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "MCG"
+amount = 50
+
+[[recipes]]
+building_ticker = "BMP"
+recipe_name = "50xPE 4xAL=>2xSTR"
+standard_recipe_name = "BMP:4xAL-50xPE=>2xSTR"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 50
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "STR"
+amount = 2
+
+[[recipes]]
+building_ticker = "PP3"
+recipe_name = "100xPE 1xAR 1xTHF=>24xINS"
+standard_recipe_name = "PP3:1xAR-100xPE-1xTHF=>24xINS"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 100
+
+[[recipes.inputs]]
+ticker = "THF"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AR"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "INS"
+amount = 24
+
+[[recipes]]
+building_ticker = "PP3"
+recipe_name = "1xBBH 1xSTL 50xEPO=>1xRBH"
+standard_recipe_name = "PP3:1xBBH-50xEPO-1xSTL=>1xRBH"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "BBH"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "EPO"
+amount = 50
+
+[[recipes.outputs]]
+ticker = "RBH"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP3"
+recipe_name = "1xLDE 100xEPO 1xKV=>2xRDE"
+standard_recipe_name = "PP3:100xEPO-1xKV-1xLDE=>2xRDE"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "EPO"
+amount = 100
+
+[[recipes.inputs]]
+ticker = "KV"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "LDE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RDE"
+amount = 2
+
+[[recipes]]
+building_ticker = "PP3"
+recipe_name = "1xLTA 6xRG=>1xRTA"
+standard_recipe_name = "PP3:1xLTA-6xRG=>1xRTA"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "LTA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "RG"
+amount = 6
+
+[[recipes.outputs]]
+ticker = "RTA"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP3"
+recipe_name = "1xMAG 1xLDE=>1xMGC"
+standard_recipe_name = "PP3:1xLDE-1xMAG=>1xMGC"
+time_ms = 95_040_000
+
+[[recipes.inputs]]
+ticker = "MAG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "LDE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "MGC"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP3"
+recipe_name = "1xTI 250xNFI=>1xPSH"
+standard_recipe_name = "PP3:250xNFI-1xTI=>1xPSH"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "NFI"
+amount = 250
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "PSH"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP3"
+recipe_name = "2xBSE 1xSTL 225xEPO=>2xRSE"
+standard_recipe_name = "PP3:2xBSE-225xEPO-1xSTL=>2xRSE"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "EPO"
+amount = 225
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BSE"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "RSE"
+amount = 2
+
+[[recipes]]
+building_ticker = "PP3"
+recipe_name = "2xLSE 1xTCS=>2xHSE"
+standard_recipe_name = "PP3:2xLSE-1xTCS=>2xHSE"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "TCS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "LSE"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "HSE"
+amount = 2
+
+[[recipes]]
+building_ticker = "ELP"
+recipe_name = "16xSEN 4xPCB=>1xSAR"
+standard_recipe_name = "ELP:4xPCB-16xSEN=>1xSAR"
+time_ms = 57_888_000
+
+[[recipes.inputs]]
+ticker = "SEN"
+amount = 16
+
+[[recipes.inputs]]
+ticker = "PCB"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "SAR"
+amount = 1
+
+[[recipes]]
+building_ticker = "ELP"
+recipe_name = "1xDIS 2xBCO=>1xCD"
+standard_recipe_name = "ELP:2xBCO-1xDIS=>1xCD"
+time_ms = 57_888_000
+
+[[recipes.inputs]]
+ticker = "BCO"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "DIS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "CD"
+amount = 1
+
+[[recipes]]
+building_ticker = "ELP"
+recipe_name = "1xKV 2xAU 4xPCB 6xSWF=>3xAAR"
+standard_recipe_name = "ELP:2xAU-1xKV-4xPCB-6xSWF=>3xAAR"
+time_ms = 57_888_000
+
+[[recipes.inputs]]
+ticker = "SWF"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "AU"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "KV"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PCB"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "AAR"
+amount = 3
+
+[[recipes]]
+building_ticker = "ELP"
+recipe_name = "1xMAG 10xBAC 10xPE=>5xAWF"
+standard_recipe_name = "ELP:10xBAC-1xMAG-10xPE=>5xAWF"
+time_ms = 56_160_000
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "MAG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BAC"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "AWF"
+amount = 5
+
+[[recipes]]
+building_ticker = "ELP"
+recipe_name = "1xMB 1xDCM 1xHD=>1xBWS"
+standard_recipe_name = "ELP:1xDCM-1xHD-1xMB=>1xBWS"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "MB"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DCM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HD"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BWS"
+amount = 1
+
+[[recipes]]
+building_ticker = "ELP"
+recipe_name = "1xMB 1xDCS 1xCD=>1xHPC"
+standard_recipe_name = "ELP:1xCD-1xDCS-1xMB=>1xHPC"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "DCS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CD"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MB"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "HPC"
+amount = 1
+
+[[recipes]]
+building_ticker = "ELP"
+recipe_name = "1xTPU 1xFAN 1xMB 1xDCL=>1xBMF"
+standard_recipe_name = "ELP:1xDCL-1xFAN-1xMB-1xTPU=>1xBMF"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "FAN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DCL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TPU"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MB"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BMF"
+amount = 1
+
+[[recipes]]
+building_ticker = "ELP"
+recipe_name = "3xCTF 1xCBL=>1xLFE"
+standard_recipe_name = "ELP:1xCBL-3xCTF=>1xLFE"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "CBL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CTF"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "LFE"
+amount = 1
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "12xFLP 1xFC 1xAWF 1xPCB 1xSEN 1xWAI=>1xWR"
+standard_recipe_name = "APF:1xAWF-1xFC-12xFLP-1xPCB-1xSEN-1xWAI=>1xWR"
+time_ms = 146_880_000
+
+[[recipes.inputs]]
+ticker = "AWF"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "WAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FC"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FLP"
+amount = 12
+
+[[recipes.inputs]]
+ticker = "SEN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PCB"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "WR"
+amount = 1
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "1xBMF 1xLD 1xSAL=>1xLOG"
+standard_recipe_name = "APF:1xBMF-1xLD-1xSAL=>1xLOG"
+time_ms = 77_760_000
+
+[[recipes.inputs]]
+ticker = "LD"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SAL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BMF"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "LOG"
+amount = 1
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "1xBWS 1xAAR 4xRAD=>1xCOM"
+standard_recipe_name = "APF:1xAAR-1xBWS-4xRAD=>1xCOM"
+time_ms = 64_800_000
+
+[[recipes.inputs]]
+ticker = "RAD"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "AAR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BWS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "COM"
+amount = 1
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "1xBWS 1xOS 1xSAR 1xDA=>1xRCS"
+standard_recipe_name = "APF:1xBWS-1xDA-1xOS-1xSAR=>1xRCS"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BWS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "OS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RCS"
+amount = 1
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "1xBWS 8xTRA 1xOS=>1xADS"
+standard_recipe_name = "APF:1xBWS-1xOS-8xTRA=>1xADS"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "OS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TRA"
+amount = 8
+
+[[recipes.inputs]]
+ticker = "BWS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "ADS"
+amount = 1
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "1xDA 1xBWS=>20xWS"
+standard_recipe_name = "APF:1xBWS-1xDA=>20xWS"
+time_ms = 155_520_000
+
+[[recipes.inputs]]
+ticker = "BWS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DA"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "WS"
+amount = 20
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "1xHCP 1xNS 1xH2O 1xWAI 1xPCB 1xSAR 1xGV 1xFC 1xBAC=>1xAIR"
+standard_recipe_name = "APF:1xBAC-1xFC-1xGV-1xH2O-1xHCP-1xNS-1xPCB-1xSAR-1xWAI=>1xAIR"
+time_ms = 216_000_000
+
+[[recipes.inputs]]
+ticker = "GV"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HCP"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BAC"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "WAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PCB"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FC"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "AIR"
+amount = 1
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "1xWAI 1xSAR 1xFC 10xTHF=>1xACS"
+standard_recipe_name = "APF:1xFC-1xSAR-10xTHF-1xWAI=>1xACS"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "THF"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "FC"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "WAI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "ACS"
+amount = 1
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "1xWR 1xAIR 1xBMF 1xWAI=>1xLIS"
+standard_recipe_name = "APF:1xAIR-1xBMF-1xWAI-1xWR=>1xLIS"
+time_ms = 216_000_000
+
+[[recipes.inputs]]
+ticker = "WAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "WR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BMF"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AIR"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "LIS"
+amount = 1
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "1xWS 1xSNM=>1xNV1"
+standard_recipe_name = "APF:1xSNM-1xWS=>1xNV1"
+time_ms = 129_600_000
+
+[[recipes.inputs]]
+ticker = "SNM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "WS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "NV1"
+amount = 1
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "2xHPC 1xLD=>32xPDA"
+standard_recipe_name = "APF:2xHPC-1xLD=>32xPDA"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "LD"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HPC"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "PDA"
+amount = 32
+
+[[recipes]]
+building_ticker = "APF"
+recipe_name = "5xW 1xWAI 1xDA 1xBMF=>1xFFC"
+standard_recipe_name = "APF:1xBMF-1xDA-5xW-1xWAI=>1xFFC"
+time_ms = 216_000_000
+
+[[recipes.inputs]]
+ticker = "DA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "WAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "W"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "BMF"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "FFC"
+amount = 1
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "10xC 2xSI=>1200xNFI"
+standard_recipe_name = "CLR:10xC-2xSI=>1200xNFI"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "NFI"
+amount = 1_200
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "1xAL 1xSI=>10xTRN"
+standard_recipe_name = "CLR:1xAL-1xSI=>10xTRN"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "TRN"
+amount = 10
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "1xCAP 1xSWF 1xTRN=>1xTRA"
+standard_recipe_name = "CLR:1xCAP-1xSWF-1xTRN=>1xTRA"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "CAP"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TRN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SWF"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "TRA"
+amount = 1
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "1xC=>100xNCS"
+standard_recipe_name = "CLR:1xC=>100xNCS"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "NCS"
+amount = 100
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "1xGAL 1xSI=>6xLDI"
+standard_recipe_name = "CLR:1xGAL-1xSI=>6xLDI"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GAL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "LDI"
+amount = 6
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "1xSI 1xAL=>30xSWF"
+standard_recipe_name = "CLR:1xAL-1xSI=>30xSWF"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SWF"
+amount = 30
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "1xSI 1xFE=>15xCAP"
+standard_recipe_name = "CLR:1xFE-1xSI=>15xCAP"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "CAP"
+amount = 15
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "2xCF 1xCBS=>1xSFE"
+standard_recipe_name = "CLR:1xCBS-2xCF=>1xSFE"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "CBS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CF"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "SFE"
+amount = 1
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "2xNCS=>2xMTC"
+standard_recipe_name = "CLR:2xNCS=>2xMTC"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "NCS"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "MTC"
+amount = 2
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "2xSI 2xAL=>20xMWF"
+standard_recipe_name = "CLR:2xAL-2xSI=>20xMWF"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "MWF"
+amount = 20
+
+[[recipes]]
+building_ticker = "CLR"
+recipe_name = "4xCF 1xCBM=>1xMFE"
+standard_recipe_name = "CLR:1xCBM-4xCF=>1xMFE"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "CBM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CF"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "MFE"
+amount = 1
+
+[[recipes]]
+building_ticker = "AAF"
+recipe_name = "1xBMF 1xSNM=>1xNV2"
+standard_recipe_name = "AAF:1xBMF-1xSNM=>1xNV2"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "BMF"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SNM"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "NV2"
+amount = 1
+
+[[recipes]]
+building_ticker = "AAF"
+recipe_name = "1xCST 1xWAI 10xES 1xPCB 1xSAR 6xFLP 3xFC=>1xCRU"
+standard_recipe_name = "AAF:1xCST-10xES-3xFC-6xFLP-1xPCB-1xSAR-1xWAI=>1xCRU"
+time_ms = 190_080_000
+
+[[recipes.inputs]]
+ticker = "CST"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PCB"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ES"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "FLP"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FC"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "WAI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "CRU"
+amount = 1
+
+[[recipes]]
+building_ticker = "AAF"
+recipe_name = "1xSA 1xBMF 1xDA=>1xTAC"
+standard_recipe_name = "AAF:1xBMF-1xDA-1xSA=>1xTAC"
+time_ms = 207_360_000
+
+[[recipes.inputs]]
+ticker = "DA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BMF"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "TAC"
+amount = 1
+
+[[recipes]]
+building_ticker = "AAF"
+recipe_name = "1xWAI 1xPCB 10xSAR 100xGV 8xFC 20xTHF=>1xCC"
+standard_recipe_name = "AAF:8xFC-100xGV-1xPCB-10xSAR-20xTHF-1xWAI=>1xCC"
+time_ms = 207_360_000
+
+[[recipes.inputs]]
+ticker = "WAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "THF"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "PCB"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "GV"
+amount = 100
+
+[[recipes.inputs]]
+ticker = "FC"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "CC"
+amount = 1
+
+[[recipes]]
+building_ticker = "AAF"
+recipe_name = "1xWAI 1xTPU=>1xSTS"
+standard_recipe_name = "AAF:1xTPU-1xWAI=>1xSTS"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "WAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TPU"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "STS"
+amount = 1
+
+[[recipes]]
+building_ticker = "WPL"
+recipe_name = "1xKV 1xTC=>1xTK"
+standard_recipe_name = "WPL:1xKV-1xTC=>1xTK"
+time_ms = 77_760_000
+
+[[recipes.inputs]]
+ticker = "KV"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TC"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "TK"
+amount = 1
+
+[[recipes]]
+building_ticker = "WPL"
+recipe_name = "1xRCO=>1xCOT"
+standard_recipe_name = "WPL:1xRCO=>1xCOT"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "RCO"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "COT"
+amount = 1
+
+[[recipes]]
+building_ticker = "WPL"
+recipe_name = "1xRSI=>1xSIL"
+standard_recipe_name = "WPL:1xRSI=>1xSIL"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "RSI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SIL"
+amount = 1
+
+[[recipes]]
+building_ticker = "WPL"
+recipe_name = "50xPG=>1xNL"
+standard_recipe_name = "WPL:50xPG=>1xNL"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 50
+
+[[recipes.outputs]]
+ticker = "NL"
+amount = 1
+
+[[recipes]]
+building_ticker = "WPL"
+recipe_name = "75xPG 5xTCL=>1xKV"
+standard_recipe_name = "WPL:75xPG-5xTCL=>1xKV"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "TCL"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 75
+
+[[recipes.outputs]]
+ticker = "KV"
+amount = 1
+
+[[recipes]]
+building_ticker = "INC"
+recipe_name = "4xGRN=>4xC"
+standard_recipe_name = "INC:4xGRN=>4xC"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "C"
+amount = 4
+
+[[recipes]]
+building_ticker = "INC"
+recipe_name = "4xHCP 2xGRN 2xMAI=>4xC"
+standard_recipe_name = "INC:2xGRN-4xHCP-2xMAI=>4xC"
+time_ms = 28_512_000
+
+[[recipes.inputs]]
+ticker = "HCP"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "MAI"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "C"
+amount = 4
+
+[[recipes]]
+building_ticker = "INC"
+recipe_name = "4xHCP 2xGRN=>4xC"
+standard_recipe_name = "INC:2xGRN-4xHCP=>4xC"
+time_ms = 57_024_000
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "HCP"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "C"
+amount = 4
+
+[[recipes]]
+building_ticker = "INC"
+recipe_name = "4xHCP 2xMAI=>4xC"
+standard_recipe_name = "INC:4xHCP-2xMAI=>4xC"
+time_ms = 57_024_000
+
+[[recipes.inputs]]
+ticker = "HCP"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "MAI"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "C"
+amount = 4
+
+[[recipes]]
+building_ticker = "INC"
+recipe_name = "4xHCP=>4xC"
+standard_recipe_name = "INC:4xHCP=>4xC"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "HCP"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "C"
+amount = 4
+
+[[recipes]]
+building_ticker = "INC"
+recipe_name = "4xMAI=>4xC"
+standard_recipe_name = "INC:4xMAI=>4xC"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "MAI"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "C"
+amount = 4
+
+[[recipes]]
+building_ticker = "EXT"
+recipe_name = "=>"
+standard_recipe_name = "EXT:=>"
+inputs = []
+outputs = []
+time_ms = 43_200_000
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "10xHEX 5xBL 5xCST 1xPK=>30xJUI"
+standard_recipe_name = "LAB:5xBL-5xCST-10xHEX-1xPK=>30xJUI"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "BL"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "PK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CST"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "HEX"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "JUI"
+amount = 30
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "10xNAB 3xS 2xO=>4xBLE"
+standard_recipe_name = "LAB:10xNAB-2xO-3xS=>4xBLE"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "S"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "NAB"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "BLE"
+amount = 4
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "1xC 1xH 1xCL=>3xDDT"
+standard_recipe_name = "LAB:1xC-1xCL-1xH=>3xDDT"
+time_ms = 64_800_000
+
+[[recipes.inputs]]
+ticker = "CL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "H"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "DDT"
+amount = 3
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "1xCL 1xO 1xH=>3xTCL"
+standard_recipe_name = "LAB:1xCL-1xH-1xO=>3xTCL"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "H"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "TCL"
+amount = 3
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "1xES 1xALG 1xTHF=>4xNST"
+standard_recipe_name = "LAB:1xALG-1xES-1xTHF=>4xNST"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "ALG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "THF"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ES"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "NST"
+amount = 4
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "1xF 1xO=>2xBL"
+standard_recipe_name = "LAB:1xF-1xO=>2xBL"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "F"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BL"
+amount = 2
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "1xHCP 1xO 1xS=>10xBAC"
+standard_recipe_name = "LAB:1xHCP-1xO-1xS=>10xBAC"
+time_ms = 190_080_000
+
+[[recipes.inputs]]
+ticker = "S"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HCP"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BAC"
+amount = 10
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "1xNA 1xCL 1xO=>3xBLE"
+standard_recipe_name = "LAB:1xCL-1xNA-1xO=>3xBLE"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BLE"
+amount = 3
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "1xNS 1xDW=>3xCST"
+standard_recipe_name = "LAB:1xDW-1xNS=>3xCST"
+time_ms = 129_600_000
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DW"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "CST"
+amount = 3
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "4xAMM 4xH2O 4xNA=>20xTHF"
+standard_recipe_name = "LAB:4xAMM-4xH2O-4xNA=>20xTHF"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "AMM"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "NA"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "THF"
+amount = 20
+
+[[recipes]]
+building_ticker = "LAB"
+recipe_name = "50xEPO 75xNCS=>50xNR"
+standard_recipe_name = "LAB:50xEPO-75xNCS=>50xNR"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "NCS"
+amount = 75
+
+[[recipes.inputs]]
+ticker = "EPO"
+amount = 50
+
+[[recipes.outputs]]
+ticker = "NR"
+amount = 50
+
+[[recipes]]
+building_ticker = "ASM"
+recipe_name = "1xAL 3xTI=>4xAST"
+standard_recipe_name = "ASM:1xAL-3xTI=>4xAST"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "AST"
+amount = 4
+
+[[recipes]]
+building_ticker = "ASM"
+recipe_name = "1xFE 3xTI=>4xFET"
+standard_recipe_name = "ASM:1xFE-3xTI=>4xFET"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "FET"
+amount = 4
+
+[[recipes]]
+building_ticker = "ASM"
+recipe_name = "1xW 3xAL=>4xWAL"
+standard_recipe_name = "ASM:3xAL-1xW=>4xWAL"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "W"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "WAL"
+amount = 4
+
+[[recipes]]
+building_ticker = "ASM"
+recipe_name = "2xWAL 1xSI 1xO=>1xCTF"
+standard_recipe_name = "ASM:1xO-1xSI-2xWAL=>1xCTF"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "WAL"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "CTF"
+amount = 1
+
+[[recipes]]
+building_ticker = "ASM"
+recipe_name = "3xAL 3xFE=>6xFAL"
+standard_recipe_name = "ASM:3xAL-3xFE=>6xFAL"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "FAL"
+amount = 6
+
+[[recipes]]
+building_ticker = "ECA"
+recipe_name = "12xLI 12xBE 60xHCC 150xPG=>1xCBL"
+standard_recipe_name = "ECA:12xBE-60xHCC-12xLI-150xPG=>1xCBL"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "LI"
+amount = 12
+
+[[recipes.inputs]]
+ticker = "HCC"
+amount = 60
+
+[[recipes.inputs]]
+ticker = "BE"
+amount = 12
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 150
+
+[[recipes.outputs]]
+ticker = "CBL"
+amount = 1
+
+[[recipes]]
+building_ticker = "ECA"
+recipe_name = "1xNCS 4xLI=>1xPOW"
+standard_recipe_name = "ECA:4xLI-1xNCS=>1xPOW"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "NCS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "LI"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "POW"
+amount = 1
+
+[[recipes]]
+building_ticker = "ECA"
+recipe_name = "2xCU 2xSI 4xBCO 1xBRO=>12xSOL"
+standard_recipe_name = "ECA:4xBCO-1xBRO-2xCU-2xSI=>12xSOL"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "BCO"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "CU"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "BRO"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SOL"
+amount = 12
+
+[[recipes]]
+building_ticker = "ECA"
+recipe_name = "4xEES 8xAFR 10xCTF 1xACS 1xRCS 10xWAL=>1xFIR"
+standard_recipe_name = "ECA:1xACS-8xAFR-10xCTF-4xEES-1xRCS-10xWAL=>1xFIR"
+time_ms = 302_400_000
+
+[[recipes.inputs]]
+ticker = "ACS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AFR"
+amount = 8
+
+[[recipes.inputs]]
+ticker = "EES"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "RCS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "WAL"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "CTF"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "FIR"
+amount = 1
+
+[[recipes]]
+building_ticker = "ECA"
+recipe_name = "4xETC 4xBFR 6xCF 1xACS 1xRCS 8xAST=>1xRAG"
+standard_recipe_name = "ECA:1xACS-8xAST-4xBFR-6xCF-4xETC-1xRCS=>1xRAG"
+time_ms = 216_000_000
+
+[[recipes.inputs]]
+ticker = "CF"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "BFR"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "ETC"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "ACS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "RCS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AST"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "RAG"
+amount = 1
+
+[[recipes]]
+building_ticker = "ECA"
+recipe_name = "6xLI 6xBE 20xBCO 60xPG=>1xCBS"
+standard_recipe_name = "ECA:20xBCO-6xBE-6xLI-60xPG=>1xCBS"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "BCO"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "BE"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "LI"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 60
+
+[[recipes.outputs]]
+ticker = "CBS"
+amount = 1
+
+[[recipes]]
+building_ticker = "ECA"
+recipe_name = "8xGL 24xSOL=>12xSP"
+standard_recipe_name = "ECA:8xGL-24xSOL=>12xSP"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "SOL"
+amount = 24
+
+[[recipes.inputs]]
+ticker = "GL"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "SP"
+amount = 12
+
+[[recipes]]
+building_ticker = "ECA"
+recipe_name = "8xLI 8xBE 40xBGC 120xPG=>1xCBM"
+standard_recipe_name = "ECA:8xBE-40xBGC-8xLI-120xPG=>1xCBM"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "BGC"
+amount = 40
+
+[[recipes.inputs]]
+ticker = "LI"
+amount = 8
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 120
+
+[[recipes.inputs]]
+ticker = "BE"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "CBM"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "100xAST 100xFET 20xMFK=>1xWCB"
+standard_recipe_name = "SKF:100xAST-100xFET-20xMFK=>1xWCB"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "AST"
+amount = 100
+
+[[recipes.inputs]]
+ticker = "FET"
+amount = 100
+
+[[recipes.outputs]]
+ticker = "WCB"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "100xAST 16xMFK=>1xMCB"
+standard_recipe_name = "SKF:100xAST-16xMFK=>1xMCB"
+time_ms = 56_160_000
+
+[[recipes.inputs]]
+ticker = "AST"
+amount = 100
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 16
+
+[[recipes.outputs]]
+ticker = "MCB"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "10xZR 4xMFK=>1xMFL"
+standard_recipe_name = "SKF:4xMFK-10xZR=>1xMFL"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "ZR"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "MFL"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "125xFET 8xMFK=>1xLSL"
+standard_recipe_name = "SKF:125xFET-8xMFK=>1xLSL"
+time_ms = 77_760_000
+
+[[recipes.inputs]]
+ticker = "FET"
+amount = 125
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "LSL"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "200xAST 20xMFK=>1xLCB"
+standard_recipe_name = "SKF:200xAST-20xMFK=>1xLCB"
+time_ms = 64_800_000
+
+[[recipes.inputs]]
+ticker = "AST"
+amount = 200
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 20
+
+[[recipes.outputs]]
+ticker = "LCB"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "200xFET 20xMFK=>1xVCB"
+standard_recipe_name = "SKF:200xFET-20xMFK=>1xVCB"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "FET"
+amount = 200
+
+[[recipes.outputs]]
+ticker = "VCB"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "20xFE 4xMFK=>1xTCB"
+standard_recipe_name = "SKF:20xFE-4xMFK=>1xTCB"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "TCB"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "20xTI 2xMFK=>1xSSL"
+standard_recipe_name = "SKF:2xMFK-20xTI=>1xSSL"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "SSL"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "20xZR 8xMFK=>1xLFL"
+standard_recipe_name = "SKF:8xMFK-20xZR=>1xLFL"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "ZR"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "LFL"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "35xFE 8xMFK=>1xVSC"
+standard_recipe_name = "SKF:35xFE-8xMFK=>1xVSC"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 35
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "VSC"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "50xFAL 12xMFK=>1xSCB"
+standard_recipe_name = "SKF:50xFAL-12xMFK=>1xSCB"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "FAL"
+amount = 50
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 12
+
+[[recipes.outputs]]
+ticker = "SCB"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "50xFET 4xMFK=>1xMSL"
+standard_recipe_name = "SKF:50xFET-4xMFK=>1xMSL"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "FET"
+amount = 50
+
+[[recipes.outputs]]
+ticker = "MSL"
+amount = 1
+
+[[recipes]]
+building_ticker = "SKF"
+recipe_name = "5xZR 1xMFK=>1xSFL"
+standard_recipe_name = "SKF:1xMFK-5xZR=>1xSFL"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ZR"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "SFL"
+amount = 1
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "10xLIO 4xHAL=>4xLI"
+standard_recipe_name = "SME:4xHAL-10xLIO=>4xLI"
+time_ms = 57_024_000
+
+[[recipes.inputs]]
+ticker = "LIO"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "HAL"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "LI"
+amount = 4
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "1xC 3xAUO=>2xAU"
+standard_recipe_name = "SME:3xAUO-1xC=>2xAU"
+time_ms = 38_880_000
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AUO"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "AU"
+amount = 2
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "1xSCR 1xO=>6xS"
+standard_recipe_name = "SME:1xO-1xSCR=>6xS"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "SCR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "S"
+amount = 6
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "2xFE 8xO=>2xSTL"
+standard_recipe_name = "SME:2xFE-8xO=>2xSTL"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 8
+
+[[recipes.inputs]]
+ticker = "FE"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "STL"
+amount = 2
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "3xSIO 1xAL=>1xSI"
+standard_recipe_name = "SME:1xAL-3xSIO=>1xSI"
+time_ms = 12_960_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SIO"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "3xSIO 1xC 1xO 1xFLX=>1xSI"
+standard_recipe_name = "SME:1xC-1xFLX-1xO-3xSIO=>1xSI"
+time_ms = 10_368_000
+
+[[recipes.inputs]]
+ticker = "FLX"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SIO"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "3xSIO 1xC 1xO=>1xSI"
+standard_recipe_name = "SME:1xC-1xO-3xSIO=>1xSI"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "SIO"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "4xAL 1xSI 2xO=>1xCF"
+standard_recipe_name = "SME:4xAL-2xO-1xSI=>1xCF"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "CF"
+amount = 1
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "4xTIO 1xC 1xO=>2xTI"
+standard_recipe_name = "SME:1xC-1xO-4xTIO=>2xTI"
+time_ms = 64_800_000
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TIO"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "TI"
+amount = 2
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "4xTS 1xO 1xAL=>1xSI"
+standard_recipe_name = "SME:1xAL-1xO-4xTS=>1xSI"
+time_ms = 10_368_000
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TS"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "5xCUO 10xO 1xSIO=>3xCU"
+standard_recipe_name = "SME:5xCUO-10xO-1xSIO=>3xCU"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "SIO"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CUO"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "CU"
+amount = 3
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "6xALO 1xC 1xO=>3xAL"
+standard_recipe_name = "SME:6xALO-1xC-1xO=>3xAL"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ALO"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "AL"
+amount = 3
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "6xALO 1xO 1xC 1xFLX=>4xAL"
+standard_recipe_name = "SME:6xALO-1xC-1xFLX-1xO=>4xAL"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ALO"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "FLX"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "AL"
+amount = 4
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "6xFEO 1xC 1xO 1xFLX=>4xFE"
+standard_recipe_name = "SME:1xC-6xFEO-1xFLX-1xO=>4xFE"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "FEO"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FLX"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "FE"
+amount = 4
+
+[[recipes]]
+building_ticker = "SME"
+recipe_name = "6xFEO 1xC 1xO=>3xFE"
+standard_recipe_name = "SME:1xC-6xFEO-1xO=>3xFE"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "FEO"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "FE"
+amount = 3
+
+[[recipes]]
+building_ticker = "PPF"
+recipe_name = "10xPG=>1xPSS"
+standard_recipe_name = "PPF:10xPG=>1xPSS"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "PSS"
+amount = 1
+
+[[recipes]]
+building_ticker = "PPF"
+recipe_name = "1xSFK 50xPG 10xTHF=>1xLFP"
+standard_recipe_name = "PPF:50xPG-1xSFK-10xTHF=>1xLFP"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "THF"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 50
+
+[[recipes.outputs]]
+ticker = "LFP"
+amount = 1
+
+[[recipes]]
+building_ticker = "PPF"
+recipe_name = "20xPG=>1xPSM"
+standard_recipe_name = "PPF:20xPG=>1xPSM"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 20
+
+[[recipes.outputs]]
+ticker = "PSM"
+amount = 1
+
+[[recipes]]
+building_ticker = "PPF"
+recipe_name = "2xPSL 2xMFK 40xPG=>2xDCL"
+standard_recipe_name = "PPF:2xMFK-40xPG-2xPSL=>2xDCL"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 40
+
+[[recipes.outputs]]
+ticker = "DCL"
+amount = 2
+
+[[recipes]]
+building_ticker = "PPF"
+recipe_name = "2xPSM 8xSFK 20xPG=>2xDCM"
+standard_recipe_name = "PPF:20xPG-2xPSM-8xSFK=>2xDCM"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 8
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "DCM"
+amount = 2
+
+[[recipes]]
+building_ticker = "PPF"
+recipe_name = "40xPG=>1xPSL"
+standard_recipe_name = "PPF:40xPG=>1xPSL"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 40
+
+[[recipes.outputs]]
+ticker = "PSL"
+amount = 1
+
+[[recipes]]
+building_ticker = "PPF"
+recipe_name = "4xSFK 10xPG 1xPSS=>2xDCS"
+standard_recipe_name = "PPF:10xPG-1xPSS-4xSFK=>2xDCS"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "PSS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "DCS"
+amount = 2
+
+[[recipes]]
+building_ticker = "HYF"
+recipe_name = "10xH2O 4xNS=>2xRCO"
+standard_recipe_name = "HYF:10xH2O-4xNS=>2xRCO"
+time_ms = 19_008_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "RCO"
+amount = 2
+
+[[recipes]]
+building_ticker = "HYF"
+recipe_name = "14xH2O 1xNS=>8xHCP"
+standard_recipe_name = "HYF:14xH2O-1xNS=>8xHCP"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 14
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "HCP"
+amount = 8
+
+[[recipes]]
+building_ticker = "HYF"
+recipe_name = "16xH2O 1xNS=>6xVEG"
+standard_recipe_name = "HYF:16xH2O-1xNS=>6xVEG"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 16
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "VEG"
+amount = 6
+
+[[recipes]]
+building_ticker = "HYF"
+recipe_name = "16xH2O 2xNS=>12xALG"
+standard_recipe_name = "HYF:16xH2O-2xNS=>12xALG"
+time_ms = 38_880_000
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 16
+
+[[recipes.outputs]]
+ticker = "ALG"
+amount = 12
+
+[[recipes]]
+building_ticker = "HYF"
+recipe_name = "1xNS=>4xMUS"
+standard_recipe_name = "HYF:1xNS=>4xMUS"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "MUS"
+amount = 4
+
+[[recipes]]
+building_ticker = "HYF"
+recipe_name = "20xH2O 2xNS=>12xMAI"
+standard_recipe_name = "HYF:20xH2O-2xNS=>12xMAI"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "MAI"
+amount = 12
+
+[[recipes]]
+building_ticker = "HYF"
+recipe_name = "22xH2O 3xNS=>2xCAF"
+standard_recipe_name = "HYF:22xH2O-3xNS=>2xCAF"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 22
+
+[[recipes.outputs]]
+ticker = "CAF"
+amount = 2
+
+[[recipes]]
+building_ticker = "HYF"
+recipe_name = "4xNS=>12xMUS"
+standard_recipe_name = "HYF:4xNS=>12xMUS"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "MUS"
+amount = 12
+
+[[recipes]]
+building_ticker = "POL"
+recipe_name = "150xPG 70xEPO=>1xDEC"
+standard_recipe_name = "POL:70xEPO-150xPG=>1xDEC"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 150
+
+[[recipes.inputs]]
+ticker = "EPO"
+amount = 70
+
+[[recipes.outputs]]
+ticker = "DEC"
+amount = 1
+
+[[recipes]]
+building_ticker = "POL"
+recipe_name = "1xC 1xH 1xCL 1xO=>50xEPO"
+standard_recipe_name = "POL:1xC-1xCL-1xH-1xO=>50xEPO"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "H"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "EPO"
+amount = 50
+
+[[recipes]]
+building_ticker = "POL"
+recipe_name = "1xH 1xC 1xMG=>50xPG"
+standard_recipe_name = "POL:1xC-1xH-1xMG=>50xPG"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "H"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "C"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "PG"
+amount = 50
+
+[[recipes]]
+building_ticker = "HWP"
+recipe_name = "12xAL 1xHE=>4xLHP"
+standard_recipe_name = "HWP:12xAL-1xHE=>4xLHP"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 12
+
+[[recipes.outputs]]
+ticker = "LHP"
+amount = 4
+
+[[recipes]]
+building_ticker = "HWP"
+recipe_name = "12xAL 1xSTL 1xHE=>4xBHP"
+standard_recipe_name = "HWP:12xAL-1xHE-1xSTL=>4xBHP"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 12
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BHP"
+amount = 4
+
+[[recipes]]
+building_ticker = "HWP"
+recipe_name = "12xAL 4xAST 1xHE=>4xHHP"
+standard_recipe_name = "HWP:12xAL-4xAST-1xHE=>4xHHP"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AST"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 12
+
+[[recipes.outputs]]
+ticker = "HHP"
+amount = 4
+
+[[recipes]]
+building_ticker = "HWP"
+recipe_name = "12xAL 4xTI 1xHE=>4xRHP"
+standard_recipe_name = "HWP:12xAL-1xHE-4xTI=>4xRHP"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 12
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RHP"
+amount = 4
+
+[[recipes]]
+building_ticker = "HWP"
+recipe_name = "2xBOS 2xCTF 1xHE=>2xATP"
+standard_recipe_name = "HWP:2xBOS-2xCTF-1xHE=>2xATP"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CTF"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "BOS"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "ATP"
+amount = 2
+
+[[recipes]]
+building_ticker = "HWP"
+recipe_name = "2xFAL 4xCF 1xKV 1xHE=>8xBWH"
+standard_recipe_name = "HWP:4xCF-2xFAL-1xHE-1xKV=>8xBWH"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "FAL"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "KV"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CF"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "BWH"
+amount = 8
+
+[[recipes]]
+building_ticker = "HWP"
+recipe_name = "2xTI 4xCTF 2xTK 1xHE=>8xAWH"
+standard_recipe_name = "HWP:4xCTF-1xHE-2xTI-2xTK=>8xAWH"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "CTF"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TK"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "AWH"
+amount = 8
+
+[[recipes]]
+building_ticker = "HWP"
+recipe_name = "8xAL 10xFET 1xHE=>4xAHP"
+standard_recipe_name = "HWP:8xAL-10xFET-1xHE=>4xAHP"
+time_ms = 77_760_000
+
+[[recipes.inputs]]
+ticker = "HE"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FET"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "AHP"
+amount = 4
+
+[[recipes]]
+building_ticker = "SL"
+recipe_name = "1xDA 1xDD=>1xIMM"
+standard_recipe_name = "SL:1xDA-1xDD=>1xIMM"
+time_ms = 129_600_000
+
+[[recipes.inputs]]
+ticker = "DA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DD"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "IMM"
+amount = 1
+
+[[recipes]]
+building_ticker = "SL"
+recipe_name = "1xNN 1xROM=>1xWAI"
+standard_recipe_name = "SL:1xNN-1xROM=>1xWAI"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "NN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ROM"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "WAI"
+amount = 1
+
+[[recipes]]
+building_ticker = "SL"
+recipe_name = "1xWAI 1xDV 1xIMM=>2xSNM"
+standard_recipe_name = "SL:1xDV-1xIMM-1xWAI=>2xSNM"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "DV"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "WAI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "IMM"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SNM"
+amount = 2
+
+[[recipes]]
+building_ticker = "SL"
+recipe_name = "=>1xIDC"
+standard_recipe_name = "SL:=>1xIDC"
+inputs = []
+time_ms = 86_400_000
+
+[[recipes.outputs]]
+ticker = "IDC"
+amount = 1
+
+[[recipes]]
+building_ticker = "SD"
+recipe_name = "=>1xBAI"
+standard_recipe_name = "SD:=>1xBAI"
+inputs = []
+time_ms = 172_800_000
+
+[[recipes.outputs]]
+ticker = "BAI"
+amount = 1
+
+[[recipes]]
+building_ticker = "SD"
+recipe_name = "=>1xLD"
+standard_recipe_name = "SD:=>1xLD"
+inputs = []
+time_ms = 129_600_000
+
+[[recipes.outputs]]
+ticker = "LD"
+amount = 1
+
+[[recipes]]
+building_ticker = "SD"
+recipe_name = "=>1xMLI"
+standard_recipe_name = "SD:=>1xMLI"
+inputs = []
+time_ms = 259_200_000
+
+[[recipes.outputs]]
+ticker = "MLI"
+amount = 1
+
+[[recipes]]
+building_ticker = "SD"
+recipe_name = "=>1xNF"
+standard_recipe_name = "SD:=>1xNF"
+inputs = []
+time_ms = 129_600_000
+
+[[recipes.outputs]]
+ticker = "NF"
+amount = 1
+
+[[recipes]]
+building_ticker = "SD"
+recipe_name = "=>1xSA"
+standard_recipe_name = "SD:=>1xSA"
+inputs = []
+time_ms = 86_400_000
+
+[[recipes.outputs]]
+ticker = "SA"
+amount = 1
+
+[[recipes]]
+building_ticker = "SD"
+recipe_name = "=>1xSAL"
+standard_recipe_name = "SD:=>1xSAL"
+inputs = []
+time_ms = 86_400_000
+
+[[recipes.outputs]]
+ticker = "SAL"
+amount = 1
+
+[[recipes]]
+building_ticker = "SD"
+recipe_name = "=>1xWM"
+standard_recipe_name = "SD:=>1xWM"
+inputs = []
+time_ms = 172_800_000
+
+[[recipes.outputs]]
+ticker = "WM"
+amount = 1
+
+[[recipes]]
+building_ticker = "ORC"
+recipe_name = "20xH2O 1xDDT 2xSOI=>12xPIB"
+standard_recipe_name = "ORC:1xDDT-20xH2O-2xSOI=>12xPIB"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "SOI"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "DDT"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "PIB"
+amount = 12
+
+[[recipes]]
+building_ticker = "ORC"
+recipe_name = "30xH2O 1xDDT 3xSOI=>6xGRA"
+standard_recipe_name = "ORC:1xDDT-30xH2O-3xSOI=>6xGRA"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "SOI"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "DDT"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 30
+
+[[recipes.outputs]]
+ticker = "GRA"
+amount = 6
+
+[[recipes]]
+building_ticker = "ORC"
+recipe_name = "30xH2O 1xDDT=>10xPIB"
+standard_recipe_name = "ORC:1xDDT-30xH2O=>10xPIB"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "DDT"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 30
+
+[[recipes.outputs]]
+ticker = "PIB"
+amount = 10
+
+[[recipes]]
+building_ticker = "ORC"
+recipe_name = "40xH2O 1xDDT=>5xGRA"
+standard_recipe_name = "ORC:1xDDT-40xH2O=>5xGRA"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 40
+
+[[recipes.inputs]]
+ticker = "DDT"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "GRA"
+amount = 5
+
+[[recipes]]
+building_ticker = "ORC"
+recipe_name = "40xH2O 2xDDT 4xSOI=>18xHOP"
+standard_recipe_name = "ORC:2xDDT-40xH2O-4xSOI=>18xHOP"
+time_ms = 151_200_000
+
+[[recipes.inputs]]
+ticker = "SOI"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "DDT"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 40
+
+[[recipes.outputs]]
+ticker = "HOP"
+amount = 18
+
+[[recipes]]
+building_ticker = "ORC"
+recipe_name = "60xH2O 2xDDT=>15xHOP"
+standard_recipe_name = "ORC:2xDDT-60xH2O=>15xHOP"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "DDT"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 60
+
+[[recipes.outputs]]
+ticker = "HOP"
+amount = 15
+
+[[recipes]]
+building_ticker = "PP2"
+recipe_name = "120xPG 3xAL=>1xLSE"
+standard_recipe_name = "PP2:3xAL-120xPG=>1xLSE"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 120
+
+[[recipes.outputs]]
+ticker = "LSE"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP2"
+recipe_name = "1xAL 2xLST=>1xBSE"
+standard_recipe_name = "PP2:1xAL-2xLST=>1xBSE"
+time_ms = 19_008_000
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BSE"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP2"
+recipe_name = "1xAL 5xGL=>1xLTA"
+standard_recipe_name = "PP2:1xAL-5xGL=>1xLTA"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "GL"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "LTA"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP2"
+recipe_name = "1xGL 1xAL=>1xBTA"
+standard_recipe_name = "PP2:1xAL-1xGL=>1xBTA"
+time_ms = 12_960_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BTA"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP2"
+recipe_name = "2xAL 1xLST=>1xBBH"
+standard_recipe_name = "PP2:2xAL-1xLST=>1xBBH"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BBH"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP2"
+recipe_name = "35xPE 3xAL=>1xLBH"
+standard_recipe_name = "PP2:3xAL-35xPE=>1xLBH"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 35
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "LBH"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP2"
+recipe_name = "3xAL 1xNL=>1xLDE"
+standard_recipe_name = "PP2:3xAL-1xNL=>1xLDE"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "NL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "LDE"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP2"
+recipe_name = "50xPG 1xNE=>1xAEF"
+standard_recipe_name = "PP2:1xNE-50xPG=>1xAEF"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 50
+
+[[recipes.inputs]]
+ticker = "NE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "AEF"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP2"
+recipe_name = "60xPG=>1xBDE"
+standard_recipe_name = "PP2:60xPG=>1xBDE"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 60
+
+[[recipes.outputs]]
+ticker = "BDE"
+amount = 1
+
+[[recipes]]
+building_ticker = "REF"
+recipe_name = "1xAMM 2xGAL 3xH=>100xSF"
+standard_recipe_name = "REF:1xAMM-2xGAL-3xH=>100xSF"
+time_ms = 12_960_000
+
+[[recipes.inputs]]
+ticker = "GAL"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "H"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "AMM"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SF"
+amount = 100
+
+[[recipes]]
+building_ticker = "REF"
+recipe_name = "1xAMM 5xNAB=>150xSF"
+standard_recipe_name = "REF:1xAMM-5xNAB=>150xSF"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "AMM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NAB"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "SF"
+amount = 150
+
+[[recipes]]
+building_ticker = "REF"
+recipe_name = "2xHE3 4xH=>100xFF"
+standard_recipe_name = "REF:4xH-2xHE3=>100xFF"
+time_ms = 12_960_000
+
+[[recipes.inputs]]
+ticker = "H"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "HE3"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "FF"
+amount = 100
+
+[[recipes]]
+building_ticker = "REF"
+recipe_name = "3xTS=>2xHE3"
+standard_recipe_name = "REF:3xTS=>2xHE3"
+time_ms = 21_600_000
+
+[[recipes.inputs]]
+ticker = "TS"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "HE3"
+amount = 2
+
+[[recipes]]
+building_ticker = "MCA"
+recipe_name = "1xAL 8xDCS 2xSFK=>8xFAN"
+standard_recipe_name = "MCA:1xAL-8xDCS-2xSFK=>8xFAN"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DCS"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "FAN"
+amount = 8
+
+[[recipes]]
+building_ticker = "MCA"
+recipe_name = "1xLCR 3xGL=>1xDIS"
+standard_recipe_name = "MCA:3xGL-1xLCR=>1xDIS"
+time_ms = 57_888_000
+
+[[recipes.inputs]]
+ticker = "GL"
+amount = 3
+
+[[recipes.inputs]]
+ticker = "LCR"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "DIS"
+amount = 1
+
+[[recipes]]
+building_ticker = "MCA"
+recipe_name = "1xRG 5xDCS 5xLDI=>5xHD"
+standard_recipe_name = "MCA:5xDCS-5xLDI-1xRG=>5xHD"
+time_ms = 57_888_000
+
+[[recipes.inputs]]
+ticker = "DCS"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "LDI"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "RG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "HD"
+amount = 5
+
+[[recipes]]
+building_ticker = "MCA"
+recipe_name = "4xRAM 4xMPC 4xPSM 4xSFK=>4xMB"
+standard_recipe_name = "MCA:4xMPC-4xPSM-4xRAM-4xSFK=>4xMB"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "RAM"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "MPC"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "MB"
+amount = 4
+
+[[recipes]]
+building_ticker = "PP4"
+recipe_name = "150xPE 2xLBH 2xTHP=>1xTSH"
+standard_recipe_name = "PP4:2xLBH-150xPE-2xTHP=>1xTSH"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 150
+
+[[recipes.inputs]]
+ticker = "LBH"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "THP"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "TSH"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP4"
+recipe_name = "1xRSE 2xTI=>1xASE"
+standard_recipe_name = "PP4:1xRSE-2xTI=>1xASE"
+time_ms = 47_520_000
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "RSE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "ASE"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP4"
+recipe_name = "1xRTA 1xNG=>1xATA"
+standard_recipe_name = "PP4:1xNG-1xRTA=>1xATA"
+time_ms = 47_520_000
+
+[[recipes.inputs]]
+ticker = "NG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "RTA"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "ATA"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP4"
+recipe_name = "1xTA 1xSTL 1xLST=>1xRSH"
+standard_recipe_name = "PP4:1xLST-1xSTL-1xTA=>1xRSH"
+time_ms = 77_760_000
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TA"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RSH"
+amount = 1
+
+[[recipes]]
+building_ticker = "PP4"
+recipe_name = "2xLDE 2xKV=>2xADE"
+standard_recipe_name = "PP4:2xKV-2xLDE=>2xADE"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "KV"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "LDE"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "ADE"
+amount = 2
+
+[[recipes]]
+building_ticker = "PP4"
+recipe_name = "2xRBH 125xNR=>2xABH"
+standard_recipe_name = "PP4:125xNR-2xRBH=>2xABH"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "RBH"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "NR"
+amount = 125
+
+[[recipes.outputs]]
+ticker = "ABH"
+amount = 2
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "10xAMM 4xREA=>10xPFE"
+standard_recipe_name = "CHP:10xAMM-4xREA=>10xPFE"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "REA"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "AMM"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "PFE"
+amount = 10
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "10xCLI 20xBRM=>16xSOI"
+standard_recipe_name = "CHP:20xBRM-10xCLI=>16xSOI"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "CLI"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "BRM"
+amount = 20
+
+[[recipes.outputs]]
+ticker = "SOI"
+amount = 16
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "1xLST=>10xFLX"
+standard_recipe_name = "CHP:1xLST=>10xFLX"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "FLX"
+amount = 10
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "1xLST=>1xCA"
+standard_recipe_name = "CHP:1xLST=>1xCA"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "CA"
+amount = 1
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "1xMG 1xCU 1xS=>1xIND"
+standard_recipe_name = "CHP:1xCU-1xMG-1xS=>1xIND"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "S"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MG"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "CU"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "IND"
+amount = 1
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "1xNA 1xBOR 5xH=>20xNAB"
+standard_recipe_name = "CHP:1xBOR-5xH-1xNA=>20xNAB"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "NA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BOR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "H"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "NAB"
+amount = 20
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "1xSI 1xO=>1xLCR"
+standard_recipe_name = "CHP:1xO-1xSI=>1xLCR"
+time_ms = 56_160_000
+
+[[recipes.inputs]]
+ticker = "O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "LCR"
+amount = 1
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "25xBRM=>10xREA"
+standard_recipe_name = "CHP:25xBRM=>10xREA"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "BRM"
+amount = 25
+
+[[recipes.outputs]]
+ticker = "REA"
+amount = 10
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "2xCA 1xMG 1xTA=>20xSC"
+standard_recipe_name = "CHP:2xCA-1xMG-1xTA=>20xSC"
+time_ms = 56_160_000
+
+[[recipes.inputs]]
+ticker = "CA"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "TA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SC"
+amount = 20
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "2xH2O 2xN 1xLST=>4xNS"
+standard_recipe_name = "CHP:2xH2O-1xLST-2xN=>4xNS"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "N"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "NS"
+amount = 4
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "3xHAL 1xH2O=>2xNA 1xCL"
+standard_recipe_name = "CHP:1xH2O-3xHAL=>1xCL-2xNA"
+time_ms = 50_112_000
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HAL"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "NA"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "CL"
+amount = 1
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "50xPE 1xAL 4xCOT 1xHER=>16xMED"
+standard_recipe_name = "CHP:1xAL-4xCOT-1xHER-50xPE=>16xMED"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HER"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 50
+
+[[recipes.inputs]]
+ticker = "COT"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "MED"
+amount = 16
+
+[[recipes]]
+building_ticker = "CHP"
+recipe_name = "6xVEG 10xREA=>6xOLF"
+standard_recipe_name = "CHP:10xREA-6xVEG=>6xOLF"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "VEG"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "REA"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "OLF"
+amount = 6
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "100xPG 20xAST 8xTK=>1xAGS"
+standard_recipe_name = "SPP:20xAST-100xPG-8xTK=>1xAGS"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "TK"
+amount = 8
+
+[[recipes.inputs]]
+ticker = "AST"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 100
+
+[[recipes.outputs]]
+ticker = "AGS"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "5xATP 30xTHF=>10xAPT"
+standard_recipe_name = "SPP:5xATP-30xTHF=>10xAPT"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "ATP"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "THF"
+amount = 30
+
+[[recipes.outputs]]
+ticker = "APT"
+amount = 10
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "5xATP 30xTHF=>12xAPT"
+standard_recipe_name = "SPP:5xATP-30xTHF=>12xAPT"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "THF"
+amount = 30
+
+[[recipes.inputs]]
+ticker = "ATP"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "APT"
+amount = 12
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "5xLST 2xKV=>10xBRP"
+standard_recipe_name = "SPP:2xKV-5xLST=>10xBRP"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "KV"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "BRP"
+amount = 10
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "5xLST 2xKV=>12xBRP"
+standard_recipe_name = "SPP:2xKV-5xLST=>12xBRP"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "KV"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "BRP"
+amount = 12
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "5xLST 2xTK=>10xARP"
+standard_recipe_name = "SPP:5xLST-2xTK=>10xARP"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "TK"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "ARP"
+amount = 10
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "5xLST 2xTK=>8xARP"
+standard_recipe_name = "SPP:5xLST-2xTK=>8xARP"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "TK"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "ARP"
+amount = 8
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "5xLST 5xW 5xTA=>10xSRP"
+standard_recipe_name = "SPP:5xLST-5xTA-5xW=>10xSRP"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "TA"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "W"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "SRP"
+amount = 10
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "5xLST 5xW 5xTA=>8xSRP"
+standard_recipe_name = "SPP:5xLST-5xTA-5xW=>8xSRP"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "TA"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "W"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "LST"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "SRP"
+amount = 8
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "5xTHP 20xTHF=>10xBPT"
+standard_recipe_name = "SPP:20xTHF-5xTHP=>10xBPT"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "THF"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "THP"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "BPT"
+amount = 10
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "5xTHP 20xTHF=>12xBPT"
+standard_recipe_name = "SPP:20xTHF-5xTHP=>12xBPT"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "THF"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "THP"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "BPT"
+amount = 12
+
+[[recipes]]
+building_ticker = "SPP"
+recipe_name = "80xPG 14xFAL 4xKV=>1xBGS"
+standard_recipe_name = "SPP:14xFAL-4xKV-80xPG=>1xBGS"
+time_ms = 129_600_000
+
+[[recipes.inputs]]
+ticker = "FAL"
+amount = 14
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 80
+
+[[recipes.inputs]]
+ticker = "KV"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "BGS"
+amount = 1
+
+[[recipes]]
+building_ticker = "PHF"
+recipe_name = "1xBSC 20xREA 4xMFK 2xDCM=>1xADR"
+standard_recipe_name = "PHF:1xBSC-2xDCM-4xMFK-20xREA=>1xADR"
+time_ms = 77_760_000
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "REA"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "DCM"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "BSC"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "ADR"
+amount = 1
+
+[[recipes]]
+building_ticker = "PHF"
+recipe_name = "1xDCM 1xMFK 1xSAR=>1xBSC"
+standard_recipe_name = "PHF:1xDCM-1xMFK-1xSAR=>1xBSC"
+time_ms = 77_760_000
+
+[[recipes.inputs]]
+ticker = "DCM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BSC"
+amount = 1
+
+[[recipes]]
+building_ticker = "PHF"
+recipe_name = "1xNL 1xSIL=>20xBND"
+standard_recipe_name = "PHF:1xNL-1xSIL=>20xBND"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "NL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SIL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BND"
+amount = 20
+
+[[recipes]]
+building_ticker = "PHF"
+recipe_name = "2xCA 4xLI 10xREA=>10xPK"
+standard_recipe_name = "PHF:2xCA-4xLI-10xREA=>10xPK"
+time_ms = 28_512_000
+
+[[recipes.inputs]]
+ticker = "REA"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "CA"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "LI"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "PK"
+amount = 10
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "10xPSL 20xPSM 10xFET 1xNV1 5xSAR 1xCOM=>1xBR1"
+standard_recipe_name = "UPF:1xCOM-10xFET-1xNV1-10xPSL-20xPSM-5xSAR=>1xBR1"
+time_ms = 345_600_000
+
+[[recipes.inputs]]
+ticker = "NV1"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "COM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "FET"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "BR1"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "10xPSL 20xPSM 10xFET 1xNV2 10xSAR 1xCOM=>1xBR2"
+standard_recipe_name = "UPF:1xCOM-10xFET-1xNV2-10xPSL-20xPSM-10xSAR=>1xBR2"
+time_ms = 432_000_000
+
+[[recipes.inputs]]
+ticker = "COM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "FET"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "NV2"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "BR2"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "10xPSL 20xPSM 10xTI 1xLIS 10xDEC 1xTCU=>1xCQM"
+standard_recipe_name = "UPF:10xDEC-1xLIS-10xPSL-20xPSM-1xTCU-10xTI=>1xCQM"
+time_ms = 216_000_000
+
+[[recipes.inputs]]
+ticker = "DEC"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "TCU"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "LIS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "CQM"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "10xPSL 20xPSM 10xTI 5xSAR 4xRAD=>1xBRS"
+standard_recipe_name = "UPF:10xPSL-20xPSM-4xRAD-5xSAR-10xTI=>1xBRS"
+time_ms = 259_200_000
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "RAD"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "BRS"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "10xPSL 4xSAR 1xCOM=>1xDOU"
+standard_recipe_name = "UPF:1xCOM-10xPSL-4xSAR=>1xDOU"
+time_ms = 155_520_000
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "COM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "DOU"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "12xPSL 8xPSM 1xADR=>1xTCU"
+standard_recipe_name = "UPF:1xADR-12xPSL-8xPSM=>1xTCU"
+time_ms = 138_240_000
+
+[[recipes.inputs]]
+ticker = "ADR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 12
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "TCU"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "1xBWS 8xPSL 4xPCB 1xBID=>1xFUN"
+standard_recipe_name = "UPF:1xBID-1xBWS-4xPCB-8xPSL=>1xFUN"
+time_ms = 190_080_000
+
+[[recipes.inputs]]
+ticker = "PCB"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 8
+
+[[recipes.inputs]]
+ticker = "BID"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BWS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "FUN"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "1xWS 1xDA 10xPSL 6xPSM=>1xLU"
+standard_recipe_name = "UPF:1xDA-10xPSL-6xPSM-1xWS=>1xLU"
+time_ms = 129_600_000
+
+[[recipes.inputs]]
+ticker = "WS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "DA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 6
+
+[[recipes.outputs]]
+ticker = "LU"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "20xPSL 30xPSM 20xFET 1xLIS 20xDEC 1xTCU=>1xCQL"
+standard_recipe_name = "UPF:20xDEC-20xFET-1xLIS-20xPSL-30xPSM-1xTCU=>1xCQL"
+time_ms = 259_200_000
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "LIS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 30
+
+[[recipes.inputs]]
+ticker = "FET"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "TCU"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DEC"
+amount = 20
+
+[[recipes.outputs]]
+ticker = "CQL"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "20xPSL 30xPSM 4xSRD=>1xRDS"
+standard_recipe_name = "UPF:20xPSL-30xPSM-4xSRD=>1xRDS"
+time_ms = 259_200_000
+
+[[recipes.inputs]]
+ticker = "SRD"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 30
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 20
+
+[[recipes.outputs]]
+ticker = "RDS"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "20xPSL 6xUTS 12xPSM=>1xWOR"
+standard_recipe_name = "UPF:20xPSL-12xPSM-6xUTS=>1xWOR"
+time_ms = 155_520_000
+
+[[recipes.inputs]]
+ticker = "UTS"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 12
+
+[[recipes.outputs]]
+ticker = "WOR"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "2xPSL 5xPSM 5xAL 1xDEC 1xTCU 1xBMF=>1xCQT"
+standard_recipe_name = "UPF:5xAL-1xBMF-1xDEC-2xPSL-5xPSM-1xTCU=>1xCQT"
+time_ms = 146_880_000
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "TCU"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DEC"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "BMF"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "CQT"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "30xPSL 50xPSM 8xSRD=>1xRDL"
+standard_recipe_name = "UPF:30xPSL-50xPSM-8xSRD=>1xRDL"
+time_ms = 432_000_000
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 50
+
+[[recipes.inputs]]
+ticker = "SRD"
+amount = 8
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 30
+
+[[recipes.outputs]]
+ticker = "RDL"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "4xSEQ 2xBSC 12xPSL 8xPSM 10xNG=>1xSU"
+standard_recipe_name = "UPF:2xBSC-10xNG-12xPSL-8xPSM-4xSEQ=>1xSU"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 8
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 12
+
+[[recipes.inputs]]
+ticker = "SEQ"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "BSC"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "NG"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "SU"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "5xPSL 10xPSM 5xFAL 1xLIS 2xDEC 1xTCU=>1xCQS"
+standard_recipe_name = "UPF:2xDEC-5xFAL-1xLIS-5xPSL-10xPSM-1xTCU=>1xCQS"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "DEC"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "FAL"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "PSM"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "PSL"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "LIS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "TCU"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "CQS"
+amount = 1
+
+[[recipes]]
+building_ticker = "UPF"
+recipe_name = "6xBBH 10xBDE 10xBSE 50xSOI=>1xHAB"
+standard_recipe_name = "UPF:6xBBH-10xBDE-10xBSE-50xSOI=>1xHAB"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "BBH"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "BSE"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "SOI"
+amount = 50
+
+[[recipes.inputs]]
+ticker = "BDE"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "HAB"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "10xFAL 2xMFK 1xCHA=>1xNOZ"
+standard_recipe_name = "SPF:1xCHA-10xFAL-2xMFK=>1xNOZ"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "CHA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FAL"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "NOZ"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "1xFIR 20xSTL 1xCBM=>1xHPR"
+standard_recipe_name = "SPF:1xCBM-1xFIR-20xSTL=>1xHPR"
+time_ms = 432_000_000
+
+[[recipes.inputs]]
+ticker = "CBM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "STL"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "FIR"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "HPR"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "1xRAG 10xAST 1xCBS=>1xRCT"
+standard_recipe_name = "SPF:10xAST-1xCBS-1xRAG=>1xRCT"
+time_ms = 224_640_000
+
+[[recipes.inputs]]
+ticker = "AST"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "CBS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "RAG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RCT"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "1xRAG 20xBGO 1xCBS=>1xQCR"
+standard_recipe_name = "SPF:20xBGO-1xCBS-1xRAG=>1xQCR"
+time_ms = 259_200_000
+
+[[recipes.inputs]]
+ticker = "CBS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BGO"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "RAG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "QCR"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "1xSFK 50xPG 10xATP=>1xAFP"
+standard_recipe_name = "SPF:10xATP-50xPG-1xSFK=>1xAFP"
+time_ms = 34_560_000
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 50
+
+[[recipes.inputs]]
+ticker = "ATP"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "AFP"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "1xSFK 50xPG 5xTHP=>1xBFP"
+standard_recipe_name = "SPF:50xPG-1xSFK-5xTHP=>1xBFP"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "THP"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 50
+
+[[recipes.outputs]]
+ticker = "BFP"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "20xFET 4xMFK 1xCHA=>1xANZ"
+standard_recipe_name = "SPF:1xCHA-20xFET-4xMFK=>1xANZ"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "FET"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "CHA"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "ANZ"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "20xWAL 4xMFK 1xCHA=>1xHNZ"
+standard_recipe_name = "SPF:1xCHA-4xMFK-20xWAL=>1xHNZ"
+time_ms = 77_760_000
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "CHA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "WAL"
+amount = 20
+
+[[recipes.outputs]]
+ticker = "HNZ"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "2xFIR 20xWAL 1xCBL=>1xHYR"
+standard_recipe_name = "SPF:1xCBL-2xFIR-20xWAL=>1xHYR"
+time_ms = 604_800_000
+
+[[recipes.inputs]]
+ticker = "WAL"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "FIR"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "CBL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "HYR"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "4xAFP 4xANZ 20xFET 1xACS 1xMFK=>1xAEN"
+standard_recipe_name = "SPF:1xACS-4xAFP-4xANZ-20xFET-1xMFK=>1xAEN"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "AFP"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "ACS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FET"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "ANZ"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "AEN"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "4xBFP 4xNOZ 10xAST 1xACS 1xMFK=>1xENG"
+standard_recipe_name = "SPF:1xACS-10xAST-4xBFP-1xMFK-4xNOZ=>1xENG"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "ACS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AST"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "NOZ"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BFP"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "ENG"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "6xLFP 6xNOZ 25xBRO 1xACS 1xMFK=>1xFSE"
+standard_recipe_name = "SPF:1xACS-25xBRO-6xLFP-1xMFK-6xNOZ=>1xFSE"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "NOZ"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "LFP"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "BRO"
+amount = 25
+
+[[recipes.inputs]]
+ticker = "ACS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "FSE"
+amount = 1
+
+[[recipes]]
+building_ticker = "SPF"
+recipe_name = "8xAFP 4xHNZ 20xWAL 1xACS 1xMFK=>1xHTE"
+standard_recipe_name = "SPF:1xACS-8xAFP-4xHNZ-1xMFK-20xWAL=>1xHTE"
+time_ms = 345_600_000
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HNZ"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "WAL"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "ACS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AFP"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "HTE"
+amount = 1
+
+[[recipes]]
+building_ticker = "EDM"
+recipe_name = "100xPE 4xCU=>8xSCN"
+standard_recipe_name = "EDM:4xCU-100xPE=>8xSCN"
+time_ms = 103_680_000
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 100
+
+[[recipes.inputs]]
+ticker = "CU"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "SCN"
+amount = 8
+
+[[recipes]]
+building_ticker = "EDM"
+recipe_name = "1xDCS 1xHD 1xNG=>1xHOG"
+standard_recipe_name = "EDM:1xDCS-1xHD-1xNG=>1xHOG"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "DCS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HD"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NG"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "HOG"
+amount = 1
+
+[[recipes]]
+building_ticker = "EDM"
+recipe_name = "1xDCS 1xSFK 1xPOW=>1xRAD"
+standard_recipe_name = "EDM:1xDCS-1xPOW-1xSFK=>1xRAD"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "DCS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "POW"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RAD"
+amount = 1
+
+[[recipes]]
+building_ticker = "EDM"
+recipe_name = "1xPCB 1xTRA=>1xMHP"
+standard_recipe_name = "EDM:1xPCB-1xTRA=>1xMHP"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "TRA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "PCB"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "MHP"
+amount = 1
+
+[[recipes]]
+building_ticker = "EDM"
+recipe_name = "2xSAR 2xCD 1xKV=>2xBID"
+standard_recipe_name = "EDM:2xCD-1xKV-2xSAR=>2xBID"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "CD"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "KV"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "BID"
+amount = 2
+
+[[recipes]]
+building_ticker = "IVP"
+recipe_name = "16xH2O 1xHCP 1xNS=>8xRSI"
+standard_recipe_name = "IVP:16xH2O-1xHCP-1xNS=>8xRSI"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "HCP"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "H2O"
+amount = 16
+
+[[recipes.outputs]]
+ticker = "RSI"
+amount = 8
+
+[[recipes]]
+building_ticker = "IVP"
+recipe_name = "1xPPA 1xNS 1xHCP=>4xMTP"
+standard_recipe_name = "IVP:1xHCP-1xNS-1xPPA=>4xMTP"
+time_ms = 64_800_000
+
+[[recipes.inputs]]
+ticker = "PPA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NS"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "HCP"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "MTP"
+amount = 4
+
+[[recipes]]
+building_ticker = "IVP"
+recipe_name = "2xVIT 4xREA 2xBAC 2xBL=>20xVG"
+standard_recipe_name = "IVP:2xBAC-2xBL-4xREA-2xVIT=>20xVG"
+time_ms = 86_400_000
+
+[[recipes.inputs]]
+ticker = "VIT"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "REA"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "BAC"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "BL"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "VG"
+amount = 20
+
+[[recipes]]
+building_ticker = "EEP"
+recipe_name = "1xES 4xREA 4xFLX=>1xEES"
+standard_recipe_name = "EEP:1xES-4xFLX-4xREA=>1xEES"
+time_ms = 103_680_000
+
+[[recipes.inputs]]
+ticker = "ES"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "REA"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "FLX"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "EES"
+amount = 1
+
+[[recipes]]
+building_ticker = "EEP"
+recipe_name = "1xLES=>10xES"
+standard_recipe_name = "EEP:1xLES=>10xES"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "LES"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "ES"
+amount = 10
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "10xGL 10xNCS=>10xNG"
+standard_recipe_name = "GF:10xGL-10xNCS=>10xNG"
+time_ms = 103_680_000
+
+[[recipes.inputs]]
+ticker = "GL"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "NCS"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "NG"
+amount = 10
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "10xGL 15xPG 1xSEN=>10xRG"
+standard_recipe_name = "GF:10xGL-15xPG-1xSEN=>10xRG"
+time_ms = 99_360_000
+
+[[recipes.inputs]]
+ticker = "SEN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GL"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 15
+
+[[recipes.outputs]]
+ticker = "RG"
+amount = 10
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "10xGL 15xPG=>10xRG"
+standard_recipe_name = "GF:10xGL-15xPG=>10xRG"
+time_ms = 112_320_000
+
+[[recipes.inputs]]
+ticker = "PG"
+amount = 15
+
+[[recipes.inputs]]
+ticker = "GL"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "RG"
+amount = 10
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "10xGL=>20xTUB"
+standard_recipe_name = "GF:10xGL=>20xTUB"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "GL"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "TUB"
+amount = 20
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "16xNE 8xRG=>1xLIT"
+standard_recipe_name = "GF:16xNE-8xRG=>1xLIT"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "NE"
+amount = 16
+
+[[recipes.inputs]]
+ticker = "RG"
+amount = 8
+
+[[recipes.outputs]]
+ticker = "LIT"
+amount = 1
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "20xRG 1xGV=>1xGCH"
+standard_recipe_name = "GF:1xGV-20xRG=>1xGCH"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "GV"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "RG"
+amount = 20
+
+[[recipes.outputs]]
+ticker = "GCH"
+amount = 1
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "20xRG 1xTI 1xGCH=>1xGNZ"
+standard_recipe_name = "GF:1xGCH-20xRG-1xTI=>1xGNZ"
+time_ms = 129_600_000
+
+[[recipes.inputs]]
+ticker = "TI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GCH"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "RG"
+amount = 20
+
+[[recipes.outputs]]
+ticker = "GNZ"
+amount = 1
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "2xSIO 1xNA 1xFLX=>12xGL"
+standard_recipe_name = "GF:1xFLX-1xNA-2xSIO=>12xGL"
+time_ms = 62_208_000
+
+[[recipes.inputs]]
+ticker = "SIO"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "NA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "FLX"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "GL"
+amount = 12
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "2xSIO 1xNA 1xSEN=>10xGL"
+standard_recipe_name = "GF:1xNA-1xSEN-2xSIO=>10xGL"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "NA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SEN"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SIO"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "GL"
+amount = 10
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "2xSIO 1xNA=>10xGL"
+standard_recipe_name = "GF:1xNA-2xSIO=>10xGL"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "NA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SIO"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "GL"
+amount = 10
+
+[[recipes]]
+building_ticker = "GF"
+recipe_name = "4xLFP 4xGNZ 50xNG 10xTHF 1xMFK=>1xGEN"
+standard_recipe_name = "GF:4xGNZ-4xLFP-1xMFK-50xNG-10xTHF=>1xGEN"
+time_ms = 108_000_000
+
+[[recipes.inputs]]
+ticker = "GNZ"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "NG"
+amount = 50
+
+[[recipes.inputs]]
+ticker = "MFK"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "LFP"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "THF"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "GEN"
+amount = 1
+
+[[recipes]]
+building_ticker = "SCA"
+recipe_name = "10xPSS 10xBGC 10xSI=>10xROM"
+standard_recipe_name = "SCA:10xBGC-10xPSS-10xSI=>10xROM"
+time_ms = 25_920_000
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "BGC"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "PSS"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "ROM"
+amount = 10
+
+[[recipes]]
+building_ticker = "SCA"
+recipe_name = "10xSWF 10xTRN 10xBCO=>10xMPC"
+standard_recipe_name = "SCA:10xBCO-10xSWF-10xTRN=>10xMPC"
+time_ms = 36_288_000
+
+[[recipes.inputs]]
+ticker = "BCO"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "TRN"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "SWF"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "MPC"
+amount = 10
+
+[[recipes]]
+building_ticker = "SCA"
+recipe_name = "10xSWF 5xBCO 60xPE 1xBGO=>5xPCB"
+standard_recipe_name = "SCA:5xBCO-1xBGO-60xPE-10xSWF=>5xPCB"
+time_ms = 24_192_000
+
+[[recipes.inputs]]
+ticker = "PE"
+amount = 60
+
+[[recipes.inputs]]
+ticker = "BCO"
+amount = 5
+
+[[recipes.inputs]]
+ticker = "BGO"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SWF"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "PCB"
+amount = 5
+
+[[recipes]]
+building_ticker = "SCA"
+recipe_name = "20xTRN 10xH 10xN=>20xSEN"
+standard_recipe_name = "SCA:10xH-10xN-20xTRN=>20xSEN"
+time_ms = 25_056_000
+
+[[recipes.inputs]]
+ticker = "TRN"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "N"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "H"
+amount = 10
+
+[[recipes.outputs]]
+ticker = "SEN"
+amount = 20
+
+[[recipes]]
+building_ticker = "SCA"
+recipe_name = "4xMWF 4xTRN 4xCAP 4xHCC=>4xTPU"
+standard_recipe_name = "SCA:4xCAP-4xHCC-4xMWF-4xTRN=>4xTPU"
+time_ms = 56_160_000
+
+[[recipes.inputs]]
+ticker = "MWF"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "TRN"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "CAP"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "HCC"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "TPU"
+amount = 4
+
+[[recipes]]
+building_ticker = "SCA"
+recipe_name = "6xPSS 6xCAP 6xBCO=>6xRAM"
+standard_recipe_name = "SCA:6xBCO-6xCAP-6xPSS=>6xRAM"
+time_ms = 36_288_000
+
+[[recipes.inputs]]
+ticker = "PSS"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "BCO"
+amount = 6
+
+[[recipes.inputs]]
+ticker = "CAP"
+amount = 6
+
+[[recipes.outputs]]
+ticker = "RAM"
+amount = 6
+
+[[recipes]]
+building_ticker = "SE"
+recipe_name = "1xBAI 1xMLI=>1xNN"
+standard_recipe_name = "SE:1xBAI-1xMLI=>1xNN"
+time_ms = 129_600_000
+
+[[recipes.inputs]]
+ticker = "MLI"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BAI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "NN"
+amount = 1
+
+[[recipes]]
+building_ticker = "SE"
+recipe_name = "1xLD 1xWM 1xROM=>1xOS"
+standard_recipe_name = "SE:1xLD-1xROM-1xWM=>1xOS"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "WM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ROM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "LD"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "OS"
+amount = 1
+
+[[recipes]]
+building_ticker = "SE"
+recipe_name = "1xNF 1xLD=>1xDD"
+standard_recipe_name = "SE:1xLD-1xNF=>1xDD"
+time_ms = 172_800_000
+
+[[recipes.inputs]]
+ticker = "LD"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "NF"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "DD"
+amount = 1
+
+[[recipes]]
+building_ticker = "SE"
+recipe_name = "1xSAL 1xLD 1xROM 1xSA=>1xDA"
+standard_recipe_name = "SE:1xLD-1xROM-1xSA-1xSAL=>1xDA"
+time_ms = 129_600_000
+
+[[recipes.inputs]]
+ticker = "SA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "ROM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "LD"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SAL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "DA"
+amount = 1
+
+[[recipes]]
+building_ticker = "SE"
+recipe_name = "=>1xDV"
+standard_recipe_name = "SE:=>1xDV"
+inputs = []
+time_ms = 129_600_000
+
+[[recipes.outputs]]
+ticker = "DV"
+amount = 1
+
+[[recipes]]
+building_ticker = "SE"
+recipe_name = "=>1xEDC"
+standard_recipe_name = "SE:=>1xEDC"
+inputs = []
+time_ms = 86_400_000
+
+[[recipes.outputs]]
+ticker = "EDC"
+amount = 1
+
+[[recipes]]
+building_ticker = "FER"
+recipe_name = "10xDW 4xPIB 1xCA 1xI 1xAMM=>20xVIT"
+standard_recipe_name = "FER:1xAMM-1xCA-10xDW-1xI-4xPIB=>20xVIT"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "CA"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "I"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AMM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DW"
+amount = 10
+
+[[recipes.inputs]]
+ticker = "PIB"
+amount = 4
+
+[[recipes.outputs]]
+ticker = "VIT"
+amount = 20
+
+[[recipes]]
+building_ticker = "FER"
+recipe_name = "20xDW 15xGRA 15xREA 1xAMM=>10xWIN"
+standard_recipe_name = "FER:1xAMM-20xDW-15xGRA-15xREA=>10xWIN"
+time_ms = 69_120_000
+
+[[recipes.inputs]]
+ticker = "DW"
+amount = 20
+
+[[recipes.inputs]]
+ticker = "AMM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "REA"
+amount = 15
+
+[[recipes.inputs]]
+ticker = "GRA"
+amount = 15
+
+[[recipes.outputs]]
+ticker = "WIN"
+amount = 10
+
+[[recipes]]
+building_ticker = "FER"
+recipe_name = "2xGRN 2xDW 1xES 1xAMM=>4xGIN"
+standard_recipe_name = "FER:1xAMM-2xDW-1xES-2xGRN=>4xGIN"
+time_ms = 56_160_000
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "DW"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "ES"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "AMM"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "GIN"
+amount = 4
+
+[[recipes]]
+building_ticker = "FER"
+recipe_name = "2xGRN 3xDW 1xHOP 1xAMM=>6xALE"
+standard_recipe_name = "FER:1xAMM-3xDW-2xGRN-1xHOP=>6xALE"
+time_ms = 55_296_000
+
+[[recipes.inputs]]
+ticker = "AMM"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "GRN"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "HOP"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DW"
+amount = 3
+
+[[recipes.outputs]]
+ticker = "ALE"
+amount = 6
+
+[[recipes]]
+building_ticker = "FER"
+recipe_name = "4xDW 1xHER 1xAMM=>6xKOM"
+standard_recipe_name = "FER:1xAMM-4xDW-1xHER=>6xKOM"
+time_ms = 30_240_000
+
+[[recipes.inputs]]
+ticker = "HER"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DW"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "AMM"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "KOM"
+amount = 6
+
+[[recipes]]
+building_ticker = "AML"
+recipe_name = "1xBOR 1xSI 4xAL=>4xBOS"
+standard_recipe_name = "AML:4xAL-1xBOR-1xSI=>4xBOS"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "AL"
+amount = 4
+
+[[recipes.inputs]]
+ticker = "BOR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SI"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BOS"
+amount = 4
+
+[[recipes]]
+building_ticker = "AML"
+recipe_name = "2xBER=>1xBE 1xAL 1xSIO"
+standard_recipe_name = "AML:2xBER=>1xAL-1xBE-1xSIO"
+time_ms = 8_640_000
+
+[[recipes.inputs]]
+ticker = "BER"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "AL"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SIO"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "BE"
+amount = 1
+
+[[recipes]]
+building_ticker = "AML"
+recipe_name = "2xTAI=>1xTA 1xFE"
+standard_recipe_name = "AML:2xTAI=>1xFE-1xTA"
+time_ms = 56_160_000
+
+[[recipes.inputs]]
+ticker = "TAI"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "FE"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "TA"
+amount = 1
+
+[[recipes]]
+building_ticker = "AML"
+recipe_name = "2xZIR=>1xZR 2xSIO"
+standard_recipe_name = "AML:2xZIR=>2xSIO-1xZR"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "ZIR"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "SIO"
+amount = 2
+
+[[recipes.outputs]]
+ticker = "ZR"
+amount = 1
+
+[[recipes]]
+building_ticker = "AML"
+recipe_name = "5xBTS=>1xW"
+standard_recipe_name = "AML:5xBTS=>1xW"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "BTS"
+amount = 5
+
+[[recipes.outputs]]
+ticker = "W"
+amount = 1
+
+[[recipes]]
+building_ticker = "DRS"
+recipe_name = "1xBSC 1xDCH=>1xCCD"
+standard_recipe_name = "DRS:1xBSC-1xDCH=>1xCCD"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "DCH"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BSC"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "CCD"
+amount = 1
+
+[[recipes]]
+building_ticker = "DRS"
+recipe_name = "1xMPC 1xPOW 1xSOL 1xDRF=>1xDCH"
+standard_recipe_name = "DRS:1xDRF-1xMPC-1xPOW-1xSOL=>1xDCH"
+time_ms = 24_192_000
+
+[[recipes.inputs]]
+ticker = "MPC"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "POW"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SOL"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DRF"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "DCH"
+amount = 1
+
+[[recipes]]
+building_ticker = "DRS"
+recipe_name = "1xSAR 1xBSC 1xDCH=>1xSUD"
+standard_recipe_name = "DRS:1xBSC-1xDCH-1xSAR=>1xSUD"
+time_ms = 51_840_000
+
+[[recipes.inputs]]
+ticker = "DCH"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BSC"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SUD"
+amount = 1
+
+[[recipes]]
+building_ticker = "DRS"
+recipe_name = "1xSAR 1xDCH=>1xRED"
+standard_recipe_name = "DRS:1xDCH-1xSAR=>1xRED"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "DCH"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "RED"
+amount = 1
+
+[[recipes]]
+building_ticker = "DRS"
+recipe_name = "1xSAR 2xUTS 1xDCH=>1xSRD"
+standard_recipe_name = "DRS:1xDCH-1xSAR-2xUTS=>1xSRD"
+time_ms = 43_200_000
+
+[[recipes.inputs]]
+ticker = "SAR"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "UTS"
+amount = 2
+
+[[recipes.inputs]]
+ticker = "DCH"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SRD"
+amount = 1
+
+[[recipes]]
+building_ticker = "DRS"
+recipe_name = "1xSEQ 1xBSC 1xDCH=>1xSDR"
+standard_recipe_name = "DRS:1xBSC-1xDCH-1xSEQ=>1xSDR"
+time_ms = 60_480_000
+
+[[recipes.inputs]]
+ticker = "DCH"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "BSC"
+amount = 1
+
+[[recipes.inputs]]
+ticker = "SEQ"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "SDR"
+amount = 1
+
+[[recipes]]
+building_ticker = "DRS"
+recipe_name = "50xNFI 1xDCS=>1xDRF"
+standard_recipe_name = "DRS:1xDCS-50xNFI=>1xDRF"
+time_ms = 17_280_000
+
+[[recipes.inputs]]
+ticker = "NFI"
+amount = 50
+
+[[recipes.inputs]]
+ticker = "DCS"
+amount = 1
+
+[[recipes.outputs]]
+ticker = "DRF"
+amount = 1
+
+[[recipes]]
+building_ticker = "COL"
+recipe_name = "=>"
+standard_recipe_name = "COL:=>"
+inputs = []
+outputs = []
+time_ms = 21_600_000

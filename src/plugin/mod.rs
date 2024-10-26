@@ -11,7 +11,7 @@ use bevy::{
     MinimalPlugins,
 };
 use bevy_embedded_assets::EmbeddedAssetPlugin;
-use data::DataPlugins;
+use data::DataPlugin;
 use io::IoPlugin;
 use log::LogPlugin;
 use std::time::Duration;
@@ -32,6 +32,6 @@ impl PluginGroup for TuiPlugins {
             .add(FrameTimeDiagnosticsPlugin)
             .add(HierarchyPlugin)
             .add(LogPlugin)
-            .add_group(DataPlugins)
+            .add(DataPlugin)
     }
 }

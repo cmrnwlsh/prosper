@@ -2686,6 +2686,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "43d84d1d7a6ac92673717f9f6d1518374ef257669c24ebc5ac25d5033828be58"
 
 [[package]]
+name = "prosper"
+version = "0.1.0"
+dependencies = [
+ "better-panic",
+ "bevy",
+ "bevy_common_assets",
+ "bevy_embedded_assets",
+ "cross",
+ "delegate",
+ "log",
+ "ratatui",
+ "serde",
+]
+
+[[package]]
 name = "quote"
 version = "1.0.36"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3303,21 +3318,6 @@ dependencies = [
  "tracing",
  "tracing-subscriber",
  "wasm-bindgen",
-]
-
-[[package]]
-name = "tui_bevy"
-version = "0.1.0"
-dependencies = [
- "better-panic",
- "bevy",
- "bevy_common_assets",
- "bevy_embedded_assets",
- "cross",
- "delegate",
- "log",
- "ratatui",
- "serde",
 ]
 
 [[package]]

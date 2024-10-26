@@ -53,11 +53,11 @@ pub struct Building {
     pub scientists: u16,
     pub area_cost: u16,
     pub recipes: Vec<String>,
-    pub costs: Vec<BuildingCost>,
+    pub costs: Vec<Commodity>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
-pub struct BuildingCost {
+pub struct Commodity {
     pub amount: u16,
     pub ticker: String,
 }

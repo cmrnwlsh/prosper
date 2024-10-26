@@ -7426,11 +7426,8 @@ amount = 1
 [[recipes.outputs]]
 ticker = "DRF"
 amount = 1
-
-
-[[buildings]]
+[buildings.RIG]
 name = "rig"
-ticker = "RIG"
 expertise = "RESOURCE_EXTRACTION"
 pioneers = 30
 settlers = 0
@@ -7438,15 +7435,13 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 10
-recipes = [ "@RIG=>",]
-[[buildings.costs]]
+recipes = ["@RIG=>"]
+[[buildings.RIG.costs]]
 amount = 12
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.TNP]
 name = "technetiumProcessing"
-ticker = "TNP"
 expertise = "CHEMISTRY"
 pioneers = 0
 settlers = 0
@@ -7454,66 +7449,66 @@ technicians = 80
 engineers = 0
 scientists = 0
 area_cost = 30
-recipes = [ "1xTC 4xREA 4xFLX@TNP=>1xETC", "1xTCO@TNP=>1xTC 1xO", "1xTC@TNP=>3xTCS",]
-[[buildings.costs]]
+recipes = [
+  "1xTC 4xREA 4xFLX@TNP=>1xETC",
+  "1xTCO@TNP=>1xTC 1xO",
+  "1xTC@TNP=>3xTCS",
+]
+[[buildings.TNP.costs]]
 amount = 8
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.TNP.costs]]
 amount = 6
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.TNP.costs]]
 amount = 12
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.TNP.costs]]
 amount = 8
 ticker = "LDE"
 
-
-[[buildings]]
+[buildings.PAR]
 recipes = []
 name = "planetaryProjectComfortSmall"
-ticker = "PAR"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 500
-[[buildings.costs]]
+[[buildings.PAR.costs]]
 amount = 300
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.PAR.costs]]
 amount = 16
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.PAR.costs]]
 amount = 10
 ticker = "BTA"
 
-[[buildings.costs]]
+[[buildings.PAR.costs]]
 amount = 16
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.PAR.costs]]
 amount = 100
 ticker = "SOI"
 
-[[buildings.costs]]
+[[buildings.PAR.costs]]
 amount = 20
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.PAR.costs]]
 amount = 5
 ticker = "HAB"
 
-
-[[buildings]]
+[buildings.PP1]
 name = "prefabPlant1"
-ticker = "PP1"
 expertise = "CONSTRUCTION"
 pioneers = 80
 settlers = 0
@@ -7521,23 +7516,26 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 19
-recipes = [ "150xPE@PP1=>1xBDE", "1xFE 2xLST@PP1=>1xBSE", "1xFE 50xPE@PP1=>1xBTA", "2xFE 1xLST@PP1=>1xBBH",]
-[[buildings.costs]]
+recipes = [
+  "150xPE@PP1=>1xBDE",
+  "1xFE 2xLST@PP1=>1xBSE",
+  "1xFE 50xPE@PP1=>1xBTA",
+  "2xFE 1xLST@PP1=>1xBBH",
+]
+[[buildings.PP1.costs]]
 amount = 4
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.PP1.costs]]
 amount = 3
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.PP1.costs]]
 amount = 3
 ticker = "BBH"
 
-
-[[buildings]]
+[buildings.CLF]
 name = "clothingFactory"
-ticker = "CLF"
 expertise = "MANUFACTURING"
 pioneers = 0
 settlers = 40
@@ -7545,272 +7543,260 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 37
-recipes = [ "1xNL 1xIND 6xGC@CLF=>10xHMS", "2xSIL 1xBLE 10xHD 10xPCB@CLF=>10xLC", "5xNL 1xBLE 5xSEN 5xPCB@CLF=>20xHSS",]
-[[buildings.costs]]
+recipes = [
+  "1xNL 1xIND 6xGC@CLF=>10xHMS",
+  "2xSIL 1xBLE 10xHD 10xPCB@CLF=>10xLC",
+  "5xNL 1xBLE 5xSEN 5xPCB@CLF=>20xHSS",
+]
+[[buildings.CLF.costs]]
 amount = 4
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.CLF.costs]]
 amount = 2
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.CLF.costs]]
 amount = 8
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.CLF.costs]]
 amount = 2
 ticker = "LSE"
 
-
-[[buildings]]
+[buildings.SDP]
 recipes = []
 name = "planetaryProjectSafetyBig"
-ticker = "SDP"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.SDP.costs]]
 amount = 16
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.SDP.costs]]
 amount = 1
 ticker = "DOU"
 
-[[buildings.costs]]
+[[buildings.SDP.costs]]
 amount = 1
 ticker = "ADS"
 
-[[buildings.costs]]
+[[buildings.SDP.costs]]
 amount = 1
 ticker = "BMF"
 
-[[buildings.costs]]
+[[buildings.SDP.costs]]
 amount = 8
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.SDP.costs]]
 amount = 300
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.SDP.costs]]
 amount = 10
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.SDP.costs]]
 amount = 16
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.SDP.costs]]
 amount = 8
 ticker = "RTA"
 
-
-[[buildings]]
+[buildings.HBL]
 recipes = []
 name = "habitationLuxury"
-ticker = "HBL"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 22
-[[buildings.costs]]
+[[buildings.HBL.costs]]
 amount = 6
 ticker = "ASE"
 
-[[buildings.costs]]
+[[buildings.HBL.costs]]
 amount = 8
 ticker = "ABH"
 
-[[buildings.costs]]
+[[buildings.HBL.costs]]
 amount = 6
 ticker = "ATA"
 
-[[buildings.costs]]
+[[buildings.HBL.costs]]
 amount = 8
 ticker = "ADE"
 
-
-[[buildings]]
+[buildings.HBM]
 recipes = []
 name = "habitationManagers"
-ticker = "HBM"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 20
-[[buildings.costs]]
+[[buildings.HBM.costs]]
 amount = 8
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.HBM.costs]]
 amount = 4
 ticker = "ATA"
 
-[[buildings.costs]]
+[[buildings.HBM.costs]]
 amount = 8
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.HBM.costs]]
 amount = 6
 ticker = "ASE"
 
-
-[[buildings]]
+[buildings.COG]
 recipes = []
 name = "planetaryProjectCogc"
-ticker = "COG"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.COG.costs]]
 amount = 1
 ticker = "BMF"
 
-[[buildings.costs]]
+[[buildings.COG.costs]]
 amount = 32
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.COG.costs]]
 amount = 16
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.COG.costs]]
 amount = 24
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.COG.costs]]
 amount = 16
 ticker = "BWS"
 
-[[buildings.costs]]
+[[buildings.COG.costs]]
 amount = 32
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.COG.costs]]
 amount = 32
 ticker = "SP"
 
-
-[[buildings]]
+[buildings.CFL]
 recipes = []
 name = "corporationProjectFTLLaboratory"
-ticker = "CFL"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 100
-[[buildings.costs]]
+[[buildings.CFL.costs]]
 amount = 32
 ticker = "SP"
 
-[[buildings.costs]]
+[[buildings.CFL.costs]]
 amount = 24
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.CFL.costs]]
 amount = 24
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.CFL.costs]]
 amount = 16
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.CFL.costs]]
 amount = 32
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.CFL.costs]]
 amount = 1
 ticker = "FFC"
 
-[[buildings.costs]]
+[[buildings.CFL.costs]]
 amount = 6
 ticker = "TAC"
 
-
-[[buildings]]
+[buildings.HB4]
 recipes = []
 name = "habitationEngineer"
-ticker = "HB4"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 16
-[[buildings.costs]]
+[[buildings.HB4.costs]]
 amount = 4
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.HB4.costs]]
 amount = 6
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.HB4.costs]]
 amount = 6
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.HB4.costs]]
 amount = 4
 ticker = "RTA"
 
-
-[[buildings]]
+[buildings.CIM]
 recipes = []
 name = "corporationProjectImmortality"
-ticker = "CIM"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 100
-[[buildings.costs]]
+[[buildings.CIM.costs]]
 amount = 32
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.CIM.costs]]
 amount = 16
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.CIM.costs]]
 amount = 36
 ticker = "SP"
 
-[[buildings.costs]]
+[[buildings.CIM.costs]]
 amount = 16
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.CIM.costs]]
 amount = 1
 ticker = "LIS"
 
-[[buildings.costs]]
+[[buildings.CIM.costs]]
 amount = 16
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.CIM.costs]]
 amount = 4
 ticker = "CRU"
 
-
-[[buildings]]
+[buildings.FP]
 name = "foodProcessor"
-ticker = "FP"
 expertise = "FOOD_INDUSTRIES"
 pioneers = 40
 settlers = 0
@@ -7818,78 +7804,96 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 12
-recipes = [ "10xH2O 1xPG@FP=>10xDW", "10xH2O@FP=>7xDW", "1xALG 1xH2O 1xBEA@FP=>6xPPA", "1xCAF 3xDW@FP=>3xCOF", "1xGRN 1xALG 1xNUT@FP=>10xRAT", "1xGRN 1xALG 1xVEG@FP=>10xRAT", "1xGRN 1xBEA 1xNUT@FP=>10xRAT", "1xGRN 1xBEA 1xVEG@FP=>10xRAT", "1xMAI 1xALG 1xNUT@FP=>10xRAT", "1xMAI 1xALG 1xVEG@FP=>10xRAT", "1xMAI 1xBEA 1xNUT@FP=>10xRAT", "1xMAI 1xBEA 1xVEG@FP=>10xRAT", "1xMUS 1xNUT 1xGRN@FP=>10xRAT", "1xMUS 1xNUT 1xMAI@FP=>10xRAT", "1xMUS 1xVEG 1xGRN@FP=>10xRAT", "1xMUS 1xVEG 1xMAI@FP=>10xRAT", "2xALG 1xH2O@FP=>4xPPA", "2xBEA 1xH2O@FP=>4xPPA", "2xFIM 1xMTP@FP=>2xMEA", "2xRAT 1xHER@FP=>2xFIM", "5xNUT 5xMAI 5xVEG@FP=>16xFOD",]
-[[buildings.costs]]
+recipes = [
+  "10xH2O 1xPG@FP=>10xDW",
+  "10xH2O@FP=>7xDW",
+  "1xALG 1xH2O 1xBEA@FP=>6xPPA",
+  "1xCAF 3xDW@FP=>3xCOF",
+  "1xGRN 1xALG 1xNUT@FP=>10xRAT",
+  "1xGRN 1xALG 1xVEG@FP=>10xRAT",
+  "1xGRN 1xBEA 1xNUT@FP=>10xRAT",
+  "1xGRN 1xBEA 1xVEG@FP=>10xRAT",
+  "1xMAI 1xALG 1xNUT@FP=>10xRAT",
+  "1xMAI 1xALG 1xVEG@FP=>10xRAT",
+  "1xMAI 1xBEA 1xNUT@FP=>10xRAT",
+  "1xMAI 1xBEA 1xVEG@FP=>10xRAT",
+  "1xMUS 1xNUT 1xGRN@FP=>10xRAT",
+  "1xMUS 1xNUT 1xMAI@FP=>10xRAT",
+  "1xMUS 1xVEG 1xGRN@FP=>10xRAT",
+  "1xMUS 1xVEG 1xMAI@FP=>10xRAT",
+  "2xALG 1xH2O@FP=>4xPPA",
+  "2xBEA 1xH2O@FP=>4xPPA",
+  "2xFIM 1xMTP@FP=>2xMEA",
+  "2xRAT 1xHER@FP=>2xFIM",
+  "5xNUT 5xMAI 5xVEG@FP=>16xFOD",
+]
+[[buildings.FP.costs]]
 amount = 3
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.FP.costs]]
 amount = 3
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.FP.costs]]
 amount = 3
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.CRC]
 recipes = []
 name = "corporationProjectRepresentationCenter"
-ticker = "CRC"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 100
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 1
 ticker = "ADS"
 
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 100
 ticker = "ATA"
 
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 100
 ticker = "ASE"
 
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 100
 ticker = "ADE"
 
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 100
 ticker = "ABH"
 
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 400
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 40
 ticker = "LIT"
 
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 80
 ticker = "DEC"
 
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 200
 ticker = "SP"
 
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 4
 ticker = "CBL"
 
-[[buildings.costs]]
+[[buildings.CRC.costs]]
 amount = 1
 ticker = "LOG"
 
-
-[[buildings]]
+[buildings.FS]
 name = "fineSmithy"
-ticker = "FS"
 expertise = "METALLURGY"
 pioneers = 0
 settlers = 50
@@ -7897,121 +7901,129 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 25
-recipes = [ "10xAL 4xSTL@FS=>1xFLO", "1xAL 2xCU@FS=>3xBRO", "1xBGO 300xPE@FS=>10xBGC", "1xCU 300xPE@FS=>10xBCO", "1xFE@FS=>16xSFK", "1xRGO 300xPE@FS=>10xHCC", "1xSTL 1xAL@FS=>1xBFR", "1xSTL@FS=>8xMFK", "1xZR 1xAL@FS=>1xAFR", "2xSFK 6xFE@FS=>1xUTS", "2xSTL 2xTI 1xHOG@FS=>1xSEQ", "4xAU 1xCU@FS=>5xRGO", "4xAU 1xFE@FS=>5xBGO",]
-[[buildings.costs]]
+recipes = [
+  "10xAL 4xSTL@FS=>1xFLO",
+  "1xAL 2xCU@FS=>3xBRO",
+  "1xBGO 300xPE@FS=>10xBGC",
+  "1xCU 300xPE@FS=>10xBCO",
+  "1xFE@FS=>16xSFK",
+  "1xRGO 300xPE@FS=>10xHCC",
+  "1xSTL 1xAL@FS=>1xBFR",
+  "1xSTL@FS=>8xMFK",
+  "1xZR 1xAL@FS=>1xAFR",
+  "2xSFK 6xFE@FS=>1xUTS",
+  "2xSTL 2xTI 1xHOG@FS=>1xSEQ",
+  "4xAU 1xCU@FS=>5xRGO",
+  "4xAU 1xFE@FS=>5xBGO",
+]
+[[buildings.FS.costs]]
 amount = 2
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.FS.costs]]
 amount = 2
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.FS.costs]]
 amount = 2
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.FS.costs]]
 amount = 4
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.HOS]
 recipes = []
 name = "planetaryProjectHealthBig"
-ticker = "HOS"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.HOS.costs]]
 amount = 24
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.HOS.costs]]
 amount = 1
 ticker = "SU"
 
-[[buildings.costs]]
+[[buildings.HOS.costs]]
 amount = 1
 ticker = "TCU"
 
-[[buildings.costs]]
+[[buildings.HOS.costs]]
 amount = 1
 ticker = "DOU"
 
-[[buildings.costs]]
+[[buildings.HOS.costs]]
 amount = 16
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.HOS.costs]]
 amount = 400
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.HOS.costs]]
 amount = 16
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.HOS.costs]]
 amount = 20
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.HOS.costs]]
 amount = 20
 ticker = "RDE"
 
-
-[[buildings]]
+[buildings.UNI]
 recipes = []
 name = "planetaryProjectEducationBig"
-ticker = "UNI"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.UNI.costs]]
 amount = 30
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.UNI.costs]]
 amount = 1
 ticker = "LOG"
 
-[[buildings.costs]]
+[[buildings.UNI.costs]]
 amount = 4
 ticker = "LU"
 
-[[buildings.costs]]
+[[buildings.UNI.costs]]
 amount = 2
 ticker = "BMF"
 
-[[buildings.costs]]
+[[buildings.UNI.costs]]
 amount = 12
 ticker = "ABH"
 
-[[buildings.costs]]
+[[buildings.UNI.costs]]
 amount = 400
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.UNI.costs]]
 amount = 16
 ticker = "ASE"
 
-[[buildings.costs]]
+[[buildings.UNI.costs]]
 amount = 16
 ticker = "ADE"
 
-[[buildings.costs]]
+[[buildings.UNI.costs]]
 amount = 12
 ticker = "ATA"
 
-
-[[buildings]]
+[buildings.FRM]
 name = "farm"
-ticker = "FRM"
 expertise = "AGRICULTURE"
 pioneers = 50
 settlers = 0
@@ -8019,93 +8031,99 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 30
-recipes = [ "1xH2O@FRM=>12xNUT", "1xH2O@FRM=>2xBEA", "1xH2O@FRM=>4xGRN", "2xH2O 4xNS@FRM=>2xRCO", "2xH2O@FRM=>1xRCO", "2xH2O@FRM=>4xHCP", "3xH2O@FRM=>4xVEG", "4xH2O 1xDDT@FRM=>4xHER", "4xH2O@FRM=>12xMAI", "4xH2O@FRM=>4xGRN", "6xH2O@FRM=>4xBEA",]
-[[buildings.costs]]
+recipes = [
+  "1xH2O@FRM=>12xNUT",
+  "1xH2O@FRM=>2xBEA",
+  "1xH2O@FRM=>4xGRN",
+  "2xH2O 4xNS@FRM=>2xRCO",
+  "2xH2O@FRM=>1xRCO",
+  "2xH2O@FRM=>4xHCP",
+  "3xH2O@FRM=>4xVEG",
+  "4xH2O 1xDDT@FRM=>4xHER",
+  "4xH2O@FRM=>12xMAI",
+  "4xH2O@FRM=>4xGRN",
+  "6xH2O@FRM=>4xBEA",
+]
+[[buildings.FRM.costs]]
 amount = 4
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.FRM.costs]]
 amount = 4
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.LIB]
 recipes = []
 name = "planetaryProjectEducationSmall"
-ticker = "LIB"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 500
-[[buildings.costs]]
+[[buildings.LIB.costs]]
 amount = 8
 ticker = "ABH"
 
-[[buildings.costs]]
+[[buildings.LIB.costs]]
 amount = 12
 ticker = "ADE"
 
-[[buildings.costs]]
+[[buildings.LIB.costs]]
 amount = 6
 ticker = "ATA"
 
-[[buildings.costs]]
+[[buildings.LIB.costs]]
 amount = 1
 ticker = "COM"
 
-[[buildings.costs]]
+[[buildings.LIB.costs]]
 amount = 20
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.LIB.costs]]
 amount = 1
 ticker = "LOG"
 
-[[buildings.costs]]
+[[buildings.LIB.costs]]
 amount = 250
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.LIB.costs]]
 amount = 12
 ticker = "ASE"
 
-
-[[buildings]]
+[buildings.PWH]
 recipes = []
 name = "planetaryProjectWarehouse"
-ticker = "PWH"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.PWH.costs]]
 amount = 24
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.PWH.costs]]
 amount = 24
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.PWH.costs]]
 amount = 20
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.PWH.costs]]
 amount = 300
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.PWH.costs]]
 amount = 12
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.WEL]
 name = "weldingPlant"
-ticker = "WEL"
 expertise = "CONSTRUCTION"
 pioneers = 70
 settlers = 0
@@ -8113,19 +8131,28 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 19
-recipes = [ "10xBOS 1xGV 1xHE@WEL=>1xCHA", "1xAL 1xBSE 1xHE@WEL=>1xFC", "1xAL 1xHE@WEL=>1xGV", "1xFE 1xAL 1xHE@WEL=>10xGC", "1xFE 1xAL 1xHE@WEL=>6xFLP", "1xI 1xFE 1xHE@WEL=>1xMHL", "20xNFI 2xAL 1xHE@WEL=>6xSSC", "2xAL 1xHE@WEL=>6xTRU", "2xBE 2xCF 1xHE@WEL=>4xTHP", "6xAL 1xHE@WEL=>1xDRF",]
-[[buildings.costs]]
+recipes = [
+  "10xBOS 1xGV 1xHE@WEL=>1xCHA",
+  "1xAL 1xBSE 1xHE@WEL=>1xFC",
+  "1xAL 1xHE@WEL=>1xGV",
+  "1xFE 1xAL 1xHE@WEL=>10xGC",
+  "1xFE 1xAL 1xHE@WEL=>6xFLP",
+  "1xI 1xFE 1xHE@WEL=>1xMHL",
+  "20xNFI 2xAL 1xHE@WEL=>6xSSC",
+  "2xAL 1xHE@WEL=>6xTRU",
+  "2xBE 2xCF 1xHE@WEL=>4xTHP",
+  "6xAL 1xHE@WEL=>1xDRF",
+]
+[[buildings.WEL.costs]]
 amount = 8
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.WEL.costs]]
 amount = 6
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.BMP]
 name = "basicMaterialsPlant"
-ticker = "BMP"
 expertise = "MANUFACTURING"
 pioneers = 100
 settlers = 0
@@ -8133,170 +8160,179 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 12
-recipes = [ "100xPE 25xPG@BMP=>20xOVE", "10xOVE 1xAL 1xMFK@BMP=>10xEXO", "10xOVE 1xAL 1xSWF@BMP=>10xEXO", "10xOVE 1xAL@BMP=>10xEXO", "1xC 2xH@BMP=>200xPE", "1xCOT 10xPG@BMP=>30xOVE", "1xCOT 50xPG@BMP=>20xPWO", "1xMFK 1xSFK 10xINS@BMP=>4xREP", "1xMGS@BMP=>6xMG", "1xRCO 50xPE@BMP=>20xOVE", "1xS 1xSI 30xPG@BMP=>30xSEA", "1xSTL 1xTRN@BMP=>7xPT", "1xSTL 1xW@BMP=>10xPT", "1xSTL 2xSFK@BMP=>6xPT", "1xSTL@BMP=>5xPT", "20xOVE 10xC@BMP=>20xSUN", "20xPG 20xEPO@BMP=>50xOFF", "3xCLI@BMP=>1xI", "4xLST 2xSIO@BMP=>50xMCG", "50xPE 4xAL@BMP=>2xSTR",]
-[[buildings.costs]]
+recipes = [
+  "100xPE 25xPG@BMP=>20xOVE",
+  "10xOVE 1xAL 1xMFK@BMP=>10xEXO",
+  "10xOVE 1xAL 1xSWF@BMP=>10xEXO",
+  "10xOVE 1xAL@BMP=>10xEXO",
+  "1xC 2xH@BMP=>200xPE",
+  "1xCOT 10xPG@BMP=>30xOVE",
+  "1xCOT 50xPG@BMP=>20xPWO",
+  "1xMFK 1xSFK 10xINS@BMP=>4xREP",
+  "1xMGS@BMP=>6xMG",
+  "1xRCO 50xPE@BMP=>20xOVE",
+  "1xS 1xSI 30xPG@BMP=>30xSEA",
+  "1xSTL 1xTRN@BMP=>7xPT",
+  "1xSTL 1xW@BMP=>10xPT",
+  "1xSTL 2xSFK@BMP=>6xPT",
+  "1xSTL@BMP=>5xPT",
+  "20xOVE 10xC@BMP=>20xSUN",
+  "20xPG 20xEPO@BMP=>50xOFF",
+  "3xCLI@BMP=>1xI",
+  "4xLST 2xSIO@BMP=>50xMCG",
+  "50xPE 4xAL@BMP=>2xSTR",
+]
+[[buildings.BMP.costs]]
 amount = 2
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.BMP.costs]]
 amount = 4
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.BMP.costs]]
 amount = 6
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.COR]
 recipes = []
 name = "corporationProjectHeadquarters"
-ticker = "COR"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 100
-[[buildings.costs]]
+[[buildings.COR.costs]]
 amount = 8
 ticker = "BWS"
 
-[[buildings.costs]]
+[[buildings.COR.costs]]
 amount = 24
 ticker = "SP"
 
-[[buildings.costs]]
+[[buildings.COR.costs]]
 amount = 2
 ticker = "BMF"
 
-[[buildings.costs]]
+[[buildings.COR.costs]]
 amount = 16
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.COR.costs]]
 amount = 32
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.COR.costs]]
 amount = 32
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.COR.costs]]
 amount = 8
 ticker = "RTA"
 
-
-[[buildings]]
+[buildings.HB5]
 recipes = []
 name = "habitationScientist"
-ticker = "HB5"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 18
-[[buildings.costs]]
+[[buildings.HB5.costs]]
 amount = 6
 ticker = "ADE"
 
-[[buildings.costs]]
+[[buildings.HB5.costs]]
 amount = 6
 ticker = "ABH"
 
-[[buildings.costs]]
+[[buildings.HB5.costs]]
 amount = 4
 ticker = "ATA"
 
-[[buildings.costs]]
+[[buildings.HB5.costs]]
 amount = 4
 ticker = "ASE"
 
-
-[[buildings]]
+[buildings.LM]
 recipes = []
 name = "planetaryProjectLocalMarket"
-ticker = "LM"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 500
-[[buildings.costs]]
+[[buildings.LM.costs]]
 amount = 10
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.LM.costs]]
 amount = 8
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.LM.costs]]
 amount = 8
 ticker = "BTA"
 
-[[buildings.costs]]
+[[buildings.LM.costs]]
 amount = 12
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.LM.costs]]
 amount = 8
 ticker = "BDE"
 
-
-[[buildings]]
+[buildings.HBB]
 recipes = []
 name = "habitationBarracks"
-ticker = "HBB"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 14
-[[buildings.costs]]
+[[buildings.HBB.costs]]
 amount = 2
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.HBB.costs]]
 amount = 4
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.HBB.costs]]
 amount = 4
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.HBB.costs]]
 amount = 2
 ticker = "LTA"
 
-
-[[buildings]]
+[buildings.STO]
 recipes = []
 name = "storageFacility"
-ticker = "STO"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 15
-[[buildings.costs]]
+[[buildings.STO.costs]]
 amount = 2
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.STO.costs]]
 amount = 6
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.STO.costs]]
 amount = 6
 ticker = "BDE"
 
-
-[[buildings]]
+[buildings.PP3]
 name = "prefabPlant3"
-ticker = "PP3"
 expertise = "CONSTRUCTION"
 pioneers = 0
 settlers = 20
@@ -8304,23 +8340,30 @@ technicians = 40
 engineers = 0
 scientists = 0
 area_cost = 32
-recipes = [ "100xPE 1xAR 1xTHF@PP3=>24xINS", "1xBBH 1xSTL 50xEPO@PP3=>1xRBH", "1xLDE 100xEPO 1xKV@PP3=>2xRDE", "1xLTA 6xRG@PP3=>1xRTA", "1xMAG 1xLDE@PP3=>1xMGC", "1xTI 250xNFI@PP3=>1xPSH", "2xBSE 1xSTL 225xEPO@PP3=>2xRSE", "2xLSE 1xTCS@PP3=>2xHSE",]
-[[buildings.costs]]
+recipes = [
+  "100xPE 1xAR 1xTHF@PP3=>24xINS",
+  "1xBBH 1xSTL 50xEPO@PP3=>1xRBH",
+  "1xLDE 100xEPO 1xKV@PP3=>2xRDE",
+  "1xLTA 6xRG@PP3=>1xRTA",
+  "1xMAG 1xLDE@PP3=>1xMGC",
+  "1xTI 250xNFI@PP3=>1xPSH",
+  "2xBSE 1xSTL 225xEPO@PP3=>2xRSE",
+  "2xLSE 1xTCS@PP3=>2xHSE",
+]
+[[buildings.PP3.costs]]
 amount = 6
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.PP3.costs]]
 amount = 4
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.PP3.costs]]
 amount = 6
 ticker = "LDE"
 
-
-[[buildings]]
+[buildings.ELP]
 name = "electronicsPlant"
-ticker = "ELP"
 expertise = "ELECTRONICS"
 pioneers = 0
 settlers = 0
@@ -8328,27 +8371,34 @@ technicians = 40
 engineers = 0
 scientists = 0
 area_cost = 35
-recipes = [ "16xSEN 4xPCB@ELP=>1xSAR", "1xDIS 2xBCO@ELP=>1xCD", "1xKV 2xAU 4xPCB 6xSWF@ELP=>3xAAR", "1xMAG 10xBAC 10xPE@ELP=>5xAWF", "1xMB 1xDCM 1xHD@ELP=>1xBWS", "1xMB 1xDCS 1xCD@ELP=>1xHPC", "1xTPU 1xFAN 1xMB 1xDCL@ELP=>1xBMF", "3xCTF 1xCBL@ELP=>1xLFE",]
-[[buildings.costs]]
+recipes = [
+  "16xSEN 4xPCB@ELP=>1xSAR",
+  "1xDIS 2xBCO@ELP=>1xCD",
+  "1xKV 2xAU 4xPCB 6xSWF@ELP=>3xAAR",
+  "1xMAG 10xBAC 10xPE@ELP=>5xAWF",
+  "1xMB 1xDCM 1xHD@ELP=>1xBWS",
+  "1xMB 1xDCS 1xCD@ELP=>1xHPC",
+  "1xTPU 1xFAN 1xMB 1xDCL@ELP=>1xBMF",
+  "3xCTF 1xCBL@ELP=>1xLFE",
+]
+[[buildings.ELP.costs]]
 amount = 4
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.ELP.costs]]
 amount = 6
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.ELP.costs]]
 amount = 6
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.ELP.costs]]
 amount = 4
 ticker = "RDE"
 
-
-[[buildings]]
+[buildings.APF]
 name = "appliancesFactory"
-ticker = "APF"
 expertise = "MANUFACTURING"
 pioneers = 0
 settlers = 0
@@ -8356,179 +8406,182 @@ technicians = 60
 engineers = 20
 scientists = 0
 area_cost = 40
-recipes = [ "12xFLP 1xFC 1xAWF 1xPCB 1xSEN 1xWAI@APF=>1xWR", "1xBMF 1xLD 1xSAL@APF=>1xLOG", "1xBWS 1xAAR 4xRAD@APF=>1xCOM", "1xBWS 1xOS 1xSAR 1xDA@APF=>1xRCS", "1xBWS 8xTRA 1xOS@APF=>1xADS", "1xDA 1xBWS@APF=>20xWS", "1xHCP 1xNS 1xH2O 1xWAI 1xPCB 1xSAR 1xGV 1xFC 1xBAC@APF=>1xAIR", "1xWAI 1xSAR 1xFC 10xTHF@APF=>1xACS", "1xWR 1xAIR 1xBMF 1xWAI@APF=>1xLIS", "1xWS 1xSNM@APF=>1xNV1", "2xHPC 1xLD@APF=>32xPDA", "5xW 1xWAI 1xDA 1xBMF@APF=>1xFFC",]
-[[buildings.costs]]
+recipes = [
+  "12xFLP 1xFC 1xAWF 1xPCB 1xSEN 1xWAI@APF=>1xWR",
+  "1xBMF 1xLD 1xSAL@APF=>1xLOG",
+  "1xBWS 1xAAR 4xRAD@APF=>1xCOM",
+  "1xBWS 1xOS 1xSAR 1xDA@APF=>1xRCS",
+  "1xBWS 8xTRA 1xOS@APF=>1xADS",
+  "1xDA 1xBWS@APF=>20xWS",
+  "1xHCP 1xNS 1xH2O 1xWAI 1xPCB 1xSAR 1xGV 1xFC 1xBAC@APF=>1xAIR",
+  "1xWAI 1xSAR 1xFC 10xTHF@APF=>1xACS",
+  "1xWR 1xAIR 1xBMF 1xWAI@APF=>1xLIS",
+  "1xWS 1xSNM@APF=>1xNV1",
+  "2xHPC 1xLD@APF=>32xPDA",
+  "5xW 1xWAI 1xDA 1xBMF@APF=>1xFFC",
+]
+[[buildings.APF.costs]]
 amount = 10
 ticker = "ADE"
 
-[[buildings.costs]]
+[[buildings.APF.costs]]
 amount = 8
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.APF.costs]]
 amount = 10
 ticker = "ASE"
 
-[[buildings.costs]]
+[[buildings.APF.costs]]
 amount = 6
 ticker = "ABH"
 
-
-[[buildings]]
+[buildings.HB1]
 recipes = []
 name = "habitationPioneer"
-ticker = "HB1"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 10
-[[buildings.costs]]
+[[buildings.HB1.costs]]
 amount = 1
 ticker = "BTA"
 
-[[buildings.costs]]
+[[buildings.HB1.costs]]
 amount = 2
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.HB1.costs]]
 amount = 2
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.HB1.costs]]
 amount = 4
 ticker = "BBH"
 
-
-[[buildings]]
+[buildings.EMC]
 recipes = []
 name = "planetaryProjectSafetyHealth"
-ticker = "EMC"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.EMC.costs]]
 amount = 1
 ticker = "DOU"
 
-[[buildings.costs]]
+[[buildings.EMC.costs]]
 amount = 300
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.EMC.costs]]
 amount = 32
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.EMC.costs]]
 amount = 24
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.EMC.costs]]
 amount = 32
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.EMC.costs]]
 amount = 1
 ticker = "TCU"
 
-[[buildings.costs]]
+[[buildings.EMC.costs]]
 amount = 16
 ticker = "BTA"
 
-
-[[buildings]]
+[buildings.ART]
 recipes = []
 name = "planetaryProjectCultureSmall"
-ticker = "ART"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 500
-[[buildings.costs]]
+[[buildings.ART.costs]]
 amount = 300
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.ART.costs]]
 amount = 32
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.ART.costs]]
 amount = 24
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.ART.costs]]
 amount = 16
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.ART.costs]]
 amount = 20
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.ART.costs]]
 amount = 10
 ticker = "DEC"
 
-[[buildings.costs]]
+[[buildings.ART.costs]]
 amount = 32
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.ART.costs]]
 amount = 2
 ticker = "WOR"
 
-
-[[buildings]]
+[buildings.WCE]
 recipes = []
 name = "planetaryProjectHealthComfort"
-ticker = "WCE"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.WCE.costs]]
 amount = 36
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.WCE.costs]]
 amount = 12
 ticker = "FLO"
 
-[[buildings.costs]]
+[[buildings.WCE.costs]]
 amount = 40
 ticker = "DEC"
 
-[[buildings.costs]]
+[[buildings.WCE.costs]]
 amount = 500
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.WCE.costs]]
 amount = 16
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.WCE.costs]]
 amount = 24
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.WCE.costs]]
 amount = 36
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.WCE.costs]]
 amount = 32
 ticker = "LSE"
 
-
-[[buildings]]
+[buildings.CLR]
 name = "cleanRoom"
-ticker = "CLR"
 expertise = "ELECTRONICS"
 pioneers = 0
 settlers = 25
@@ -8536,31 +8589,41 @@ technicians = 15
 engineers = 0
 scientists = 0
 area_cost = 27
-recipes = [ "10xC 2xSI@CLR=>1200xNFI", "1xAL 1xSI@CLR=>10xTRN", "1xCAP 1xSWF 1xTRN@CLR=>1xTRA", "1xC@CLR=>100xNCS", "1xGAL 1xSI@CLR=>6xLDI", "1xSI 1xAL@CLR=>30xSWF", "1xSI 1xFE@CLR=>15xCAP", "2xCF 1xCBS@CLR=>1xSFE", "2xNCS@CLR=>2xMTC", "2xSI 2xAL@CLR=>20xMWF", "4xCF 1xCBM@CLR=>1xMFE",]
-[[buildings.costs]]
+recipes = [
+  "10xC 2xSI@CLR=>1200xNFI",
+  "1xAL 1xSI@CLR=>10xTRN",
+  "1xCAP 1xSWF 1xTRN@CLR=>1xTRA",
+  "1xC@CLR=>100xNCS",
+  "1xGAL 1xSI@CLR=>6xLDI",
+  "1xSI 1xAL@CLR=>30xSWF",
+  "1xSI 1xFE@CLR=>15xCAP",
+  "2xCF 1xCBS@CLR=>1xSFE",
+  "2xNCS@CLR=>2xMTC",
+  "2xSI 2xAL@CLR=>20xMWF",
+  "4xCF 1xCBM@CLR=>1xMFE",
+]
+[[buildings.CLR.costs]]
 amount = 4
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.CLR.costs]]
 amount = 4
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.CLR.costs]]
 amount = 4
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.CLR.costs]]
 amount = 4
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.CLR.costs]]
 amount = 6
 ticker = "LBH"
 
-
-[[buildings]]
+[buildings.AAF]
 name = "advancedAppliancesFactory"
-ticker = "AAF"
 expertise = "MANUFACTURING"
 pioneers = 0
 settlers = 0
@@ -8568,82 +8631,84 @@ technicians = 0
 engineers = 40
 scientists = 20
 area_cost = 50
-recipes = [ "1xBMF 1xSNM@AAF=>1xNV2", "1xCST 1xWAI 10xES 1xPCB 1xSAR 6xFLP 3xFC@AAF=>1xCRU", "1xSA 1xBMF 1xDA@AAF=>1xTAC", "1xWAI 1xPCB 10xSAR 100xGV 8xFC 20xTHF@AAF=>1xCC", "1xWAI 1xTPU@AAF=>1xSTS",]
-[[buildings.costs]]
+recipes = [
+  "1xBMF 1xSNM@AAF=>1xNV2",
+  "1xCST 1xWAI 10xES 1xPCB 1xSAR 6xFLP 3xFC@AAF=>1xCRU",
+  "1xSA 1xBMF 1xDA@AAF=>1xTAC",
+  "1xWAI 1xPCB 10xSAR 100xGV 8xFC 20xTHF@AAF=>1xCC",
+  "1xWAI 1xTPU@AAF=>1xSTS",
+]
+[[buildings.AAF.costs]]
 amount = 1
 ticker = "ATA"
 
-[[buildings.costs]]
+[[buildings.AAF.costs]]
 amount = 8
 ticker = "ADE"
 
-[[buildings.costs]]
+[[buildings.AAF.costs]]
 amount = 6
 ticker = "ABH"
 
-[[buildings.costs]]
+[[buildings.AAF.costs]]
 amount = 8
 ticker = "ASE"
 
-[[buildings.costs]]
+[[buildings.AAF.costs]]
 amount = 8
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.4DA]
 recipes = []
 name = "planetaryProjectComfortBig"
-ticker = "4DA"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.4DA.costs]]
 amount = 42
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.4DA.costs]]
 amount = 42
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.4DA.costs]]
 amount = 42
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.4DA.costs]]
 amount = 2
 ticker = "LIT"
 
-[[buildings.costs]]
+[[buildings.4DA.costs]]
 amount = 2
 ticker = "BMF"
 
-[[buildings.costs]]
+[[buildings.4DA.costs]]
 amount = 600
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.4DA.costs]]
 amount = 10
 ticker = "FUN"
 
-[[buildings.costs]]
+[[buildings.4DA.costs]]
 amount = 1
 ticker = "ADS"
 
-[[buildings.costs]]
+[[buildings.4DA.costs]]
 amount = 40
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.4DA.costs]]
 amount = 24
 ticker = "LTA"
 
-
-[[buildings]]
+[buildings.WPL]
 name = "weavingPlant"
-ticker = "WPL"
 expertise = "MANUFACTURING"
 pioneers = 0
 settlers = 70
@@ -8651,27 +8716,31 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 40
-recipes = [ "1xKV 1xTC@WPL=>1xTK", "1xRCO@WPL=>1xCOT", "1xRSI@WPL=>1xSIL", "50xPG@WPL=>1xNL", "75xPG 5xTCL@WPL=>1xKV",]
-[[buildings.costs]]
+recipes = [
+  "1xKV 1xTC@WPL=>1xTK",
+  "1xRCO@WPL=>1xCOT",
+  "1xRSI@WPL=>1xSIL",
+  "50xPG@WPL=>1xNL",
+  "75xPG 5xTCL@WPL=>1xKV",
+]
+[[buildings.WPL.costs]]
 amount = 6
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.WPL.costs]]
 amount = 6
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.WPL.costs]]
 amount = 2
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.WPL.costs]]
 amount = 3
 ticker = "LSE"
 
-
-[[buildings]]
+[buildings.INC]
 name = "incinerator"
-ticker = "INC"
 expertise = "RESOURCE_EXTRACTION"
 pioneers = 40
 settlers = 0
@@ -8679,27 +8748,32 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 10
-recipes = [ "4xGRN@INC=>4xC", "4xHCP 2xGRN 2xMAI@INC=>4xC", "4xHCP 2xGRN@INC=>4xC", "4xHCP 2xMAI@INC=>4xC", "4xHCP@INC=>4xC", "4xMAI@INC=>4xC",]
-[[buildings.costs]]
+recipes = [
+  "4xGRN@INC=>4xC",
+  "4xHCP 2xGRN 2xMAI@INC=>4xC",
+  "4xHCP 2xGRN@INC=>4xC",
+  "4xHCP 2xMAI@INC=>4xC",
+  "4xHCP@INC=>4xC",
+  "4xMAI@INC=>4xC",
+]
+[[buildings.INC.costs]]
 amount = 2
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.INC.costs]]
 amount = 3
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.INC.costs]]
 amount = 1
 ticker = "BTA"
 
-[[buildings.costs]]
+[[buildings.INC.costs]]
 amount = 4
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.EXT]
 name = "extractor"
-ticker = "EXT"
 expertise = "RESOURCE_EXTRACTION"
 pioneers = 60
 settlers = 0
@@ -8707,46 +8781,42 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 25
-recipes = [ "@EXT=>",]
-[[buildings.costs]]
+recipes = ["@EXT=>"]
+[[buildings.EXT.costs]]
 amount = 16
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.HB2]
 recipes = []
 name = "habitationSettler"
-ticker = "HB2"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 12
-[[buildings.costs]]
+[[buildings.HB2.costs]]
 amount = 2
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.HB2.costs]]
 amount = 2
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.HB2.costs]]
 amount = 2
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.HB2.costs]]
 amount = 2
 ticker = "BTA"
 
-[[buildings.costs]]
+[[buildings.HB2.costs]]
 amount = 2
 ticker = "BDE"
 
-
-[[buildings]]
+[buildings.LAB]
 name = "laboratory"
-ticker = "LAB"
 expertise = "CHEMISTRY"
 pioneers = 0
 settlers = 20
@@ -8754,23 +8824,33 @@ technicians = 70
 engineers = 0
 scientists = 0
 area_cost = 25
-recipes = [ "10xHEX 5xBL 5xCST 1xPK@LAB=>30xJUI", "10xNAB 3xS 2xO@LAB=>4xBLE", "1xC 1xH 1xCL@LAB=>3xDDT", "1xCL 1xO 1xH@LAB=>3xTCL", "1xES 1xALG 1xTHF@LAB=>4xNST", "1xF 1xO@LAB=>2xBL", "1xHCP 1xO 1xS@LAB=>10xBAC", "1xNA 1xCL 1xO@LAB=>3xBLE", "1xNS 1xDW@LAB=>3xCST", "4xAMM 4xH2O 4xNA@LAB=>20xTHF", "50xEPO 75xNCS@LAB=>50xNR",]
-[[buildings.costs]]
+recipes = [
+  "10xHEX 5xBL 5xCST 1xPK@LAB=>30xJUI",
+  "10xNAB 3xS 2xO@LAB=>4xBLE",
+  "1xC 1xH 1xCL@LAB=>3xDDT",
+  "1xCL 1xO 1xH@LAB=>3xTCL",
+  "1xES 1xALG 1xTHF@LAB=>4xNST",
+  "1xF 1xO@LAB=>2xBL",
+  "1xHCP 1xO 1xS@LAB=>10xBAC",
+  "1xNA 1xCL 1xO@LAB=>3xBLE",
+  "1xNS 1xDW@LAB=>3xCST",
+  "4xAMM 4xH2O 4xNA@LAB=>20xTHF",
+  "50xEPO 75xNCS@LAB=>50xNR",
+]
+[[buildings.LAB.costs]]
 amount = 8
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.LAB.costs]]
 amount = 12
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.LAB.costs]]
 amount = 6
 ticker = "LSE"
 
-
-[[buildings]]
+[buildings.ASM]
 name = "advancedSmelter"
-ticker = "ASM"
 expertise = "METALLURGY"
 pioneers = 0
 settlers = 0
@@ -8778,70 +8858,72 @@ technicians = 50
 engineers = 20
 scientists = 0
 area_cost = 34
-recipes = [ "1xAL 3xTI@ASM=>4xAST", "1xFE 3xTI@ASM=>4xFET", "1xW 3xAL@ASM=>4xWAL", "2xWAL 1xSI 1xO@ASM=>1xCTF", "3xAL 3xFE@ASM=>6xFAL",]
-[[buildings.costs]]
+recipes = [
+  "1xAL 3xTI@ASM=>4xAST",
+  "1xFE 3xTI@ASM=>4xFET",
+  "1xW 3xAL@ASM=>4xWAL",
+  "2xWAL 1xSI 1xO@ASM=>1xCTF",
+  "3xAL 3xFE@ASM=>6xFAL",
+]
+[[buildings.ASM.costs]]
 amount = 4
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.ASM.costs]]
 amount = 2
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.ASM.costs]]
 amount = 4
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.ASM.costs]]
 amount = 2
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.ASM.costs]]
 amount = 6
 ticker = "LSE"
 
-
-[[buildings]]
+[buildings.ADM]
 recipes = []
 name = "planetaryProjectAdminCenter"
-ticker = "ADM"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 400
-[[buildings.costs]]
+[[buildings.ADM.costs]]
 amount = 750
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.ADM.costs]]
 amount = 16
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.ADM.costs]]
 amount = 25
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.ADM.costs]]
 amount = 32
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.ADM.costs]]
 amount = 2
 ticker = "BMF"
 
-[[buildings.costs]]
+[[buildings.ADM.costs]]
 amount = 10
 ticker = "BWS"
 
-[[buildings.costs]]
+[[buildings.ADM.costs]]
 amount = 5
 ticker = "RTA"
 
-
-[[buildings]]
+[buildings.ECA]
 name = "energyComponentAssembly"
-ticker = "ECA"
 expertise = "ELECTRONICS"
 pioneers = 0
 settlers = 20
@@ -8849,128 +8931,129 @@ technicians = 20
 engineers = 0
 scientists = 0
 area_cost = 35
-recipes = [ "12xLI 12xBE 60xHCC 150xPG@ECA=>1xCBL", "1xNCS 4xLI@ECA=>1xPOW", "2xCU 2xSI 4xBCO 1xBRO@ECA=>12xSOL", "4xEES 8xAFR 10xCTF 1xACS 1xRCS 10xWAL@ECA=>1xFIR", "4xETC 4xBFR 6xCF 1xACS 1xRCS 8xAST@ECA=>1xRAG", "6xLI 6xBE 20xBCO 60xPG@ECA=>1xCBS", "8xGL 24xSOL@ECA=>12xSP", "8xLI 8xBE 40xBGC 120xPG@ECA=>1xCBM",]
-[[buildings.costs]]
+recipes = [
+  "12xLI 12xBE 60xHCC 150xPG@ECA=>1xCBL",
+  "1xNCS 4xLI@ECA=>1xPOW",
+  "2xCU 2xSI 4xBCO 1xBRO@ECA=>12xSOL",
+  "4xEES 8xAFR 10xCTF 1xACS 1xRCS 10xWAL@ECA=>1xFIR",
+  "4xETC 4xBFR 6xCF 1xACS 1xRCS 8xAST@ECA=>1xRAG",
+  "6xLI 6xBE 20xBCO 60xPG@ECA=>1xCBS",
+  "8xGL 24xSOL@ECA=>12xSP",
+  "8xLI 8xBE 40xBGC 120xPG@ECA=>1xCBM",
+]
+[[buildings.ECA.costs]]
 amount = 2
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.ECA.costs]]
 amount = 6
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.ECA.costs]]
 amount = 6
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.ECA.costs]]
 amount = 6
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.ECA.costs]]
 amount = 4
 ticker = "RBH"
 
-
-[[buildings]]
+[buildings.PSY]
 recipes = []
 name = "planetaryProjectShipyard"
-ticker = "PSY"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.PSY.costs]]
 amount = 24
 ticker = "ASE"
 
-[[buildings.costs]]
+[[buildings.PSY.costs]]
 amount = 8
 ticker = "ATA"
 
-[[buildings.costs]]
+[[buildings.PSY.costs]]
 amount = 24
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.PSY.costs]]
 amount = 32
 ticker = "ABH"
 
-[[buildings.costs]]
+[[buildings.PSY.costs]]
 amount = 24
 ticker = "ADE"
 
-
-[[buildings]]
+[buildings.SST]
 recipes = []
 name = "planetaryProjectSafetySmall"
-ticker = "SST"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 500
-[[buildings.costs]]
+[[buildings.SST.costs]]
 amount = 10
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.SST.costs]]
 amount = 24
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.SST.costs]]
 amount = 24
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.SST.costs]]
 amount = 12
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.SST.costs]]
 amount = 6
 ticker = "BTA"
 
-[[buildings.costs]]
+[[buildings.SST.costs]]
 amount = 300
 ticker = "MCG"
 
-
-[[buildings]]
+[buildings.CM]
 recipes = []
 name = "coreModule"
-ticker = "CM"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 25
-[[buildings.costs]]
+[[buildings.CM.costs]]
 amount = 12
 ticker = "PSL"
 
-[[buildings.costs]]
+[[buildings.CM.costs]]
 amount = 4
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.CM.costs]]
 amount = 8
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.CM.costs]]
 amount = 4
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.CM.costs]]
 amount = 4
 ticker = "LDE"
 
-
-[[buildings]]
+[buildings.SKF]
 name = "shipKitFactory"
-ticker = "SKF"
 expertise = "METALLURGY"
 pioneers = 0
 settlers = 40
@@ -8978,31 +9061,43 @@ technicians = 10
 engineers = 0
 scientists = 0
 area_cost = 40
-recipes = [ "100xAST 100xFET 20xMFK@SKF=>1xWCB", "100xAST 16xMFK@SKF=>1xMCB", "10xZR 4xMFK@SKF=>1xMFL", "125xFET 8xMFK@SKF=>1xLSL", "200xAST 20xMFK@SKF=>1xLCB", "200xFET 20xMFK@SKF=>1xVCB", "20xFE 4xMFK@SKF=>1xTCB", "20xTI 2xMFK@SKF=>1xSSL", "20xZR 8xMFK@SKF=>1xLFL", "35xFE 8xMFK@SKF=>1xVSC", "50xFAL 12xMFK@SKF=>1xSCB", "50xFET 4xMFK@SKF=>1xMSL", "5xZR 1xMFK@SKF=>1xSFL",]
-[[buildings.costs]]
+recipes = [
+  "100xAST 100xFET 20xMFK@SKF=>1xWCB",
+  "100xAST 16xMFK@SKF=>1xMCB",
+  "10xZR 4xMFK@SKF=>1xMFL",
+  "125xFET 8xMFK@SKF=>1xLSL",
+  "200xAST 20xMFK@SKF=>1xLCB",
+  "200xFET 20xMFK@SKF=>1xVCB",
+  "20xFE 4xMFK@SKF=>1xTCB",
+  "20xTI 2xMFK@SKF=>1xSSL",
+  "20xZR 8xMFK@SKF=>1xLFL",
+  "35xFE 8xMFK@SKF=>1xVSC",
+  "50xFAL 12xMFK@SKF=>1xSCB",
+  "50xFET 4xMFK@SKF=>1xMSL",
+  "5xZR 1xMFK@SKF=>1xSFL",
+]
+[[buildings.SKF.costs]]
 amount = 2
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.SKF.costs]]
 amount = 6
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.SKF.costs]]
 amount = 4
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.SKF.costs]]
 amount = 6
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.SKF.costs]]
 amount = 4
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.SME]
 name = "smelter"
-ticker = "SME"
 expertise = "METALLURGY"
 pioneers = 50
 settlers = 0
@@ -9010,50 +9105,62 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 17
-recipes = [ "10xLIO 4xHAL@SME=>4xLI", "1xC 3xAUO@SME=>2xAU", "1xSCR 1xO@SME=>6xS", "2xFE 8xO@SME=>2xSTL", "3xSIO 1xAL@SME=>1xSI", "3xSIO 1xC 1xO 1xFLX@SME=>1xSI", "3xSIO 1xC 1xO@SME=>1xSI", "4xAL 1xSI 2xO@SME=>1xCF", "4xTIO 1xC 1xO@SME=>2xTI", "4xTS 1xO 1xAL@SME=>1xSI", "5xCUO 10xO 1xSIO@SME=>3xCU", "6xALO 1xC 1xO@SME=>3xAL", "6xALO 1xO 1xC 1xFLX@SME=>4xAL", "6xFEO 1xC 1xO 1xFLX@SME=>4xFE", "6xFEO 1xC 1xO@SME=>3xFE",]
-[[buildings.costs]]
+recipes = [
+  "10xLIO 4xHAL@SME=>4xLI",
+  "1xC 3xAUO@SME=>2xAU",
+  "1xSCR 1xO@SME=>6xS",
+  "2xFE 8xO@SME=>2xSTL",
+  "3xSIO 1xAL@SME=>1xSI",
+  "3xSIO 1xC 1xO 1xFLX@SME=>1xSI",
+  "3xSIO 1xC 1xO@SME=>1xSI",
+  "4xAL 1xSI 2xO@SME=>1xCF",
+  "4xTIO 1xC 1xO@SME=>2xTI",
+  "4xTS 1xO 1xAL@SME=>1xSI",
+  "5xCUO 10xO 1xSIO@SME=>3xCU",
+  "6xALO 1xC 1xO@SME=>3xAL",
+  "6xALO 1xO 1xC 1xFLX@SME=>4xAL",
+  "6xFEO 1xC 1xO 1xFLX@SME=>4xFE",
+  "6xFEO 1xC 1xO@SME=>3xFE",
+]
+[[buildings.SME.costs]]
 amount = 4
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.SME.costs]]
 amount = 4
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.SME.costs]]
 amount = 6
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.HB3]
 recipes = []
 name = "habitationTechnician"
-ticker = "HB3"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 14
-[[buildings.costs]]
+[[buildings.HB3.costs]]
 amount = 8
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.HB3.costs]]
 amount = 4
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.HB3.costs]]
 amount = 4
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.HB3.costs]]
 amount = 4
 ticker = "LDE"
 
-
-[[buildings]]
+[buildings.PPF]
 name = "plasticsPrinterFacility"
-ticker = "PPF"
 expertise = "MANUFACTURING"
 pioneers = 0
 settlers = 50
@@ -9061,27 +9168,33 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 16
-recipes = [ "10xPG@PPF=>1xPSS", "1xSFK 50xPG 10xTHF@PPF=>1xLFP", "20xPG@PPF=>1xPSM", "2xPSL 2xMFK 40xPG@PPF=>2xDCL", "2xPSM 8xSFK 20xPG@PPF=>2xDCM", "40xPG@PPF=>1xPSL", "4xSFK 10xPG 1xPSS@PPF=>2xDCS",]
-[[buildings.costs]]
+recipes = [
+  "10xPG@PPF=>1xPSS",
+  "1xSFK 50xPG 10xTHF@PPF=>1xLFP",
+  "20xPG@PPF=>1xPSM",
+  "2xPSL 2xMFK 40xPG@PPF=>2xDCL",
+  "2xPSM 8xSFK 20xPG@PPF=>2xDCM",
+  "40xPG@PPF=>1xPSL",
+  "4xSFK 10xPG 1xPSS@PPF=>2xDCS",
+]
+[[buildings.PPF.costs]]
 amount = 2
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.PPF.costs]]
 amount = 2
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.PPF.costs]]
 amount = 2
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.PPF.costs]]
 amount = 4
 ticker = "LBH"
 
-
-[[buildings]]
+[buildings.HYF]
 name = "hydroponicsFarm"
-ticker = "HYF"
 expertise = "AGRICULTURE"
 pioneers = 40
 settlers = 20
@@ -9089,27 +9202,34 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 15
-recipes = [ "10xH2O 4xNS@HYF=>2xRCO", "14xH2O 1xNS@HYF=>8xHCP", "16xH2O 1xNS@HYF=>6xVEG", "16xH2O 2xNS@HYF=>12xALG", "1xNS@HYF=>4xMUS", "20xH2O 2xNS@HYF=>12xMAI", "22xH2O 3xNS@HYF=>2xCAF", "4xNS@HYF=>12xMUS",]
-[[buildings.costs]]
+recipes = [
+  "10xH2O 4xNS@HYF=>2xRCO",
+  "14xH2O 1xNS@HYF=>8xHCP",
+  "16xH2O 1xNS@HYF=>6xVEG",
+  "16xH2O 2xNS@HYF=>12xALG",
+  "1xNS@HYF=>4xMUS",
+  "20xH2O 2xNS@HYF=>12xMAI",
+  "22xH2O 3xNS@HYF=>2xCAF",
+  "4xNS@HYF=>12xMUS",
+]
+[[buildings.HYF.costs]]
 amount = 2
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.HYF.costs]]
 amount = 16
 ticker = "MHL"
 
-[[buildings.costs]]
+[[buildings.HYF.costs]]
 amount = 4
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.HYF.costs]]
 amount = 4
 ticker = "LBH"
 
-
-[[buildings]]
+[buildings.POL]
 name = "polymerPlant"
-ticker = "POL"
 expertise = "CHEMISTRY"
 pioneers = 10
 settlers = 25
@@ -9117,27 +9237,29 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 15
-recipes = [ "150xPG 70xEPO@POL=>1xDEC", "1xC 1xH 1xCL 1xO@POL=>50xEPO", "1xH 1xC 1xMG@POL=>50xPG",]
-[[buildings.costs]]
+recipes = [
+  "150xPG 70xEPO@POL=>1xDEC",
+  "1xC 1xH 1xCL 1xO@POL=>50xEPO",
+  "1xH 1xC 1xMG@POL=>50xPG",
+]
+[[buildings.POL.costs]]
 amount = 8
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.POL.costs]]
 amount = 4
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.POL.costs]]
 amount = 4
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.POL.costs]]
 amount = 2
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.HWP]
 name = "hullWeldingPlant"
-ticker = "HWP"
 expertise = "METALLURGY"
 pioneers = 0
 settlers = 40
@@ -9145,31 +9267,38 @@ technicians = 10
 engineers = 0
 scientists = 0
 area_cost = 25
-recipes = [ "12xAL 1xHE@HWP=>4xLHP", "12xAL 1xSTL 1xHE@HWP=>4xBHP", "12xAL 4xAST 1xHE@HWP=>4xHHP", "12xAL 4xTI 1xHE@HWP=>4xRHP", "2xBOS 2xCTF 1xHE@HWP=>2xATP", "2xFAL 4xCF 1xKV 1xHE@HWP=>8xBWH", "2xTI 4xCTF 2xTK 1xHE@HWP=>8xAWH", "8xAL 10xFET 1xHE@HWP=>4xAHP",]
-[[buildings.costs]]
+recipes = [
+  "12xAL 1xHE@HWP=>4xLHP",
+  "12xAL 1xSTL 1xHE@HWP=>4xBHP",
+  "12xAL 4xAST 1xHE@HWP=>4xHHP",
+  "12xAL 4xTI 1xHE@HWP=>4xRHP",
+  "2xBOS 2xCTF 1xHE@HWP=>2xATP",
+  "2xFAL 4xCF 1xKV 1xHE@HWP=>8xBWH",
+  "2xTI 4xCTF 2xTK 1xHE@HWP=>8xAWH",
+  "8xAL 10xFET 1xHE@HWP=>4xAHP",
+]
+[[buildings.HWP.costs]]
 amount = 6
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.HWP.costs]]
 amount = 4
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.HWP.costs]]
 amount = 2
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.HWP.costs]]
 amount = 6
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.HWP.costs]]
 amount = 4
 ticker = "BBH"
 
-
-[[buildings]]
+[buildings.SL]
 name = "softwareLabs"
-ticker = "SL"
 expertise = "ELECTRONICS"
 pioneers = 0
 settlers = 0
@@ -9177,31 +9306,34 @@ technicians = 0
 engineers = 0
 scientists = 20
 area_cost = 20
-recipes = [ "1xDA 1xDD@SL=>1xIMM", "1xNN 1xROM@SL=>1xWAI", "1xWAI 1xDV 1xIMM@SL=>2xSNM", "@SL=>1xIDC",]
-[[buildings.costs]]
+recipes = [
+  "1xDA 1xDD@SL=>1xIMM",
+  "1xNN 1xROM@SL=>1xWAI",
+  "1xWAI 1xDV 1xIMM@SL=>2xSNM",
+  "@SL=>1xIDC",
+]
+[[buildings.SL.costs]]
 amount = 8
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.SL.costs]]
 amount = 8
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.SL.costs]]
 amount = 6
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.SL.costs]]
 amount = 12
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.SL.costs]]
 amount = 12
 ticker = "RBH"
 
-
-[[buildings]]
+[buildings.SD]
 name = "softwareDevelopment"
-ticker = "SD"
 expertise = "ELECTRONICS"
 pioneers = 0
 settlers = 0
@@ -9209,31 +9341,37 @@ technicians = 50
 engineers = 0
 scientists = 0
 area_cost = 20
-recipes = [ "@SD=>1xBAI", "@SD=>1xLD", "@SD=>1xMLI", "@SD=>1xNF", "@SD=>1xSA", "@SD=>1xSAL", "@SD=>1xWM",]
-[[buildings.costs]]
+recipes = [
+  "@SD=>1xBAI",
+  "@SD=>1xLD",
+  "@SD=>1xMLI",
+  "@SD=>1xNF",
+  "@SD=>1xSA",
+  "@SD=>1xSAL",
+  "@SD=>1xWM",
+]
+[[buildings.SD.costs]]
 amount = 6
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.SD.costs]]
 amount = 6
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.SD.costs]]
 amount = 10
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.SD.costs]]
 amount = 4
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.SD.costs]]
 amount = 8
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.ORC]
 name = "orchard"
-ticker = "ORC"
 expertise = "AGRICULTURE"
 pioneers = 0
 settlers = 70
@@ -9241,58 +9379,61 @@ technicians = 10
 engineers = 0
 scientists = 0
 area_cost = 120
-recipes = [ "20xH2O 1xDDT 2xSOI@ORC=>12xPIB", "30xH2O 1xDDT 3xSOI@ORC=>6xGRA", "30xH2O 1xDDT@ORC=>10xPIB", "40xH2O 1xDDT@ORC=>5xGRA", "40xH2O 2xDDT 4xSOI@ORC=>18xHOP", "60xH2O 2xDDT@ORC=>15xHOP",]
-[[buildings.costs]]
+recipes = [
+  "20xH2O 1xDDT 2xSOI@ORC=>12xPIB",
+  "30xH2O 1xDDT 3xSOI@ORC=>6xGRA",
+  "30xH2O 1xDDT@ORC=>10xPIB",
+  "40xH2O 1xDDT@ORC=>5xGRA",
+  "40xH2O 2xDDT 4xSOI@ORC=>18xHOP",
+  "60xH2O 2xDDT@ORC=>15xHOP",
+]
+[[buildings.ORC.costs]]
 amount = 8
 ticker = "ASE"
 
-[[buildings.costs]]
+[[buildings.ORC.costs]]
 amount = 2
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.ORC.costs]]
 amount = 4
 ticker = "ATA"
 
-
-[[buildings]]
+[buildings.INF]
 recipes = []
 name = "planetaryProjectHealthSmall"
-ticker = "INF"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 500
-[[buildings.costs]]
+[[buildings.INF.costs]]
 amount = 300
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.INF.costs]]
 amount = 12
 ticker = "BTA"
 
-[[buildings.costs]]
+[[buildings.INF.costs]]
 amount = 10
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.INF.costs]]
 amount = 24
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.INF.costs]]
 amount = 24
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.INF.costs]]
 amount = 16
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.PP2]
 name = "prefabPlant2"
-ticker = "PP2"
 expertise = "CONSTRUCTION"
 pioneers = 25
 settlers = 25
@@ -9300,27 +9441,35 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 25
-recipes = [ "120xPG 3xAL@PP2=>1xLSE", "1xAL 2xLST@PP2=>1xBSE", "1xAL 5xGL@PP2=>1xLTA", "1xGL 1xAL@PP2=>1xBTA", "2xAL 1xLST@PP2=>1xBBH", "35xPE 3xAL@PP2=>1xLBH", "3xAL 1xNL@PP2=>1xLDE", "50xPG 1xNE@PP2=>1xAEF", "60xPG@PP2=>1xBDE",]
-[[buildings.costs]]
+recipes = [
+  "120xPG 3xAL@PP2=>1xLSE",
+  "1xAL 2xLST@PP2=>1xBSE",
+  "1xAL 5xGL@PP2=>1xLTA",
+  "1xGL 1xAL@PP2=>1xBTA",
+  "2xAL 1xLST@PP2=>1xBBH",
+  "35xPE 3xAL@PP2=>1xLBH",
+  "3xAL 1xNL@PP2=>1xLDE",
+  "50xPG 1xNE@PP2=>1xAEF",
+  "60xPG@PP2=>1xBDE",
+]
+[[buildings.PP2.costs]]
 amount = 4
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.PP2.costs]]
 amount = 6
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.PP2.costs]]
 amount = 3
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.PP2.costs]]
 amount = 6
 ticker = "BDE"
 
-
-[[buildings]]
+[buildings.REF]
 name = "refinery"
-ticker = "REF"
 expertise = "FUEL_REFINING"
 pioneers = 60
 settlers = 20
@@ -9328,144 +9477,141 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 25
-recipes = [ "1xAMM 2xGAL 3xH@REF=>100xSF", "1xAMM 5xNAB@REF=>150xSF", "2xHE3 4xH@REF=>100xFF", "3xTS@REF=>2xHE3",]
-[[buildings.costs]]
+recipes = [
+  "1xAMM 2xGAL 3xH@REF=>100xSF",
+  "1xAMM 5xNAB@REF=>150xSF",
+  "2xHE3 4xH@REF=>100xFF",
+  "3xTS@REF=>2xHE3",
+]
+[[buildings.REF.costs]]
 amount = 6
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.REF.costs]]
 amount = 6
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.REF.costs]]
 amount = 6
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.CTE]
 recipes = []
 name = "corporationProjectTerraforming"
-ticker = "CTE"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 100
-[[buildings.costs]]
+[[buildings.CTE.costs]]
 amount = 32
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.CTE.costs]]
 amount = 44
 ticker = "SP"
 
-[[buildings.costs]]
+[[buildings.CTE.costs]]
 amount = 8
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.CTE.costs]]
 amount = 32
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.CTE.costs]]
 amount = 32
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.CTE.costs]]
 amount = 1
 ticker = "LIS"
 
-[[buildings.costs]]
+[[buildings.CTE.costs]]
 amount = 5
 ticker = "CC"
 
-
-[[buildings]]
+[buildings.ACA]
 recipes = []
 name = "planetaryProjectComfortCulture"
-ticker = "ACA"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.ACA.costs]]
 amount = 24
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.ACA.costs]]
 amount = 16
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.ACA.costs]]
 amount = 20
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.ACA.costs]]
 amount = 300
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.ACA.costs]]
 amount = 32
 ticker = "DEC"
 
-[[buildings.costs]]
+[[buildings.ACA.costs]]
 amount = 12
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.ACA.costs]]
 amount = 24
 ticker = "RDE"
 
-
-[[buildings]]
+[buildings.PBH]
 recipes = []
 name = "planetaryProjectCultureEducation"
-ticker = "PBH"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.PBH.costs]]
 amount = 300
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.PBH.costs]]
 amount = 12
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.PBH.costs]]
 amount = 1
 ticker = "COM"
 
-[[buildings.costs]]
+[[buildings.PBH.costs]]
 amount = 30
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.PBH.costs]]
 amount = 1
 ticker = "ADS"
 
-[[buildings.costs]]
+[[buildings.PBH.costs]]
 amount = 24
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.PBH.costs]]
 amount = 16
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.PBH.costs]]
 amount = 24
 ticker = "RSE"
 
-
-[[buildings]]
+[buildings.MCA]
 name = "mediumComponentsAssembly"
-ticker = "MCA"
 expertise = "MANUFACTURING"
 pioneers = 0
 settlers = 20
@@ -9473,27 +9619,30 @@ technicians = 20
 engineers = 0
 scientists = 0
 area_cost = 35
-recipes = [ "1xAL 8xDCS 2xSFK@MCA=>8xFAN", "1xLCR 3xGL@MCA=>1xDIS", "1xRG 5xDCS 5xLDI@MCA=>5xHD", "4xRAM 4xMPC 4xPSM 4xSFK@MCA=>4xMB",]
-[[buildings.costs]]
+recipes = [
+  "1xAL 8xDCS 2xSFK@MCA=>8xFAN",
+  "1xLCR 3xGL@MCA=>1xDIS",
+  "1xRG 5xDCS 5xLDI@MCA=>5xHD",
+  "4xRAM 4xMPC 4xPSM 4xSFK@MCA=>4xMB",
+]
+[[buildings.MCA.costs]]
 amount = 4
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.MCA.costs]]
 amount = 4
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.MCA.costs]]
 amount = 6
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.MCA.costs]]
 amount = 6
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.PP4]
 name = "prefabPlant4"
-ticker = "PP4"
 expertise = "CONSTRUCTION"
 pioneers = 0
 settlers = 0
@@ -9501,27 +9650,32 @@ technicians = 40
 engineers = 30
 scientists = 0
 area_cost = 40
-recipes = [ "150xPE 2xLBH 2xTHP@PP4=>1xTSH", "1xRSE 2xTI@PP4=>1xASE", "1xRTA 1xNG@PP4=>1xATA", "1xTA 1xSTL 1xLST@PP4=>1xRSH", "2xLDE 2xKV@PP4=>2xADE", "2xRBH 125xNR@PP4=>2xABH",]
-[[buildings.costs]]
+recipes = [
+  "150xPE 2xLBH 2xTHP@PP4=>1xTSH",
+  "1xRSE 2xTI@PP4=>1xASE",
+  "1xRTA 1xNG@PP4=>1xATA",
+  "1xTA 1xSTL 1xLST@PP4=>1xRSH",
+  "2xLDE 2xKV@PP4=>2xADE",
+  "2xRBH 125xNR@PP4=>2xABH",
+]
+[[buildings.PP4.costs]]
 amount = 4
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.PP4.costs]]
 amount = 6
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.PP4.costs]]
 amount = 6
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.PP4.costs]]
 amount = 8
 ticker = "RSE"
 
-
-[[buildings]]
+[buildings.CHP]
 name = "chemPlant"
-ticker = "CHP"
 expertise = "CHEMISTRY"
 pioneers = 20
 settlers = 60
@@ -9529,27 +9683,39 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 18
-recipes = [ "10xAMM 4xREA@CHP=>10xPFE", "10xCLI 20xBRM@CHP=>16xSOI", "1xLST@CHP=>10xFLX", "1xLST@CHP=>1xCA", "1xMG 1xCU 1xS@CHP=>1xIND", "1xNA 1xBOR 5xH@CHP=>20xNAB", "1xSI 1xO@CHP=>1xLCR", "25xBRM@CHP=>10xREA", "2xCA 1xMG 1xTA@CHP=>20xSC", "2xH2O 2xN 1xLST@CHP=>4xNS", "3xHAL 1xH2O@CHP=>2xNA 1xCL", "50xPE 1xAL 4xCOT 1xHER@CHP=>16xMED", "6xVEG 10xREA@CHP=>6xOLF",]
-[[buildings.costs]]
+recipes = [
+  "10xAMM 4xREA@CHP=>10xPFE",
+  "10xCLI 20xBRM@CHP=>16xSOI",
+  "1xLST@CHP=>10xFLX",
+  "1xLST@CHP=>1xCA",
+  "1xMG 1xCU 1xS@CHP=>1xIND",
+  "1xNA 1xBOR 5xH@CHP=>20xNAB",
+  "1xSI 1xO@CHP=>1xLCR",
+  "25xBRM@CHP=>10xREA",
+  "2xCA 1xMG 1xTA@CHP=>20xSC",
+  "2xH2O 2xN 1xLST@CHP=>4xNS",
+  "3xHAL 1xH2O@CHP=>2xNA 1xCL",
+  "50xPE 1xAL 4xCOT 1xHER@CHP=>16xMED",
+  "6xVEG 10xREA@CHP=>6xOLF",
+]
+[[buildings.CHP.costs]]
 amount = 3
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.CHP.costs]]
 amount = 3
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.CHP.costs]]
 amount = 3
 ticker = "BSE"
 
-[[buildings.costs]]
+[[buildings.CHP.costs]]
 amount = 4
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.SPP]
 name = "spacecraftPrefabPlant"
-ticker = "SPP"
 expertise = "MANUFACTURING"
 pioneers = 0
 settlers = 0
@@ -9557,74 +9723,83 @@ technicians = 50
 engineers = 30
 scientists = 0
 area_cost = 60
-recipes = [ "100xPG 20xAST 8xTK@SPP=>1xAGS", "5xATP 30xTHF@SPP=>10xAPT", "5xATP 30xTHF@SPP=>12xAPT", "5xLST 2xKV@SPP=>10xBRP", "5xLST 2xKV@SPP=>12xBRP", "5xLST 2xTK@SPP=>10xARP", "5xLST 2xTK@SPP=>8xARP", "5xLST 5xW 5xTA@SPP=>10xSRP", "5xLST 5xW 5xTA@SPP=>8xSRP", "5xTHP 20xTHF@SPP=>10xBPT", "5xTHP 20xTHF@SPP=>12xBPT", "80xPG 14xFAL 4xKV@SPP=>1xBGS",]
-[[buildings.costs]]
+recipes = [
+  "100xPG 20xAST 8xTK@SPP=>1xAGS",
+  "5xATP 30xTHF@SPP=>10xAPT",
+  "5xATP 30xTHF@SPP=>12xAPT",
+  "5xLST 2xKV@SPP=>10xBRP",
+  "5xLST 2xKV@SPP=>12xBRP",
+  "5xLST 2xTK@SPP=>10xARP",
+  "5xLST 2xTK@SPP=>8xARP",
+  "5xLST 5xW 5xTA@SPP=>10xSRP",
+  "5xLST 5xW 5xTA@SPP=>8xSRP",
+  "5xTHP 20xTHF@SPP=>10xBPT",
+  "5xTHP 20xTHF@SPP=>12xBPT",
+  "80xPG 14xFAL 4xKV@SPP=>1xBGS",
+]
+[[buildings.SPP.costs]]
 amount = 6
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.SPP.costs]]
 amount = 2
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.SPP.costs]]
 amount = 12
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.SPP.costs]]
 amount = 8
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.SPP.costs]]
 amount = 6
 ticker = "RSE"
 
-
-[[buildings]]
+[buildings.VRT]
 recipes = []
 name = "planetaryProjectCultureBig"
-ticker = "VRT"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 1000
-[[buildings.costs]]
+[[buildings.VRT.costs]]
 amount = 32
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.VRT.costs]]
 amount = 32
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.VRT.costs]]
 amount = 24
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.VRT.costs]]
 amount = 12
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.VRT.costs]]
 amount = 500
 ticker = "MCG"
 
-[[buildings.costs]]
+[[buildings.VRT.costs]]
 amount = 20
 ticker = "DEC"
 
-[[buildings.costs]]
+[[buildings.VRT.costs]]
 amount = 1
 ticker = "ADS"
 
-[[buildings.costs]]
+[[buildings.VRT.costs]]
 amount = 30
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.PHF]
 name = "pharmaFactory"
-ticker = "PHF"
 expertise = "CHEMISTRY"
 pioneers = 0
 settlers = 25
@@ -9632,31 +9807,34 @@ technicians = 25
 engineers = 0
 scientists = 0
 area_cost = 35
-recipes = [ "1xBSC 20xREA 4xMFK 2xDCM@PHF=>1xADR", "1xDCM 1xMFK 1xSAR@PHF=>1xBSC", "1xNL 1xSIL@PHF=>20xBND", "2xCA 4xLI 10xREA@PHF=>10xPK",]
-[[buildings.costs]]
+recipes = [
+  "1xBSC 20xREA 4xMFK 2xDCM@PHF=>1xADR",
+  "1xDCM 1xMFK 1xSAR@PHF=>1xBSC",
+  "1xNL 1xSIL@PHF=>20xBND",
+  "2xCA 4xLI 10xREA@PHF=>10xPK",
+]
+[[buildings.PHF.costs]]
 amount = 8
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.PHF.costs]]
 amount = 2
 ticker = "LTA"
 
-[[buildings.costs]]
+[[buildings.PHF.costs]]
 amount = 6
 ticker = "LDE"
 
-[[buildings.costs]]
+[[buildings.PHF.costs]]
 amount = 4
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.PHF.costs]]
 amount = 6
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.UPF]
 name = "unitPrefabPlant"
-ticker = "UPF"
 expertise = "CONSTRUCTION"
 pioneers = 20
 settlers = 50
@@ -9664,31 +9842,46 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 50
-recipes = [ "10xPSL 20xPSM 10xFET 1xNV1 5xSAR 1xCOM@UPF=>1xBR1", "10xPSL 20xPSM 10xFET 1xNV2 10xSAR 1xCOM@UPF=>1xBR2", "10xPSL 20xPSM 10xTI 1xLIS 10xDEC 1xTCU@UPF=>1xCQM", "10xPSL 20xPSM 10xTI 5xSAR 4xRAD@UPF=>1xBRS", "10xPSL 4xSAR 1xCOM@UPF=>1xDOU", "12xPSL 8xPSM 1xADR@UPF=>1xTCU", "1xBWS 8xPSL 4xPCB 1xBID@UPF=>1xFUN", "1xWS 1xDA 10xPSL 6xPSM@UPF=>1xLU", "20xPSL 30xPSM 20xFET 1xLIS 20xDEC 1xTCU@UPF=>1xCQL", "20xPSL 30xPSM 4xSRD@UPF=>1xRDS", "20xPSL 6xUTS 12xPSM@UPF=>1xWOR", "2xPSL 5xPSM 5xAL 1xDEC 1xTCU 1xBMF@UPF=>1xCQT", "30xPSL 50xPSM 8xSRD@UPF=>1xRDL", "4xSEQ 2xBSC 12xPSL 8xPSM 10xNG@UPF=>1xSU", "5xPSL 10xPSM 5xFAL 1xLIS 2xDEC 1xTCU@UPF=>1xCQS", "6xBBH 10xBDE 10xBSE 50xSOI@UPF=>1xHAB",]
-[[buildings.costs]]
+recipes = [
+  "10xPSL 20xPSM 10xFET 1xNV1 5xSAR 1xCOM@UPF=>1xBR1",
+  "10xPSL 20xPSM 10xFET 1xNV2 10xSAR 1xCOM@UPF=>1xBR2",
+  "10xPSL 20xPSM 10xTI 1xLIS 10xDEC 1xTCU@UPF=>1xCQM",
+  "10xPSL 20xPSM 10xTI 5xSAR 4xRAD@UPF=>1xBRS",
+  "10xPSL 4xSAR 1xCOM@UPF=>1xDOU",
+  "12xPSL 8xPSM 1xADR@UPF=>1xTCU",
+  "1xBWS 8xPSL 4xPCB 1xBID@UPF=>1xFUN",
+  "1xWS 1xDA 10xPSL 6xPSM@UPF=>1xLU",
+  "20xPSL 30xPSM 20xFET 1xLIS 20xDEC 1xTCU@UPF=>1xCQL",
+  "20xPSL 30xPSM 4xSRD@UPF=>1xRDS",
+  "20xPSL 6xUTS 12xPSM@UPF=>1xWOR",
+  "2xPSL 5xPSM 5xAL 1xDEC 1xTCU 1xBMF@UPF=>1xCQT",
+  "30xPSL 50xPSM 8xSRD@UPF=>1xRDL",
+  "4xSEQ 2xBSC 12xPSL 8xPSM 10xNG@UPF=>1xSU",
+  "5xPSL 10xPSM 5xFAL 1xLIS 2xDEC 1xTCU@UPF=>1xCQS",
+  "6xBBH 10xBDE 10xBSE 50xSOI@UPF=>1xHAB",
+]
+[[buildings.UPF.costs]]
 amount = 3
 ticker = "BTA"
 
-[[buildings.costs]]
+[[buildings.UPF.costs]]
 amount = 8
 ticker = "BBH"
 
-[[buildings.costs]]
+[[buildings.UPF.costs]]
 amount = 10
 ticker = "BDE"
 
-[[buildings.costs]]
+[[buildings.UPF.costs]]
 amount = 8
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.UPF.costs]]
 amount = 10
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.SPF]
 name = "spacecraftPropulsionFactory"
-ticker = "SPF"
 expertise = "MANUFACTURING"
 pioneers = 0
 settlers = 0
@@ -9696,31 +9889,43 @@ technicians = 0
 engineers = 50
 scientists = 20
 area_cost = 40
-recipes = [ "10xFAL 2xMFK 1xCHA@SPF=>1xNOZ", "1xFIR 20xSTL 1xCBM@SPF=>1xHPR", "1xRAG 10xAST 1xCBS@SPF=>1xRCT", "1xRAG 20xBGO 1xCBS@SPF=>1xQCR", "1xSFK 50xPG 10xATP@SPF=>1xAFP", "1xSFK 50xPG 5xTHP@SPF=>1xBFP", "20xFET 4xMFK 1xCHA@SPF=>1xANZ", "20xWAL 4xMFK 1xCHA@SPF=>1xHNZ", "2xFIR 20xWAL 1xCBL@SPF=>1xHYR", "4xAFP 4xANZ 20xFET 1xACS 1xMFK@SPF=>1xAEN", "4xBFP 4xNOZ 10xAST 1xACS 1xMFK@SPF=>1xENG", "6xLFP 6xNOZ 25xBRO 1xACS 1xMFK@SPF=>1xFSE", "8xAFP 4xHNZ 20xWAL 1xACS 1xMFK@SPF=>1xHTE",]
-[[buildings.costs]]
+recipes = [
+  "10xFAL 2xMFK 1xCHA@SPF=>1xNOZ",
+  "1xFIR 20xSTL 1xCBM@SPF=>1xHPR",
+  "1xRAG 10xAST 1xCBS@SPF=>1xRCT",
+  "1xRAG 20xBGO 1xCBS@SPF=>1xQCR",
+  "1xSFK 50xPG 10xATP@SPF=>1xAFP",
+  "1xSFK 50xPG 5xTHP@SPF=>1xBFP",
+  "20xFET 4xMFK 1xCHA@SPF=>1xANZ",
+  "20xWAL 4xMFK 1xCHA@SPF=>1xHNZ",
+  "2xFIR 20xWAL 1xCBL@SPF=>1xHYR",
+  "4xAFP 4xANZ 20xFET 1xACS 1xMFK@SPF=>1xAEN",
+  "4xBFP 4xNOZ 10xAST 1xACS 1xMFK@SPF=>1xENG",
+  "6xLFP 6xNOZ 25xBRO 1xACS 1xMFK@SPF=>1xFSE",
+  "8xAFP 4xHNZ 20xWAL 1xACS 1xMFK@SPF=>1xHTE",
+]
+[[buildings.SPF.costs]]
 amount = 8
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.SPF.costs]]
 amount = 2
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.SPF.costs]]
 amount = 6
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.SPF.costs]]
 amount = 6
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.SPF.costs]]
 amount = 6
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.EDM]
 name = "electronicDeviceManufactory"
-ticker = "EDM"
 expertise = "ELECTRONICS"
 pioneers = 0
 settlers = 50
@@ -9728,27 +9933,31 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 30
-recipes = [ "100xPE 4xCU@EDM=>8xSCN", "1xDCS 1xHD 1xNG@EDM=>1xHOG", "1xDCS 1xSFK 1xPOW@EDM=>1xRAD", "1xPCB 1xTRA@EDM=>1xMHP", "2xSAR 2xCD 1xKV@EDM=>2xBID",]
-[[buildings.costs]]
+recipes = [
+  "100xPE 4xCU@EDM=>8xSCN",
+  "1xDCS 1xHD 1xNG@EDM=>1xHOG",
+  "1xDCS 1xSFK 1xPOW@EDM=>1xRAD",
+  "1xPCB 1xTRA@EDM=>1xMHP",
+  "2xSAR 2xCD 1xKV@EDM=>2xBID",
+]
+[[buildings.EDM.costs]]
 amount = 4
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.EDM.costs]]
 amount = 6
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.EDM.costs]]
 amount = 4
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.EDM.costs]]
 amount = 4
 ticker = "LDE"
 
-
-[[buildings]]
+[buildings.IVP]
 name = "inVitroPlant"
-ticker = "IVP"
 expertise = "FOOD_INDUSTRIES"
 pioneers = 0
 settlers = 0
@@ -9756,31 +9965,33 @@ technicians = 70
 engineers = 0
 scientists = 0
 area_cost = 32
-recipes = [ "16xH2O 1xHCP 1xNS@IVP=>8xRSI", "1xPPA 1xNS 1xHCP@IVP=>4xMTP", "2xVIT 4xREA 2xBAC 2xBL@IVP=>20xVG",]
-[[buildings.costs]]
+recipes = [
+  "16xH2O 1xHCP 1xNS@IVP=>8xRSI",
+  "1xPPA 1xNS 1xHCP@IVP=>4xMTP",
+  "2xVIT 4xREA 2xBAC 2xBL@IVP=>20xVG",
+]
+[[buildings.IVP.costs]]
 amount = 4
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.IVP.costs]]
 amount = 6
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.IVP.costs]]
 amount = 6
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.IVP.costs]]
 amount = 2
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.IVP.costs]]
 amount = 4
 ticker = "RSE"
 
-
-[[buildings]]
+[buildings.EEP]
 name = "einsteiniumEnrichmentPlant"
-ticker = "EEP"
 expertise = "CHEMISTRY"
 pioneers = 0
 settlers = 0
@@ -9788,31 +9999,29 @@ technicians = 0
 engineers = 60
 scientists = 40
 area_cost = 100
-recipes = [ "1xES 4xREA 4xFLX@EEP=>1xEES", "1xLES@EEP=>10xES",]
-[[buildings.costs]]
+recipes = ["1xES 4xREA 4xFLX@EEP=>1xEES", "1xLES@EEP=>10xES"]
+[[buildings.EEP.costs]]
 amount = 12
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.EEP.costs]]
 amount = 6
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.EEP.costs]]
 amount = 6
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.EEP.costs]]
 amount = 6
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.EEP.costs]]
 amount = 2
 ticker = "RTA"
 
-
-[[buildings]]
+[buildings.GF]
 name = "glassFurnace"
-ticker = "GF"
 expertise = "METALLURGY"
 pioneers = 0
 settlers = 80
@@ -9820,23 +10029,33 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 27
-recipes = [ "10xGL 10xNCS@GF=>10xNG", "10xGL 15xPG 1xSEN@GF=>10xRG", "10xGL 15xPG@GF=>10xRG", "10xGL@GF=>20xTUB", "16xNE 8xRG@GF=>1xLIT", "20xRG 1xGV@GF=>1xGCH", "20xRG 1xTI 1xGCH@GF=>1xGNZ", "2xSIO 1xNA 1xFLX@GF=>12xGL", "2xSIO 1xNA 1xSEN@GF=>10xGL", "2xSIO 1xNA@GF=>10xGL", "4xLFP 4xGNZ 50xNG 10xTHF 1xMFK@GF=>1xGEN",]
-[[buildings.costs]]
+recipes = [
+  "10xGL 10xNCS@GF=>10xNG",
+  "10xGL 15xPG 1xSEN@GF=>10xRG",
+  "10xGL 15xPG@GF=>10xRG",
+  "10xGL@GF=>20xTUB",
+  "16xNE 8xRG@GF=>1xLIT",
+  "20xRG 1xGV@GF=>1xGCH",
+  "20xRG 1xTI 1xGCH@GF=>1xGNZ",
+  "2xSIO 1xNA 1xFLX@GF=>12xGL",
+  "2xSIO 1xNA 1xSEN@GF=>10xGL",
+  "2xSIO 1xNA@GF=>10xGL",
+  "4xLFP 4xGNZ 50xNG 10xTHF 1xMFK@GF=>1xGEN",
+]
+[[buildings.GF.costs]]
 amount = 6
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.GF.costs]]
 amount = 4
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.GF.costs]]
 amount = 5
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.SCA]
 name = "smallComponentsAssembly"
-ticker = "SCA"
 expertise = "MANUFACTURING"
 pioneers = 0
 settlers = 0
@@ -9844,27 +10063,32 @@ technicians = 30
 engineers = 0
 scientists = 0
 area_cost = 35
-recipes = [ "10xPSS 10xBGC 10xSI@SCA=>10xROM", "10xSWF 10xTRN 10xBCO@SCA=>10xMPC", "10xSWF 5xBCO 60xPE 1xBGO@SCA=>5xPCB", "20xTRN 10xH 10xN@SCA=>20xSEN", "4xMWF 4xTRN 4xCAP 4xHCC@SCA=>4xTPU", "6xPSS 6xCAP 6xBCO@SCA=>6xRAM",]
-[[buildings.costs]]
+recipes = [
+  "10xPSS 10xBGC 10xSI@SCA=>10xROM",
+  "10xSWF 10xTRN 10xBCO@SCA=>10xMPC",
+  "10xSWF 5xBCO 60xPE 1xBGO@SCA=>5xPCB",
+  "20xTRN 10xH 10xN@SCA=>20xSEN",
+  "4xMWF 4xTRN 4xCAP 4xHCC@SCA=>4xTPU",
+  "6xPSS 6xCAP 6xBCO@SCA=>6xRAM",
+]
+[[buildings.SCA.costs]]
 amount = 3
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.SCA.costs]]
 amount = 4
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.SCA.costs]]
 amount = 2
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.SCA.costs]]
 amount = 6
 ticker = "RDE"
 
-
-[[buildings]]
+[buildings.SE]
 name = "softwareEngineering"
-ticker = "SE"
 expertise = "ELECTRONICS"
 pioneers = 0
 settlers = 0
@@ -9872,31 +10096,36 @@ technicians = 0
 engineers = 30
 scientists = 0
 area_cost = 20
-recipes = [ "1xBAI 1xMLI@SE=>1xNN", "1xLD 1xWM 1xROM@SE=>1xOS", "1xNF 1xLD@SE=>1xDD", "1xSAL 1xLD 1xROM 1xSA@SE=>1xDA", "@SE=>1xDV", "@SE=>1xEDC",]
-[[buildings.costs]]
+recipes = [
+  "1xBAI 1xMLI@SE=>1xNN",
+  "1xLD 1xWM 1xROM@SE=>1xOS",
+  "1xNF 1xLD@SE=>1xDD",
+  "1xSAL 1xLD 1xROM 1xSA@SE=>1xDA",
+  "@SE=>1xDV",
+  "@SE=>1xEDC",
+]
+[[buildings.SE.costs]]
 amount = 4
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.SE.costs]]
 amount = 4
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.SE.costs]]
 amount = 6
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.SE.costs]]
 amount = 6
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.SE.costs]]
 amount = 2
 ticker = "RTA"
 
-
-[[buildings]]
+[buildings.FER]
 name = "fermentationFacility"
-ticker = "FER"
 expertise = "FOOD_INDUSTRIES"
 pioneers = 0
 settlers = 60
@@ -9904,27 +10133,31 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 25
-recipes = [ "10xDW 4xPIB 1xCA 1xI 1xAMM@FER=>20xVIT", "20xDW 15xGRA 15xREA 1xAMM@FER=>10xWIN", "2xGRN 2xDW 1xES 1xAMM@FER=>4xGIN", "2xGRN 3xDW 1xHOP 1xAMM@FER=>6xALE", "4xDW 1xHER 1xAMM@FER=>6xKOM",]
-[[buildings.costs]]
+recipes = [
+  "10xDW 4xPIB 1xCA 1xI 1xAMM@FER=>20xVIT",
+  "20xDW 15xGRA 15xREA 1xAMM@FER=>10xWIN",
+  "2xGRN 2xDW 1xES 1xAMM@FER=>4xGIN",
+  "2xGRN 3xDW 1xHOP 1xAMM@FER=>6xALE",
+  "4xDW 1xHER 1xAMM@FER=>6xKOM",
+]
+[[buildings.FER.costs]]
 amount = 5
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.FER.costs]]
 amount = 2
 ticker = "LSE"
 
-[[buildings.costs]]
+[[buildings.FER.costs]]
 amount = 2
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.FER.costs]]
 amount = 2
 ticker = "LDE"
 
-
-[[buildings]]
+[buildings.AML]
 name = "advancedMaterialLab"
-ticker = "AML"
 expertise = "CHEMISTRY"
 pioneers = 0
 settlers = 0
@@ -9932,27 +10165,31 @@ technicians = 20
 engineers = 30
 scientists = 0
 area_cost = 45
-recipes = [ "1xBOR 1xSI 4xAL@AML=>4xBOS", "2xBER@AML=>1xBE 1xAL 1xSIO", "2xTAI@AML=>1xTA 1xFE", "2xZIR@AML=>1xZR 2xSIO", "5xBTS@AML=>1xW",]
-[[buildings.costs]]
+recipes = [
+  "1xBOR 1xSI 4xAL@AML=>4xBOS",
+  "2xBER@AML=>1xBE 1xAL 1xSIO",
+  "2xTAI@AML=>1xTA 1xFE",
+  "2xZIR@AML=>1xZR 2xSIO",
+  "5xBTS@AML=>1xW",
+]
+[[buildings.AML.costs]]
 amount = 6
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.AML.costs]]
 amount = 6
 ticker = "ASE"
 
-[[buildings.costs]]
+[[buildings.AML.costs]]
 amount = 10
 ticker = "ABH"
 
-[[buildings.costs]]
+[[buildings.AML.costs]]
 amount = 6
 ticker = "ADE"
 
-
-[[buildings]]
+[buildings.DRS]
 name = "droneShop"
-ticker = "DRS"
 expertise = "ELECTRONICS"
 pioneers = 0
 settlers = 0
@@ -9960,31 +10197,37 @@ technicians = 40
 engineers = 20
 scientists = 0
 area_cost = 30
-recipes = [ "1xBSC 1xDCH@DRS=>1xCCD", "1xMPC 1xPOW 1xSOL 1xDRF@DRS=>1xDCH", "1xSAR 1xBSC 1xDCH@DRS=>1xSUD", "1xSAR 1xDCH@DRS=>1xRED", "1xSAR 2xUTS 1xDCH@DRS=>1xSRD", "1xSEQ 1xBSC 1xDCH@DRS=>1xSDR", "50xNFI 1xDCS@DRS=>1xDRF",]
-[[buildings.costs]]
+recipes = [
+  "1xBSC 1xDCH@DRS=>1xCCD",
+  "1xMPC 1xPOW 1xSOL 1xDRF@DRS=>1xDCH",
+  "1xSAR 1xBSC 1xDCH@DRS=>1xSUD",
+  "1xSAR 1xDCH@DRS=>1xRED",
+  "1xSAR 2xUTS 1xDCH@DRS=>1xSRD",
+  "1xSEQ 1xBSC 1xDCH@DRS=>1xSDR",
+  "50xNFI 1xDCS@DRS=>1xDRF",
+]
+[[buildings.DRS.costs]]
 amount = 6
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.DRS.costs]]
 amount = 6
 ticker = "RDE"
 
-[[buildings.costs]]
+[[buildings.DRS.costs]]
 amount = 4
 ticker = "RBH"
 
-[[buildings.costs]]
+[[buildings.DRS.costs]]
 amount = 2
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.DRS.costs]]
 amount = 6
 ticker = "TRU"
 
-
-[[buildings]]
+[buildings.COL]
 name = "collector"
-ticker = "COL"
 expertise = "RESOURCE_EXTRACTION"
 pioneers = 50
 settlers = 0
@@ -9992,39 +10235,37 @@ technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 15
-recipes = [ "@COL=>",]
-[[buildings.costs]]
+recipes = ["@COL=>"]
+[[buildings.COL.costs]]
 amount = 16
 ticker = "BSE"
 
-
-[[buildings]]
+[buildings.HBC]
 recipes = []
 name = "habitationCommune"
-ticker = "HBC"
 pioneers = 0
 settlers = 0
 technicians = 0
 engineers = 0
 scientists = 0
 area_cost = 17
-[[buildings.costs]]
+[[buildings.HBC.costs]]
 amount = 2
 ticker = "TRU"
 
-[[buildings.costs]]
+[[buildings.HBC.costs]]
 amount = 2
 ticker = "RSE"
 
-[[buildings.costs]]
+[[buildings.HBC.costs]]
 amount = 4
 ticker = "RTA"
 
-[[buildings.costs]]
+[[buildings.HBC.costs]]
 amount = 4
 ticker = "LBH"
 
-[[buildings.costs]]
+[[buildings.HBC.costs]]
 amount = 2
 ticker = "LDE"
 
@@ -10032,13 +10273,13 @@ ticker = "LDE"
 [items.AEN]
 category_name = "ship engines"
 name = "advancedEngine"
-weight = 14
-volume = 7
+weight = 14.0
+volume = 7.0
 
 [items.AFP]
 category_name = "ship engines"
 name = "advancedFuelPump"
-weight = 1
+weight = 1.0
 volume = 0.25
 
 [items.AFR]
@@ -10050,50 +10291,50 @@ volume = 0.10000000149011612
 [items.ENG]
 category_name = "ship engines"
 name = "standardEngine"
-weight = 8
-volume = 4
+weight = 8.0
+volume = 4.0
 
 [items.FIR]
 category_name = "ship engines"
 name = "fissionReactor"
-weight = 7
+weight = 7.0
 volume = 4.900000095367432
 
 [items.FSE]
 category_name = "ship engines"
 name = "fuelSavingEngine"
-weight = 6
-volume = 3
+weight = 6.0
+volume = 3.0
 
 [items.GCH]
 category_name = "ship engines"
 name = "glassCombustionChamber"
-weight = 1
+weight = 1.0
 volume = 0.6000000238418579
 
 [items.GNZ]
 category_name = "ship engines"
 name = "glassNozzle"
 weight = 1.5
-volume = 1
+volume = 1.0
 
 [items.HNZ]
 category_name = "ship engines"
 name = "hyperthrustNozzle"
-weight = 6
-volume = 12
+weight = 6.0
+volume = 12.0
 
 [items.HPR]
 category_name = "ship engines"
 name = "highPowerReactor"
-weight = 16
-volume = 15
+weight = 16.0
+volume = 15.0
 
 [items.RCT]
 category_name = "ship engines"
 name = "standardReactor"
-weight = 7
-volume = 4
+weight = 7.0
+volume = 4.0
 
 [items.SFE]
 category_name = "ship engines"
@@ -10116,14 +10357,14 @@ volume = 0.009999999776482582
 [items.SSC]
 category_name = "ship parts"
 name = "structuralSpacecraftComponent"
-weight = 1
-volume = 1
+weight = 1.0
+volume = 1.0
 
 [items.RSI]
 category_name = "agricultural products"
 name = "silkRaw"
 weight = 1.100000023841858
-volume = 1
+volume = 1.0
 
 [items.RBH]
 category_name = "construction prefabs"
@@ -10153,127 +10394,127 @@ volume = 0.3499999940395355
 category_name = "elements"
 name = "technetium"
 weight = 11.800000190734863
-volume = 1
+volume = 1.0
 
 [items.ZR]
 category_name = "elements"
 name = "zirconium"
 weight = 6.53000020980835
-volume = 1
+volume = 1.0
 
 [items.AMM]
 category_name = "gases"
 name = "ammonia"
 weight = 0.8600000143051147
-volume = 1
+volume = 1.0
 
 [items.AR]
 category_name = "gases"
 name = "argon"
 weight = 1.784000039100647
-volume = 1
+volume = 1.0
 
 [items.F]
 category_name = "gases"
 name = "fluorine"
 weight = 1.6959999799728394
-volume = 1
+volume = 1.0
 
 [items.H]
 category_name = "gases"
 name = "hydrogen"
 weight = 0.07000000029802322
-volume = 1
+volume = 1.0
 
 [items.HE]
 category_name = "gases"
 name = "helium"
 weight = 0.14499999582767487
-volume = 1
+volume = 1.0
 
 [items.HE3]
 category_name = "gases"
 name = "helium3"
 weight = 0.14499999582767487
-volume = 1
+volume = 1.0
 
 [items.N]
 category_name = "gases"
 name = "nitrogen"
 weight = 0.8069999814033508
-volume = 1
+volume = 1.0
 
 [items.NE]
 category_name = "gases"
 name = "neon"
 weight = 0.8999999761581421
-volume = 1
+volume = 1.0
 
 [items.O]
 category_name = "gases"
 name = "oxygen"
 weight = 1.1410000324249268
-volume = 1
+volume = 1.0
 
 [items.AGS]
 category_name = "ship parts"
 name = "advancedHighgSeats"
-weight = 30
-volume = 5
+weight = 30.0
+volume = 5.0
 
 [items.AHP]
 category_name = "ship parts"
 name = "advancedHullPlate"
-weight = 10
-volume = 10
+weight = 10.0
+volume = 10.0
 
 [items.ATP]
 category_name = "ship parts"
 name = "advancedThermalProtectionMaterial"
 weight = 2.9000000953674316
-volume = 1
+volume = 1.0
 
 [items.BGS]
 category_name = "ship parts"
 name = "basicHighgSeats"
-weight = 20
-volume = 3
+weight = 20.0
+volume = 3.0
 
 [items.BHP]
 category_name = "ship parts"
 name = "basicHullPlate"
-weight = 9
-volume = 10
+weight = 9.0
+volume = 10.0
 
 [items.HHP]
 category_name = "ship parts"
 name = "hardenedHullPlate"
-weight = 10
-volume = 10
+weight = 10.0
+volume = 10.0
 
 [items.LHP]
 category_name = "ship parts"
 name = "lightweightHullPlate"
-weight = 4
-volume = 10
+weight = 4.0
+volume = 10.0
 
 [items.NV1]
 category_name = "ship parts"
 name = "navigation1"
 weight = 4.199999809265137
-volume = 2
+volume = 2.0
 
 [items.NV2]
 category_name = "ship parts"
 name = "navigation2"
 weight = 6.699999809265137
-volume = 3
+volume = 3.0
 
 [items.RHP]
 category_name = "ship parts"
 name = "reinforcedHullPlate"
-weight = 10
-volume = 10
+weight = 10.0
+volume = 10.0
 
 [items.EDC]
 category_name = "software tools"
@@ -10291,31 +10532,31 @@ volume = 0.009999999776482582
 category_name = "ores"
 name = "lithiumOre"
 weight = 2.75
-volume = 1
+volume = 1.0
 
 [items.SIO]
 category_name = "ores"
 name = "siliconOre"
 weight = 1.7899999618530273
-volume = 1
+volume = 1.0
 
 [items.TIO]
 category_name = "ores"
 name = "titaniumOre"
 weight = 1.5800000429153442
-volume = 1
+volume = 1.0
 
 [items.CQS]
 category_name = "unit prefabs"
 name = "crewQuartersSmall"
-weight = 25
-volume = 50
+weight = 25.0
+volume = 50.0
 
 [items.CQT]
 category_name = "unit prefabs"
 name = "crewQuartersTiny"
 weight = 12.5
-volume = 25
+volume = 25.0
 
 [items.BSC]
 category_name = "electronic devices"
@@ -10333,7 +10574,7 @@ volume = 0.10000000149011612
 category_name = "electronic devices"
 name = "holographicDisplay"
 weight = 0.05000000074505806
-volume = 2
+volume = 2.0
 
 [items.HOG]
 category_name = "electronic devices"
@@ -10363,43 +10604,43 @@ volume = 0.004999999888241291
 category_name = "electronic devices"
 name = "sensorArray"
 weight = 1.7000000476837158
-volume = 2
+volume = 2.0
 
 [items.CU]
 category_name = "metals"
 name = "copper"
 weight = 8.920000076293945
-volume = 1
+volume = 1.0
 
 [items.FE]
 category_name = "metals"
 name = "iron"
 weight = 7.874000072479248
-volume = 1
+volume = 1.0
 
 [items.LI]
 category_name = "metals"
 name = "lithium"
 weight = 0.550000011920929
-volume = 1
+volume = 1.0
 
 [items.STL]
 category_name = "metals"
 name = "steel"
 weight = 7.849999904632568
-volume = 1
+volume = 1.0
 
 [items.TI]
 category_name = "metals"
 name = "titanium"
 weight = 4.5
-volume = 1
+volume = 1.0
 
 [items.W]
 category_name = "metals"
 name = "wolfram"
 weight = 7.519000053405762
-volume = 1
+volume = 1.0
 
 [items.ACS]
 category_name = "electronic systems"
@@ -10411,7 +10652,7 @@ volume = 0.20000000298023224
 category_name = "electronic systems"
 name = "audioDistributionSystem"
 weight = 0.699999988079071
-volume = 2
+volume = 2.0
 
 [items.RCS]
 category_name = "ship engines"
@@ -10531,13 +10772,13 @@ volume = 0.009999999776482582
 category_name = "ores"
 name = "ironOre"
 weight = 5.900000095367432
-volume = 1
+volume = 1.0
 
 [items.THP]
 category_name = "ship parts"
 name = "basicThermalProtectionMaterial"
 weight = 2.200000047683716
-volume = 1
+volume = 1.0
 
 [items.MFE]
 category_name = "ship engines"
@@ -10548,19 +10789,19 @@ volume = 0.800000011920929
 [items.NOZ]
 category_name = "ship engines"
 name = "basicNozzle"
-weight = 3
+weight = 3.0
 volume = 1.5
 
 [items.QCR]
 category_name = "ship engines"
 name = "quickChargeReactor"
-weight = 14
-volume = 10
+weight = 14.0
+volume = 10.0
 
 [items.RAG]
 category_name = "ship engines"
 name = "radioisotopeGenerator"
-weight = 5
+weight = 5.0
 volume = 3.4000000953674316
 
 [items.NN]
@@ -10573,13 +10814,13 @@ volume = 0.009999999776482582
 category_name = "metals"
 name = "gold"
 weight = 19.31999969482422
-volume = 1
+volume = 1.0
 
 [items.SI]
 category_name = "metals"
 name = "silicon"
 weight = 2.3289999961853027
-volume = 1
+volume = 1.0
 
 [items.CCD]
 category_name = "drones"
@@ -10627,73 +10868,73 @@ volume = 0.05000000074505806
 category_name = "agricultural products"
 name = "proteinAlgae"
 weight = 0.699999988079071
-volume = 1
+volume = 1.0
 
 [items.BEA]
 category_name = "agricultural products"
 name = "proteinBeans"
 weight = 0.800000011920929
-volume = 1
+volume = 1.0
 
 [items.CAF]
 category_name = "agricultural products"
 name = "caffeinatedBeans"
 weight = 0.8600000143051147
-volume = 1
+volume = 1.0
 
 [items.FOD]
 category_name = "agricultural products"
 name = "allPurposeFodder"
 weight = 1.2000000476837158
-volume = 1
+volume = 1.0
 
 [items.GRA]
 category_name = "agricultural products"
 name = "grapes"
 weight = 1.100000023841858
-volume = 1
+volume = 1.0
 
 [items.GRN]
 category_name = "agricultural products"
 name = "carbohydrateGrains"
 weight = 0.8999999761581421
-volume = 1
+volume = 1.0
 
 [items.PIB]
 category_name = "agricultural products"
 name = "pineberries"
 weight = 0.30000001192092896
-volume = 1
+volume = 1.0
 
 [items.PPA]
 category_name = "agricultural products"
 name = "proteinPaste"
-weight = 2
-volume = 1
+weight = 2.0
+volume = 1.0
 
 [items.RCO]
 category_name = "agricultural products"
 name = "cottonRaw"
 weight = 0.949999988079071
-volume = 1
+volume = 1.0
 
 [items.AEF]
 category_name = "construction parts"
 name = "aerostatFoundation"
-weight = 2
-volume = 5
+weight = 2.0
+volume = 5.0
 
 [items.AIR]
 category_name = "construction parts"
 name = "airScrubber"
 weight = 1.7000000476837158
-volume = 3
+volume = 3.0
 
 [items.DEC]
 category_name = "construction parts"
 name = "decorativeElements"
 weight = 0.5
-volume = 2
+volume = 2.0
 
 [items.FC]
 category_name = "construction parts"
@@ -10705,7 +10946,7 @@ volume = 0.25
 category_name = "electronic systems"
 name = "climateController"
 weight = 0.5
-volume = 1
+volume = 1.0
 
 [items.COM]
 category_name = "electronic systems"
@@ -10717,19 +10958,19 @@ volume = 1.5
 category_name = "electronic systems"
 name = "cryoUnit"
 weight = 2.200000047683716
-volume = 2
+volume = 2.0
 
 [items.FFC]
 category_name = "electronic systems"
 name = "ftlFieldController"
-weight = 50
-volume = 16
+weight = 50.0
+volume = 16.0
 
 [items.LIS]
 category_name = "electronic systems"
 name = "lifeSupportSystem"
 weight = 5.599999904632568
-volume = 7
+volume = 7.0
 
 [items.LOG]
 category_name = "electronic systems"
@@ -10747,55 +10988,55 @@ volume = 0.10000000149011612
 category_name = "electronic systems"
 name = "targetingComputer"
 weight = 0.15000000596046448
-volume = 1
+volume = 1.0
 
 [items.WR]
 category_name = "electronic systems"
 name = "waterRecycler"
 weight = 6.400000095367432
-volume = 5
+volume = 5.0
 
 [items.CF]
 category_name = "textiles"
 name = "ceramicFabric"
 weight = 2.819999933242798
-volume = 1
+volume = 1.0
 
 [items.COT]
 category_name = "textiles"
 name = "cottonProcessed"
 weight = 0.7699999809265137
-volume = 1
+volume = 1.0
 
 [items.CTF]
 category_name = "textiles"
 name = "ceramicTungstenFabric"
 weight = 4.320000171661377
-volume = 1
+volume = 1.0
 
 [items.KV]
 category_name = "textiles"
 name = "kevlar"
 weight = 1.649999976158142
-volume = 1
+volume = 1.0
 
 [items.NL]
 category_name = "textiles"
 name = "nylon"
 weight = 1.1299999952316284
-volume = 1
+volume = 1.0
 
 [items.SIL]
 category_name = "textiles"
 name = "silkProcessed"
 weight = 1.2100000381469727
-volume = 1
+volume = 1.0
 
 [items.TK]
 category_name = "textiles"
 name = "technoKevlar"
 weight = 1.8899999856948853
-volume = 1
+volume = 1.0
 
 [items.DCL]
 category_name = "plastics"
@@ -10849,7 +11090,7 @@ volume = 0.20000000298023224
 category_name = "chemicals"
 name = "sedativeSubstance"
 weight = 1.2000000476837158
-volume = 1
+volume = 1.0
 
 [items.LCR]
 category_name = "chemicals"
@@ -10885,7 +11126,7 @@ volume = 0.0010000000474974513
 category_name = "chemicals"
 name = "premiumFertilizer"
 weight = 0.8999999761581421
-volume = 1
+volume = 1.0
 
 [items.REA]
 category_name = "chemicals"
@@ -10897,19 +11138,19 @@ volume = 0.05000000074505806
 category_name = "chemicals"
 name = "artificialSoil"
 weight = 0.8999999761581421
-volume = 1
+volume = 1.0
 
 [items.FLO]
 category_name = "construction parts"
 name = "floatingTank"
-weight = 1
-volume = 2
+weight = 1.0
+volume = 2.0
 
 [items.FLP]
 category_name = "construction parts"
 name = "fluidPiping"
 weight = 0.30000001192092896
-volume = 2
+volume = 2.0
 
 [items.GC]
 category_name = "construction parts"
@@ -10926,32 +11167,32 @@ volume = 0.15000000596046448
 [items.LIT]
 category_name = "construction parts"
 name = "neonLightingSystem"
-weight = 1
-volume = 2
+weight = 1.0
+volume = 2.0
 
 [items.BE]
 category_name = "elements"
 name = "beryllium"
 weight = 1.840000033378601
-volume = 1
+volume = 1.0
 
 [items.C]
 category_name = "elements"
 name = "carbon"
 weight = 2.25
-volume = 1
+volume = 1.0
 
 [items.CA]
 category_name = "elements"
 name = "calcium"
 weight = 1.5399999618530273
-volume = 1
+volume = 1.0
 
 [items.CL]
 category_name = "elements"
 name = "chlorine"
 weight = 3.200000047683716
-volume = 1
+volume = 1.0
 
 [items.ES]
 category_name = "elements"
@@ -10963,7 +11204,7 @@ volume = 0.10000000149011612
 category_name = "elements"
 name = "iodine"
 weight = 4.929999828338623
-volume = 1
+volume = 1.0
 
 [items.MG]
 category_name = "elements"
@@ -10975,7 +11216,7 @@ volume = 0.1599999964237213
 category_name = "elements"
 name = "sodium"
 weight = 0.9700000286102295
-volume = 1
+volume = 1.0
 
 [items.S]
 category_name = "elements"
@@ -10987,7 +11228,7 @@ volume = 0.25
 category_name = "elements"
 name = "tantalum"
 weight = 16.649999618530273
-volume = 1
+volume = 1.0
 
 [items.MGC]
 category_name = "construction parts"
@@ -11035,25 +11276,25 @@ volume = 1.5
 category_name = "alloys"
 name = "aluminiumTitaniumAlloy"
 weight = 4.980000019073486
-volume = 1
+volume = 1.0
 
 [items.FET]
 category_name = "alloys"
 name = "ironTitaniumAlloy"
 weight = 6.849999904632568
-volume = 1
+volume = 1.0
 
 [items.RGO]
 category_name = "alloys"
 name = "goldCopperAlloy"
 weight = 19.31999969482422
-volume = 1
+volume = 1.0
 
 [items.WAL]
 category_name = "alloys"
 name = "tungstenAluminiumAlloy"
 weight = 6.25
-volume = 1
+volume = 1.0
 
 [items.ADR]
 category_name = "medical equipment"
@@ -11107,19 +11348,19 @@ volume = 0.10000000149011612
 category_name = "minerals"
 name = "boronCrystals"
 weight = 1.7999999523162842
-volume = 1
+volume = 1.0
 
 [items.HTE]
 category_name = "ship engines"
 name = "hyperthrustEngine"
-weight = 16
-volume = 10
+weight = 16.0
+volume = 10.0
 
 [items.HYR]
 category_name = "ship engines"
 name = "hyperPowerReactor"
-weight = 25
-volume = 25
+weight = 25.0
+volume = 25.0
 
 [items.LFE]
 category_name = "ship engines"
@@ -11137,43 +11378,43 @@ volume = 0.10000000149011612
 category_name = "minerals"
 name = "bioreactiveMineral"
 weight = 2.5
-volume = 1
+volume = 1.0
 
 [items.CLI]
 category_name = "minerals"
 name = "caliche"
 weight = 2.4200000762939453
-volume = 1
+volume = 1.0
 
 [items.GAL]
 category_name = "minerals"
 name = "galerite"
 weight = 2.509999990463257
-volume = 1
+volume = 1.0
 
 [items.LST]
 category_name = "minerals"
 name = "limestone"
 weight = 2.7300000190734863
-volume = 1
+volume = 1.0
 
 [items.MAG]
 category_name = "minerals"
 name = "magnetite"
 weight = 5.150000095367432
-volume = 1
+volume = 1.0
 
 [items.MGS]
 category_name = "minerals"
 name = "magnesite"
 weight = 1.7300000190734863
-volume = 1
+volume = 1.0
 
 [items.SCR]
 category_name = "minerals"
 name = "sulfurCrystals"
 weight = 2.049999952316284
-volume = 1
+volume = 1.0
 
 [items.MTC]
 category_name = "construction materials"
@@ -11280,116 +11521,116 @@ volume = 0.05999999865889549
 [items.LCB]
 category_name = "ship kits"
 name = "largeCargoBay"
-weight = 200
-volume = 200
+weight = 200.0
+volume = 200.0
 
 [items.LFL]
 category_name = "ship kits"
 name = "largeFtlTank"
-weight = 60
-volume = 10
+weight = 60.0
+volume = 10.0
 
 [items.LSL]
 category_name = "ship kits"
 name = "largeStlTank"
-weight = 125
-volume = 100
+weight = 125.0
+volume = 100.0
 
 [items.MCB]
 category_name = "ship kits"
 name = "mediumCargoBay"
-weight = 100
-volume = 100
+weight = 100.0
+volume = 100.0
 
 [items.MFL]
 category_name = "ship kits"
 name = "mediumFtlTank"
-weight = 24
-volume = 4
+weight = 24.0
+volume = 4.0
 
 [items.MSL]
 category_name = "ship kits"
 name = "mediumStlTank"
-weight = 50
-volume = 50
+weight = 50.0
+volume = 50.0
 
 [items.SCB]
 category_name = "ship kits"
 name = "smallCargoBay"
-weight = 50
-volume = 50
+weight = 50.0
+volume = 50.0
 
 [items.SFL]
 category_name = "ship kits"
 name = "smallFtlTank"
-weight = 9
+weight = 9.0
 volume = 1.5
 
 [items.SSL]
 category_name = "ship kits"
 name = "smallStlTank"
-weight = 20
-volume = 20
+weight = 20.0
+volume = 20.0
 
 [items.TCB]
 category_name = "ship kits"
 name = "tinyCargoBay"
-weight = 20
-volume = 20
+weight = 20.0
+volume = 20.0
 
 [items.VCB]
 category_name = "ship kits"
 name = "highVolumeCargoBay"
-weight = 200
-volume = 200
+weight = 200.0
+volume = 200.0
 
 [items.BGO]
 category_name = "alloys"
 name = "goldIronAlloy"
 weight = 19.31999969482422
-volume = 1
+volume = 1.0
 
 [items.BOS]
 category_name = "alloys"
 name = "borosilicate"
 weight = 1.5
-volume = 1
+volume = 1.0
 
 [items.BRO]
 category_name = "alloys"
 name = "copperAluminiumAlloy"
 weight = 8.729999542236328
-volume = 1
+volume = 1.0
 
 [items.FAL]
 category_name = "alloys"
 name = "aluminiumIronAlloy"
 weight = 3.2200000286102295
-volume = 1
+volume = 1.0
 
 [items.TAI]
 category_name = "minerals"
 name = "tantalite"
 weight = 7.940000057220459
-volume = 1
+volume = 1.0
 
 [items.TCO]
 category_name = "minerals"
 name = "technetiumOxide"
 weight = 9.800000190734863
-volume = 1
+volume = 1.0
 
 [items.TS]
 category_name = "minerals"
 name = "tectosilisite"
 weight = 2.4000000953674316
-volume = 1
+volume = 1.0
 
 [items.ZIR]
 category_name = "minerals"
 name = "zircon"
 weight = 4.849999904632568
-volume = 1
+volume = 1.0
 
 [items.CMK]
 category_name = "construction materials"
@@ -11424,8 +11665,8 @@ volume = 0.10000000149011612
 [items.GEN]
 category_name = "ship engines"
 name = "glassEngine"
-weight = 5
-volume = 3
+weight = 5.0
+volume = 3.0
 
 [items.HCC]
 category_name = "electronic pieces"
@@ -11491,7 +11732,7 @@ volume = 0.15000000596046448
 category_name = "chemicals"
 name = "breathableLiquid"
 weight = 1.1200000047683716
-volume = 1
+volume = 1.0
 
 [items.BLE]
 category_name = "chemicals"
@@ -11503,7 +11744,7 @@ volume = 0.5
 category_name = "chemicals"
 name = "cryogenicFluid"
 weight = 1.1399999856948853
-volume = 1
+volume = 1.0
 
 [items.DDT]
 category_name = "chemicals"
@@ -11515,25 +11756,25 @@ volume = 0.10000000149011612
 category_name = "chemicals"
 name = "enrichedEinsteinium"
 weight = 9.199999809265137
-volume = 1
+volume = 1.0
 
 [items.ETC]
 category_name = "chemicals"
 name = "enrichedTechnetium"
 weight = 4.099999904632568
-volume = 1
+volume = 1.0
 
 [items.VEG]
 category_name = "agricultural products"
 name = "fattyVegetables"
 weight = 1.100000023841858
-volume = 1
+volume = 1.0
 
 [items.VIT]
 category_name = "agricultural products"
 name = "vitaEssence"
 weight = 0.8999999761581421
-volume = 1
+volume = 1.0
 
 [items.ABH]
 category_name = "construction prefabs"
@@ -11653,7 +11894,7 @@ volume = 0.009999999776482582
 category_name = "medical equipment"
 name = "medicalStretcher"
 weight = 0.009999999776482582
-volume = 1
+volume = 1.0
 
 [items.TUB]
 category_name = "medical equipment"
@@ -11706,32 +11947,32 @@ volume = 0.0020000000949949026
 [items.RDL]
 category_name = "unit prefabs"
 name = "largeShipRepairDroneUnit"
-weight = 150
-volume = 30
+weight = 150.0
+volume = 30.0
 
 [items.RDS]
 category_name = "unit prefabs"
 name = "smallShipRepairDroneUnit"
-weight = 50
-volume = 10
+weight = 50.0
+volume = 10.0
 
 [items.SU]
 category_name = "unit prefabs"
 name = "surgeryUnit"
-weight = 6
-volume = 5
+weight = 6.0
+volume = 5.0
 
 [items.TCU]
 category_name = "unit prefabs"
 name = "traumaCareUnit"
-weight = 5
-volume = 4
+weight = 5.0
+volume = 4.0
 
 [items.WOR]
 category_name = "unit prefabs"
 name = "handcraftWorkshopUnit"
-weight = 5
-volume = 5
+weight = 5.0
+volume = 5.0
 
 [items.APT]
 category_name = "ship shields"
@@ -11749,7 +11990,7 @@ volume = 0.20000000298023224
 category_name = "ship shields"
 name = "advancedWhippleShielding"
 weight = 0.11999999731779099
-volume = 1
+volume = 1.0
 
 [items.BPT]
 category_name = "ship shields"
@@ -11767,7 +12008,7 @@ volume = 0.20000000298023224
 category_name = "ship shields"
 name = "basicWhippleShielding"
 weight = 0.10000000149011612
-volume = 1
+volume = 1.0
 
 [items.SRP]
 category_name = "ship shields"
@@ -11809,25 +12050,25 @@ volume = 0.009999999776482582
 category_name = "ores"
 name = "aluminiumOre"
 weight = 1.350000023841858
-volume = 1
+volume = 1.0
 
 [items.AUO]
 category_name = "ores"
 name = "goldOre"
 weight = 3.859999895095825
-volume = 1
+volume = 1.0
 
 [items.CUO]
 category_name = "ores"
 name = "copperOre"
 weight = 4.010000228881836
-volume = 1
+volume = 1.0
 
 [items.ANZ]
 category_name = "ship engines"
 name = "advancedNozzle"
-weight = 6
-volume = 3
+weight = 6.0
+volume = 3.0
 
 [items.BFP]
 category_name = "ship engines"
@@ -11850,56 +12091,56 @@ volume = 0.699999988079071
 [items.BR1]
 category_name = "unit prefabs"
 name = "commandBridge1"
-weight = 180
-volume = 300
+weight = 180.0
+volume = 300.0
 
 [items.BR2]
 category_name = "unit prefabs"
 name = "commandBridge2"
-weight = 280
-volume = 400
+weight = 280.0
+volume = 400.0
 
 [items.BRS]
 category_name = "unit prefabs"
 name = "commandBridgeShort"
-weight = 150
-volume = 200
+weight = 150.0
+volume = 200.0
 
 [items.CQL]
 category_name = "unit prefabs"
 name = "crewQuarters"
-weight = 75
-volume = 150
+weight = 75.0
+volume = 150.0
 
 [items.CQM]
 category_name = "unit prefabs"
 name = "crewQuartersMed"
-weight = 50
-volume = 100
+weight = 50.0
+volume = 100.0
 
 [items.DOU]
 category_name = "unit prefabs"
 name = "droneOperationsUnit"
-weight = 5
-volume = 4
+weight = 5.0
+volume = 4.0
 
 [items.FUN]
 category_name = "unit prefabs"
 name = "entertainmentUnit"
-weight = 5
-volume = 4
+weight = 5.0
+volume = 4.0
 
 [items.HAB]
 category_name = "unit prefabs"
 name = "habitatUnit"
-weight = 10
-volume = 8
+weight = 10.0
+volume = 8.0
 
 [items.LU]
 category_name = "unit prefabs"
 name = "laboratoryUnit"
-weight = 8
-volume = 6
+weight = 8.0
+volume = 6.0
 
 [items.BMF]
 category_name = "electronic devices"
@@ -11965,49 +12206,49 @@ volume = 0.009999999776482582
 category_name = "agricultural products"
 name = "hydrocarbonPlants"
 weight = 0.800000011920929
-volume = 1
+volume = 1.0
 
 [items.HER]
 category_name = "agricultural products"
 name = "herbs"
 weight = 0.4000000059604645
-volume = 1
+volume = 1.0
 
 [items.HOP]
 category_name = "agricultural products"
 name = "antibacterialTreeFlowers"
 weight = 0.3499999940395355
-volume = 1
+volume = 1.0
 
 [items.MAI]
 category_name = "agricultural products"
 name = "carbohydrateMaize"
 weight = 1.2999999523162842
-volume = 1
+volume = 1.0
 
 [items.MTP]
 category_name = "agricultural products"
 name = "meat"
 weight = 0.699999988079071
-volume = 1
+volume = 1.0
 
 [items.MUS]
 category_name = "agricultural products"
 name = "mushrooms"
 weight = 0.800000011920929
-volume = 1
+volume = 1.0
 
 [items.NUT]
 category_name = "agricultural products"
 name = "fattyNuts"
 weight = 0.8999999761581421
-volume = 1
+volume = 1.0
 
 [items.VSC]
 category_name = "ship kits"
 name = "verySmallCargoBay"
-weight = 35
-volume = 35
+weight = 35.0
+volume = 35.0
 
 [items.ALE]
 category_name = "consumables (luxury)"
@@ -12019,19 +12260,19 @@ volume = 0.10000000149011612
 category_name = "minerals"
 name = "beryl"
 weight = 1.9199999570846558
-volume = 1
+volume = 1.0
 
 [items.AL]
 category_name = "metals"
 name = "aluminium"
 weight = 2.700000047683716
-volume = 1
+volume = 1.0
 
 [items.HAL]
 category_name = "minerals"
 name = "halite"
 weight = 2.1700000762939453
-volume = 1
+volume = 1.0
 
 [items.UTS]
 category_name = "utility"
@@ -12054,14 +12295,14 @@ volume = 0.10000000149011612
 [items.WCB]
 category_name = "ship kits"
 name = "highLoadCargoBay"
-weight = 200
-volume = 200
+weight = 200.0
+volume = 200.0
 
 [items.BTS]
 category_name = "liquids"
 name = "tungstenResource"
 weight = 1.0499999523162842
-volume = 1
+volume = 1.0
 
 [items.H2O]
 category_name = "liquids"
@@ -12073,13 +12314,13 @@ volume = 0.20000000298023224
 category_name = "liquids"
 name = "heliotropeExtract"
 weight = 1.100000023841858
-volume = 1
+volume = 1.0
 
 [items.LES]
 category_name = "liquids"
 name = "liquidEinsteinium"
 weight = 8.84000015258789
-volume = 1
+volume = 1.0
 
 [items.OFF]
 category_name = "utility"

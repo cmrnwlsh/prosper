@@ -12,59 +12,6 @@ impl Plugin for DataPlugin {
     }
 }
 
-#[derive(Debug, Clone, Copy, Default, Eq, PartialEq, Hash, States)]
-pub enum LoadState {
-    #[default]
-    Loading,
-    Loaded,
-}
-
-#[derive(Asset, TypePath, Serialize, Deserialize, Debug)]
-pub struct Data {
-    items: HashMap<String, Item>,
-    recipes: Vec<Recipe>,
-    buildings: Vec<Building>,
-}
-
-#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
-pub struct Item {
-    pub category_name: String,
-    pub name: String,
-    pub weight: f64,
-    pub volume: f64,
-}
-
-#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
-pub struct Recipe {
-    pub building_ticker: String,
-    pub recipe_name: String,
-    pub standard_recipe_name: String,
-}
-
-#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
-pub struct Building {
-    pub name: String,
-    pub ticker: String,
-    pub expertise: Option<String>,
-    pub pioneers: u16,
-    pub settlers: u16,
-    pub technicians: u16,
-    pub engineers: u16,
-    pub scientists: u16,
-    pub area_cost: u16,
-    pub recipes: Vec<String>,
-    pub costs: Vec<Commodity>,
-}
-
-#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
-pub struct Commodity {
-    pub amount: u16,
-    pub ticker: String,
-}
-
-#[derive(Resource)]
-pub struct DataAsset(Handle<Data>);
-
 pub fn load(mut commands: Commands, asset_server: Res<AssetServer>) {
     commands.insert_resource(DataAsset(asset_server.load("embedded://data.toml")));
 }
@@ -79,8 +26,58 @@ pub fn poll(
         info!(
             "\nitems: {}\nrecipes: {}\nbuildings: {}",
             asset.items.len(),
-            asset.recipes.len(),
+            asset
+                .recipes
+                .iter()
+                .map(|(_, v)| v.iter().len())
+                .sum::<usize>(),
             asset.buildings.len()
         );
     }
 }
+
+#[derive(Debug, Clone, Copy, Default, Eq, PartialEq, Hash, States)]
+pub enum LoadState {
+    #[default]
+    Loading,
+    Loaded,
+}
+
+#[derive(Asset, TypePath, Serialize, Deserialize, Debug)]
+pub struct Data {
+    items: HashMap<String, Item>,
+    recipes: HashMap<String, HashMap<String, Recipe>>,
+    buildings: HashMap<String, Building>,
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Item {
+    pub category_name: String,
+    pub name: String,
+    pub weight: f64,
+    pub volume: f64,
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Recipe {
+    pub recipe_name: String,
+    pub inputs: HashMap<String, u32>,
+    pub outputs: HashMap<String, u32>,
+    pub time_ms: u64,
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Building {
+    pub name: String,
+    pub expertise: Option<String>,
+    pub pioneers: u32,
+    pub settlers: u32,
+    pub technicians: u32,
+    pub engineers: u32,
+    pub scientists: u32,
+    pub area_cost: u32,
+    pub costs: HashMap<String, u32>,
+}
+
+#[derive(Resource)]
+pub struct DataAsset(Handle<Data>);

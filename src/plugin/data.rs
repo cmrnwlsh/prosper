@@ -1,19 +1,19 @@
 use bevy::{prelude::*, utils::HashMap};
-use bevy_common_assets::toml::TomlAssetPlugin;
+use bevy_common_assets::msgpack::MsgPackAssetPlugin;
 use serde::{Deserialize, Serialize};
 
 pub struct DataPlugin;
 impl Plugin for DataPlugin {
     fn build(&self, app: &mut App) {
         app.init_state::<LoadState>()
-            .add_plugins(TomlAssetPlugin::<Data>::new(&["embedded://data.toml"]))
+            .add_plugins(MsgPackAssetPlugin::<Data>::new(&["embedded://data.mpk"]))
             .add_systems(Startup, load)
             .add_systems(Update, poll.run_if(in_state(LoadState::Loading)));
     }
 }
 
 pub fn load(mut commands: Commands, asset_server: Res<AssetServer>) {
-    commands.insert_resource(DataAsset(asset_server.load("embedded://data.toml")));
+    commands.insert_resource(DataAsset(asset_server.load("embedded://data.mpk")));
 }
 
 pub fn poll(

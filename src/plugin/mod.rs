@@ -19,7 +19,7 @@ use ui::UiPlugin;
 
 pub struct TuiPlugins;
 impl PluginGroup for TuiPlugins {
-    fn build(self) -> bevy::app::PluginGroupBuilder {
+    fn build(self) -> PluginGroupBuilder {
         PluginGroupBuilder::start::<Self>()
             .add(EmbeddedAssetPlugin::default())
             .add_group(

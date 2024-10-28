@@ -46,7 +46,7 @@ pub enum LoadState {
 #[derive(Asset, TypePath, Serialize, Deserialize, Debug)]
 pub struct Data {
     items: HashMap<String, Item>,
-    recipes: HashMap<String, HashMap<String, Recipe>>,
+    recipes: HashMap<String, Vec<Recipe>>,
     buildings: HashMap<String, Building>,
 }
 
@@ -60,7 +60,6 @@ pub struct Item {
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Recipe {
-    pub recipe_name: String,
     pub inputs: HashMap<String, u32>,
     pub outputs: HashMap<String, u32>,
     pub time_ms: u64,

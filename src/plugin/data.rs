@@ -45,9 +45,9 @@ pub enum LoadState {
 
 #[derive(Asset, TypePath, Serialize, Deserialize, Debug)]
 pub struct Data {
-    items: HashMap<String, Item>,
-    recipes: HashMap<String, Vec<Recipe>>,
-    buildings: HashMap<String, Building>,
+    pub items: HashMap<String, Item>,
+    pub recipes: HashMap<String, Vec<Recipe>>,
+    pub buildings: HashMap<String, Building>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]

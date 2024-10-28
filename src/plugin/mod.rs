@@ -17,8 +17,8 @@ use log::LogPlugin;
 use std::time::Duration;
 use ui::UiPlugin;
 
-pub struct TuiPlugins;
-impl PluginGroup for TuiPlugins {
+pub struct ProsperPlugins;
+impl PluginGroup for ProsperPlugins {
     fn build(self) -> PluginGroupBuilder {
         PluginGroupBuilder::start::<Self>()
             .add(EmbeddedAssetPlugin::default())

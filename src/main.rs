@@ -1,8 +1,8 @@
 mod plugin;
 
 use bevy::prelude::*;
-use plugin::TuiPlugins;
+use plugin::ProsperPlugins;
 
 fn main() {
-    App::new().add_plugins(TuiPlugins).run();
+    App::new().add_plugins(ProsperPlugins).run();
 }

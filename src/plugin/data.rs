@@ -52,29 +52,45 @@ pub struct Data {
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Item {
+    #[serde(alias = "cn")]
     pub category_name: String,
+    #[serde(alias = "n")]
     pub name: String,
+    #[serde(alias = "w")]
     pub weight: f64,
+    #[serde(alias = "v")]
     pub volume: f64,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Recipe {
+    #[serde(alias = "i")]
     pub inputs: HashMap<String, u32>,
+    #[serde(alias = "o")]
     pub outputs: HashMap<String, u32>,
+    #[serde(alias = "t")]
     pub time_ms: u64,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Building {
+    #[serde(alias = "n")]
     pub name: String,
+    #[serde(alias = "ex")]
     pub expertise: Option<String>,
+    #[serde(alias = "p")]
     pub pioneers: u32,
+    #[serde(alias = "se")]
     pub settlers: u32,
+    #[serde(alias = "t")]
     pub technicians: u32,
+    #[serde(alias = "en")]
     pub engineers: u32,
+    #[serde(alias = "sc")]
     pub scientists: u32,
+    #[serde(alias = "ac")]
     pub area_cost: u32,
+    #[serde(alias = "c")]
     pub costs: HashMap<String, u32>,
 }
 

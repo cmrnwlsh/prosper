@@ -11,12 +11,12 @@ pub enum Context {
 }
 
 pub fn ui(app: &mut App) {
-    app.add_plugins(ContextPlugins)
+    app.add_plugins(ContextGroup)
         .insert_state(Context::default());
 }
 
-pub struct ContextPlugins;
-impl PluginGroup for ContextPlugins {
+pub struct ContextGroup;
+impl PluginGroup for ContextGroup {
     fn build(self) -> PluginGroupBuilder {
         PluginGroupBuilder::start::<Self>().add(log::context)
     }

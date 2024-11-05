@@ -1,24 +1,23 @@
 mod initial;
+mod log;
 
-use bevy::{app::PluginGroupBuilder, prelude::*, state::app::StatesPlugin};
+use bevy::{app::PluginGroupBuilder, prelude::*};
 
 #[derive(States, Debug, Clone, PartialEq, Eq, Hash, Default)]
 pub enum Context {
     #[default]
     Initial,
+    Log,
 }
 
-pub struct UiPlugin;
-impl Plugin for UiPlugin {
-    fn build(&self, app: &mut App) {
-        app.add_plugins((StatesPlugin, ContextPlugins))
-            .insert_state(Context::default());
-    }
+pub fn ui(app: &mut App) {
+    app.add_plugins(ContextPlugins)
+        .insert_state(Context::default());
 }
 
 pub struct ContextPlugins;
 impl PluginGroup for ContextPlugins {
     fn build(self) -> PluginGroupBuilder {
-        PluginGroupBuilder::start::<Self>().add(initial::ContextPlugin)
+        PluginGroupBuilder::start::<Self>().add(log::context)
     }
 }

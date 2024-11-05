@@ -18,13 +18,10 @@ use std::{
 use ratatui::crossterm::event::{self, KeyCode, KeyEventKind, KeyModifiers};
 use std::time::Duration;
 
-pub struct IoPlugin;
-impl Plugin for IoPlugin {
-    fn build(&self, app: &mut App) {
-        app.insert_resource(Terminal::init())
-            .add_event::<Input>()
-            .add_systems(Update, (listen_exit, read_events));
-    }
+pub fn io(app: &mut App) {
+    app.insert_resource(Terminal::init())
+        .add_event::<Input>()
+        .add_systems(Update, (listen_exit, read_events));
 }
 
 #[derive(Event)]

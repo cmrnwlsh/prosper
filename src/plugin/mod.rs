@@ -1,4 +1,3 @@
-mod data;
 mod io;
 mod log;
 mod sim;
@@ -9,14 +8,14 @@ use bevy::{
     asset::AssetPlugin,
     diagnostic::{DiagnosticsPlugin, FrameTimeDiagnosticsPlugin},
     hierarchy::HierarchyPlugin,
+    state::app::StatesPlugin,
     MinimalPlugins,
 };
 use bevy_embedded_assets::EmbeddedAssetPlugin;
-use data::DataPlugin;
-use io::IoPlugin;
-use log::LogPlugin;
+use io::io;
+use log::log;
 use std::time::Duration;
-use ui::UiPlugin;
+use ui::ui;
 
 pub struct ProsperPlugins;
 impl PluginGroup for ProsperPlugins {
@@ -26,13 +25,13 @@ impl PluginGroup for ProsperPlugins {
             .add_group(
                 MinimalPlugins.set(ScheduleRunnerPlugin::run_loop(Duration::from_micros(16670))),
             )
+            .add(StatesPlugin)
             .add(AssetPlugin::default())
-            .add(IoPlugin)
-            .add(UiPlugin)
             .add(DiagnosticsPlugin)
             .add(FrameTimeDiagnosticsPlugin)
             .add(HierarchyPlugin)
-            .add(LogPlugin)
-            .add(DataPlugin)
+            .add(io)
+            .add(ui)
+            .add(log)
     }
 }

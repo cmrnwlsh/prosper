@@ -1,14 +1,12 @@
 mod initial;
 mod log;
 
-use bevy::{app::PluginGroupBuilder, prelude::*};
-
-#[derive(States, Debug, Clone, PartialEq, Eq, Hash, Default)]
-pub enum Context {
-    #[default]
-    Initial,
-    Log,
-}
+use bevy::{
+    app::PluginGroupBuilder,
+    diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin},
+    prelude::*,
+};
+use ratatui::widgets::Block;
 
 pub fn ui(app: &mut App) {
     app.add_plugins(ContextGroup)
@@ -18,6 +16,25 @@ pub fn ui(app: &mut App) {
 pub struct ContextGroup;
 impl PluginGroup for ContextGroup {
     fn build(self) -> PluginGroupBuilder {
-        PluginGroupBuilder::start::<Self>().add(log::context)
+        PluginGroupBuilder::start::<Self>()
+            .add(initial::context)
+            .add(log::context)
     }
+}
+
+#[derive(States, Debug, Clone, PartialEq, Eq, Hash, Default)]
+pub enum Context {
+    #[default]
+    Initial,
+    Log,
+}
+
+pub fn title_block(diagnostics: Res<DiagnosticsStore>) -> Block<'_> {
+    Block::bordered().title(format!(
+        " FPS: {:.2} ",
+        diagnostics
+            .get(&FrameTimeDiagnosticsPlugin::FPS)
+            .and_then(|fps| fps.smoothed())
+            .unwrap_or(f64::NAN)
+    ))
 }

@@ -68,18 +68,18 @@ impl Drop for Terminal {
 
 fn read_events(mut event: EventWriter<Input>) {
     (|| -> std::io::Result<()> {
-        if event::poll(Duration::from_secs(0))? {
+        while event::poll(Duration::ZERO)? {
             if let event::Event::Key(key) = event::read()? {
                 event.send(Input(key));
-            };
+            }
         }
         Ok(())
     })()
     .unwrap()
 }
 
-fn listen_exit(mut event: EventReader<Input>, mut exit: EventWriter<AppExit>) {
-    event.read().for_each(|ev| {
+fn listen_exit(mut events: EventReader<Input>, mut exit: EventWriter<AppExit>) {
+    events.read().for_each(|ev| {
         if let KeyEvent {
             code: KeyCode::Char('c'),
             kind: KeyEventKind::Press,

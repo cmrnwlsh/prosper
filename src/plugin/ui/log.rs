@@ -2,23 +2,21 @@ use crate::plugin::{
     io::{Input, Terminal},
     log::LogStore,
 };
-use bevy::{
-    diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin},
-    prelude::*,
-};
+use bevy::{diagnostic::DiagnosticsStore, prelude::*};
 use ratatui::{
-    widgets::{Block, Paragraph, Wrap},
+    crossterm::event::KeyCode,
+    widgets::{Paragraph, Wrap},
     Frame,
 };
 
-pub fn context(app: &mut App) {
-    app.insert_resource(ScrollState(0))
-        .add_systems(Update, (render, listen_scroll).in_set(ContextSet))
-        .configure_sets(Update, ContextSet.run_if(in_state(super::Context::Log)));
-}
+use super::{title_block, Context};
 
-#[derive(SystemSet, Debug, Clone, PartialEq, Eq, Hash)]
-struct ContextSet;
+pub fn context(app: &mut App) {
+    app.insert_resource(ScrollState(0)).add_systems(
+        Update,
+        (render, listen_scroll).run_if(in_state(Context::Log)),
+    );
+}
 
 #[derive(Resource)]
 struct ScrollState(u16);
@@ -34,22 +32,15 @@ fn render(
             Paragraph::new(logs.0.join("\n"))
                 .scroll((scroll.0, 0))
                 .wrap(Wrap { trim: true })
-                .block(Block::bordered().title(format!(
-                    " FPS: {:.2} ",
-                    diagnostics
-                        .get(&FrameTimeDiagnosticsPlugin::FPS)
-                        .and_then(|fps| fps.smoothed())
-                        .unwrap_or(f64::NAN)
-                ))),
+                .block(title_block(diagnostics)),
             frame.area(),
         )
     })
     .unwrap();
 }
 
-fn listen_scroll(mut event: EventReader<Input>, mut scroll: ResMut<ScrollState>) {
-    use ratatui::crossterm::event::KeyCode;
-    event.read().for_each(|ev| {
+fn listen_scroll(mut events: EventReader<Input>, mut scroll: ResMut<ScrollState>) {
+    events.read().for_each(|ev| {
         let s = &mut scroll.0;
         *s = match ev.0.code {
             KeyCode::Up => s.saturating_sub(1),

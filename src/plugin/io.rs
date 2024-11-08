@@ -1,6 +1,7 @@
 use better_panic::Settings;
 use bevy::prelude::*;
 use delegate::delegate;
+use ratatui::crossterm::event;
 use ratatui::{
     backend::CrosstermBackend,
     crossterm::{
@@ -10,18 +11,16 @@ use ratatui::{
     },
     CompletedFrame, Frame,
 };
+use std::time::Duration;
 use std::{
     io::{stdout, Stdout},
     panic::set_hook,
 };
 
-use ratatui::crossterm::event::{self, KeyCode, KeyEventKind, KeyModifiers};
-use std::time::Duration;
-
 pub fn io(app: &mut App) {
     app.insert_resource(Terminal::init())
         .add_event::<Input>()
-        .add_systems(Update, (listen_exit, read_events));
+        .add_systems(Update, read_events);
 }
 
 #[derive(Event)]
@@ -76,18 +75,4 @@ fn read_events(mut event: EventWriter<Input>) {
         Ok(())
     })()
     .unwrap()
-}
-
-fn listen_exit(mut events: EventReader<Input>, mut exit: EventWriter<AppExit>) {
-    events.read().for_each(|ev| {
-        if let KeyEvent {
-            code: KeyCode::Char('c'),
-            kind: KeyEventKind::Press,
-            modifiers: KeyModifiers::CONTROL,
-            ..
-        } = ev.0
-        {
-            exit.send(AppExit::Success);
-        }
-    })
 }

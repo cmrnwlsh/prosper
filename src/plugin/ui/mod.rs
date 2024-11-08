@@ -6,14 +6,17 @@ use bevy::{
     diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin},
     prelude::*,
 };
-use ratatui::{crossterm::event::KeyCode, widgets::Block};
+use ratatui::{
+    crossterm::event::{KeyCode, KeyEvent, KeyEventKind, KeyModifiers},
+    widgets::Block,
+};
 
 use super::io::Input;
 
 pub fn ui(app: &mut App) {
     app.add_plugins(ContextGroup)
         .insert_state(Context::default())
-        .add_systems(Update, listen_log);
+        .add_systems(Update, (listen_log, listen_exit));
 }
 
 struct ContextGroup;
@@ -46,6 +49,20 @@ fn listen_log(mut events: EventReader<Input>, mut state: ResMut<NextState<Contex
     events.read().for_each(|ev| {
         if let KeyCode::Char('`') = ev.0.code {
             state.set(Context::Log);
+        }
+    })
+}
+
+fn listen_exit(mut events: EventReader<Input>, mut exit: EventWriter<AppExit>) {
+    events.read().for_each(|ev| {
+        if let KeyEvent {
+            code: KeyCode::Char('c'),
+            kind: KeyEventKind::Press,
+            modifiers: KeyModifiers::CONTROL,
+            ..
+        } = ev.0
+        {
+            exit.send(AppExit::Success);
         }
     })
 }

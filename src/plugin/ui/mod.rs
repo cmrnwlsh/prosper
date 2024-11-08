@@ -6,14 +6,17 @@ use bevy::{
     diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin},
     prelude::*,
 };
-use ratatui::widgets::Block;
+use ratatui::{crossterm::event::KeyCode, widgets::Block};
+
+use super::io::Input;
 
 pub fn ui(app: &mut App) {
     app.add_plugins(ContextGroup)
-        .insert_state(Context::default());
+        .insert_state(Context::default())
+        .add_systems(Update, listen_log);
 }
 
-pub struct ContextGroup;
+struct ContextGroup;
 impl PluginGroup for ContextGroup {
     fn build(self) -> PluginGroupBuilder {
         PluginGroupBuilder::start::<Self>()
@@ -37,4 +40,12 @@ pub fn title_block(diagnostics: Res<DiagnosticsStore>) -> Block<'_> {
             .and_then(|fps| fps.smoothed())
             .unwrap_or(f64::NAN)
     ))
+}
+
+fn listen_log(mut events: EventReader<Input>, mut state: ResMut<NextState<Context>>) {
+    events.read().for_each(|ev| {
+        if let KeyCode::Char('`') = ev.0.code {
+            state.set(Context::Log);
+        }
+    })
 }

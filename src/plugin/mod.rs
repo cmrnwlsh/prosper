@@ -1,3 +1,4 @@
+mod data;
 mod io;
 mod log;
 mod sim;
@@ -12,6 +13,7 @@ use bevy::{
     MinimalPlugins,
 };
 use bevy_embedded_assets::EmbeddedAssetPlugin;
+use data::data;
 use io::io;
 use log::log;
 use std::time::Duration;
@@ -32,6 +34,7 @@ impl PluginGroup for ProsperPlugins {
             .add(HierarchyPlugin)
             .add(io)
             .add(ui)
+            .add(data)
             .add(log)
     }
 }

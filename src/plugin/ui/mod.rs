@@ -1,5 +1,5 @@
-mod initial;
 mod log;
+mod splash;
 
 use bevy::{
     app::PluginGroupBuilder,
@@ -17,7 +17,7 @@ pub struct ContextGroup;
 impl PluginGroup for ContextGroup {
     fn build(self) -> PluginGroupBuilder {
         PluginGroupBuilder::start::<Self>()
-            .add(initial::context)
+            .add(splash::context)
             .add(log::context)
     }
 }
@@ -31,7 +31,7 @@ pub enum Context {
 
 pub fn title_block(diagnostics: Res<DiagnosticsStore>) -> Block<'_> {
     Block::bordered().title(format!(
-        " FPS: {:.2} ",
+        " TPS: {:.2} ",
         diagnostics
             .get(&FrameTimeDiagnosticsPlugin::FPS)
             .and_then(|fps| fps.smoothed())

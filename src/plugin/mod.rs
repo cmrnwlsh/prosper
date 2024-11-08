@@ -25,7 +25,9 @@ impl PluginGroup for ProsperPlugins {
         PluginGroupBuilder::start::<Self>()
             .add(EmbeddedAssetPlugin::default())
             .add_group(
-                MinimalPlugins.set(ScheduleRunnerPlugin::run_loop(Duration::from_micros(16670))),
+                MinimalPlugins.set(ScheduleRunnerPlugin::run_loop(Duration::from_secs_f64(
+                    1. / 60.,
+                ))),
             )
             .add(StatesPlugin)
             .add(AssetPlugin::default())

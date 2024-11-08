@@ -1,3 +1,4 @@
+use super::{title_block, Context};
 use crate::plugin::{
     io::{Input, Terminal},
     log::LogStore,
@@ -8,8 +9,6 @@ use ratatui::{
     widgets::{Paragraph, Wrap},
     Frame,
 };
-
-use super::{title_block, Context};
 
 pub fn context(app: &mut App) {
     app.insert_resource(ScrollState(0)).add_systems(

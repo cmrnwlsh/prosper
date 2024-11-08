@@ -1,6 +1,7 @@
 mod log;
 mod splash;
 
+use super::io::Input;
 use bevy::{
     app::PluginGroupBuilder,
     diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin},
@@ -11,11 +12,9 @@ use ratatui::{
     widgets::Block,
 };
 
-use super::io::Input;
-
 pub fn ui(app: &mut App) {
     app.add_plugins(ContextGroup)
-        .insert_state(Context::default())
+        .init_state::<Context>()
         .add_systems(Update, (listen_log, listen_exit));
 }
 
@@ -31,6 +30,7 @@ impl PluginGroup for ContextGroup {
 #[derive(States, Debug, Clone, PartialEq, Eq, Hash, Default)]
 pub enum Context {
     #[default]
+    Splash,
     Initial,
     Log,
 }

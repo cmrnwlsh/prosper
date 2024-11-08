@@ -22,7 +22,7 @@ press any key to start
 pub fn context(app: &mut App) {
     app.add_systems(
         Update,
-        (render, listen_input).run_if(in_state(Context::Initial)),
+        (render, listen_input).run_if(in_state(Context::Splash)),
     );
 }
 
@@ -39,6 +39,6 @@ fn render(mut term: ResMut<Terminal>, diagnostics: Res<DiagnosticsStore>) {
 
 fn listen_input(events: EventReader<Input>, mut state: ResMut<NextState<Context>>) {
     if !events.is_empty() {
-        state.set(Context::Log)
+        state.set(Context::Initial)
     }
 }

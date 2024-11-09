@@ -17,14 +17,8 @@ fn poll(mut state: ResMut<NextState<LoadState>>, handle: Res<DataAsset>, asset: 
     if let Some(asset) = asset.get(&handle.0) {
         state.set(LoadState::Loaded);
         info!(
-            "\nitems: {}\nrecipes: {}\nbuildings: {}",
-            asset.items.len(),
-            asset
-                .recipes
-                .iter()
-                .map(|(_, v)| v.iter().len())
-                .sum::<usize>(),
-            asset.buildings.len()
+            "\nitems: {:#?}\nrecipes: {:#?}\nbuildings: {:#?}",
+            asset.items, asset.recipes, asset.buildings
         );
     }
 }

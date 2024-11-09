@@ -1,14 +1,11 @@
-use super::{title_block, Context};
 use crate::plugin::{
     io::{Input, Terminal},
     log::LogStore,
 };
 use bevy::{diagnostic::DiagnosticsStore, prelude::*};
-use ratatui::{
-    crossterm::event::KeyCode,
-    widgets::{Paragraph, Wrap},
-    Frame,
-};
+use ratatui::{crossterm::event::KeyCode, widgets::Paragraph, Frame};
+
+use super::{title_block, Context};
 
 pub fn context(app: &mut App) {
     app.insert_resource(ScrollState(0)).add_systems(
@@ -30,7 +27,6 @@ fn render(
         frame.render_widget(
             Paragraph::new(logs.0.join("\n"))
                 .scroll((scroll.0, 0))
-                .wrap(Wrap { trim: true })
                 .block(title_block(diagnostics)),
             frame.area(),
         )

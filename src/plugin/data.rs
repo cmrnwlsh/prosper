@@ -2,7 +2,7 @@ use bevy::{prelude::*, utils::HashMap};
 use bevy_common_assets::msgpack::MsgPackAssetPlugin;
 use serde::{Deserialize, Serialize};
 
-pub fn data(app: &mut App) {
+pub fn plugin(app: &mut App) {
     app.init_state::<LoadState>()
         .add_plugins(MsgPackAssetPlugin::<Data>::new(&["embedded://data.mpk"]))
         .add_systems(Startup, load)
@@ -10,15 +10,25 @@ pub fn data(app: &mut App) {
 }
 
 fn load(mut commands: Commands, asset_server: Res<AssetServer>) {
-    commands.insert_resource(DataAsset(asset_server.load("embedded://data.mpk")));
+    commands.insert_resource(DataHandle(asset_server.load("embedded://data.mpk")));
 }
 
-fn poll(mut state: ResMut<NextState<LoadState>>, handle: Res<DataAsset>, asset: Res<Assets<Data>>) {
+fn poll(
+    mut state: ResMut<NextState<LoadState>>,
+    handle: Res<DataHandle>,
+    asset: Res<Assets<Data>>,
+) {
     if let Some(asset) = asset.get(&handle.0) {
         state.set(LoadState::Loaded);
         info!(
             "\nitems: {:#?}\nrecipes: {:#?}\nbuildings: {:#?}",
-            asset.items, asset.recipes, asset.buildings
+            asset.items.len(),
+            asset
+                .recipes
+                .iter()
+                .map(|(_, list)| list.len())
+                .sum::<usize>(),
+            asset.buildings.len()
         );
     }
 }
@@ -82,4 +92,4 @@ pub struct Building {
 }
 
 #[derive(Resource)]
-pub struct DataAsset(Handle<Data>);
+pub struct DataHandle(pub Handle<Data>);

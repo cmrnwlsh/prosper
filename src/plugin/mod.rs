@@ -13,11 +13,7 @@ use bevy::{
     MinimalPlugins,
 };
 use bevy_embedded_assets::EmbeddedAssetPlugin;
-use data::data;
-use io::io;
-use log::log;
 use std::time::Duration;
-use ui::ui;
 
 pub struct ProsperPlugins;
 impl PluginGroup for ProsperPlugins {
@@ -34,9 +30,9 @@ impl PluginGroup for ProsperPlugins {
             .add(DiagnosticsPlugin)
             .add(FrameTimeDiagnosticsPlugin)
             .add(HierarchyPlugin)
-            .add(io)
-            .add(ui)
-            .add(data)
-            .add(log)
+            .add(io::plugin)
+            .add(ui::plugin)
+            .add(data::plugin)
+            .add(log::plugin)
     }
 }

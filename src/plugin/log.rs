@@ -13,7 +13,7 @@ use bevy::{
 };
 use std::sync::mpsc::{channel, Receiver, Sender};
 
-pub fn log(app: &mut App) {
+pub fn plugin(app: &mut App) {
     let (sender, receiver) = channel();
     app.insert_resource(LogStore(vec![]));
     app.insert_non_send_resource(CapturedLogEvents(receiver));
@@ -23,15 +23,15 @@ pub fn log(app: &mut App) {
 }
 
 #[derive(Debug, Event)]
-pub struct LogEvent(pub String);
+struct LogEvent(pub String);
 
 #[derive(Deref, DerefMut)]
-pub struct CapturedLogEvents(pub Receiver<LogEvent>);
+struct CapturedLogEvents(pub Receiver<LogEvent>);
 
 #[derive(Resource)]
 pub struct LogStore(pub Vec<String>);
 
-pub struct CaptureLayer(pub Sender<LogEvent>);
+struct CaptureLayer(pub Sender<LogEvent>);
 impl<S: Subscriber> Layer<S> for CaptureLayer {
     fn on_event(&self, event: &Event<'_>, _ctx: Context<'_, S>) {
         let mut message = None;
@@ -62,13 +62,13 @@ impl Visit for CaptureLayerVisitor<'_> {
     }
 }
 
-pub fn store_logs(mut events: EventReader<LogEvent>, mut log_store: ResMut<LogStore>) {
+fn store_logs(mut events: EventReader<LogEvent>, mut log_store: ResMut<LogStore>) {
     for event in events.read() {
         log_store.0.push(event.0.clone());
     }
 }
 
-pub fn transfer_log_events(
+fn transfer_log_events(
     receiver: NonSend<CapturedLogEvents>,
     mut log_events: EventWriter<LogEvent>,
 ) {

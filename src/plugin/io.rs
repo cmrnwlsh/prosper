@@ -17,7 +17,7 @@ use std::{
     panic::set_hook,
 };
 
-pub fn io(app: &mut App) {
+pub fn plugin(app: &mut App) {
     app.insert_resource(Terminal::init())
         .add_event::<Input>()
         .add_systems(Update, read_events);

@@ -1,3 +1,4 @@
+mod initial;
 mod log;
 mod splash;
 
@@ -7,12 +8,13 @@ use bevy::{
     diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin},
     prelude::*,
 };
+
 use ratatui::{
     crossterm::event::{KeyCode, KeyEvent, KeyEventKind, KeyModifiers},
     widgets::Block,
 };
 
-pub fn ui(app: &mut App) {
+pub fn plugin(app: &mut App) {
     app.add_plugins(ContextGroup)
         .init_state::<Context>()
         .add_systems(Update, (listen_log, listen_exit));
@@ -23,6 +25,7 @@ impl PluginGroup for ContextGroup {
     fn build(self) -> PluginGroupBuilder {
         PluginGroupBuilder::start::<Self>()
             .add(splash::context)
+            .add(initial::context)
             .add(log::context)
     }
 }

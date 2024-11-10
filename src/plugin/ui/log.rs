@@ -8,20 +8,20 @@ use ratatui::{crossterm::event::KeyCode, widgets::Paragraph, Frame};
 use super::{title_block, Context};
 
 pub fn context(app: &mut App) {
-    app.insert_resource(ScrollState(0)).add_systems(
+    app.insert_resource(State(0)).add_systems(
         Update,
         (render, listen_scroll).run_if(in_state(Context::Log)),
     );
 }
 
 #[derive(Resource)]
-struct ScrollState(u16);
+struct State(u16);
 
 fn render(
     mut term: ResMut<Terminal>,
     diagnostics: Res<DiagnosticsStore>,
     logs: Res<LogStore>,
-    scroll: Res<ScrollState>,
+    scroll: Res<State>,
 ) {
     term.draw(|frame: &mut Frame| {
         frame.render_widget(
@@ -34,7 +34,7 @@ fn render(
     .unwrap();
 }
 
-fn listen_scroll(mut events: EventReader<Input>, mut scroll: ResMut<ScrollState>) {
+fn listen_scroll(mut events: EventReader<Input>, mut scroll: ResMut<State>) {
     events.read().for_each(|ev| {
         let s = &mut scroll.0;
         *s = match ev.0.code {

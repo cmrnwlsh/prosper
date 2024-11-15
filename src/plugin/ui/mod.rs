@@ -17,7 +17,7 @@ use ratatui::{
 pub fn plugin(app: &mut App) {
     app.add_plugins(ContextGroup)
         .init_state::<Context>()
-        .add_systems(Update, (listen_log, listen_exit));
+        .add_systems(Update, (listen_log, listen_exit, listen_back));
 }
 
 struct ContextGroup;
@@ -30,7 +30,7 @@ impl PluginGroup for ContextGroup {
     }
 }
 
-#[derive(States, Debug, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(States, Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
 pub enum Context {
     #[default]
     Splash,
@@ -38,15 +38,8 @@ pub enum Context {
     Log,
 }
 
-pub fn title_block(diagnostics: Res<DiagnosticsStore>) -> Block<'_> {
-    Block::bordered().title(format!(
-        " TPS: {:.2} ",
-        diagnostics
-            .get(&FrameTimeDiagnosticsPlugin::FPS)
-            .and_then(|fps| fps.smoothed())
-            .unwrap_or(f64::NAN)
-    ))
-}
+#[derive(Resource)]
+struct ContextStack(Vec<Context>);
 
 fn listen_log(mut events: EventReader<Input>, mut state: ResMut<NextState<Context>>) {
     events.read().for_each(|ev| {
@@ -68,4 +61,26 @@ fn listen_exit(mut events: EventReader<Input>, mut exit: EventWriter<AppExit>) {
             exit.send(AppExit::Success);
         }
     })
+}
+
+fn listen_back(
+    mut events: EventReader<Input>,
+    mut stack: ResMut<ContextStack>,
+    mut state: ResMut<NextState<Context>>,
+) {
+    events.read().for_each(|ev| {
+        if let (KeyCode::Esc, Some(c)) = (ev.0.code, stack.0.pop()) {
+            state.set(c)
+        }
+    })
+}
+
+pub fn title_block(diagnostics: Res<DiagnosticsStore>) -> Block<'_> {
+    Block::bordered().title(format!(
+        " TPS: {:.2} ",
+        diagnostics
+            .get(&FrameTimeDiagnosticsPlugin::FPS)
+            .and_then(|fps| fps.smoothed())
+            .unwrap_or(f64::NAN)
+    ))
 }

@@ -94,7 +94,6 @@ fn process_transition(
         ForwardTransition::Context { current, target } if target != current => {
             stack.0.push(*current);
             state.set(*target);
-            info!("{:#?}", stack.0)
         }
         ForwardTransition::Exit => {
             exit.send(AppExit::Success);

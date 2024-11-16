@@ -1,6 +1,7 @@
 mod data;
 mod io;
 mod log;
+mod map;
 mod sim;
 mod ui;
 

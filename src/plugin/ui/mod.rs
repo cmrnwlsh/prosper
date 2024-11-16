@@ -6,6 +6,8 @@ use super::io::Input;
 use bevy::{app::PluginGroupBuilder, prelude::*};
 use ratatui::crossterm::event::{KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
 
+const TITLE_BAR: &str = " -PROSPER- ";
+
 pub fn plugin(app: &mut App) {
     app.add_plugins(ContextGroup)
         .init_state::<Context>()

@@ -1,4 +1,4 @@
-use super::{Context, ForwardTransition};
+use super::{Context, ForwardTransition, TITLE_BAR};
 use crate::plugin::{
     data::LoadState,
     io::{Input, Terminal},
@@ -49,7 +49,7 @@ fn render(mut term: ResMut<Terminal>, load_state: Res<State<LoadState>>) {
             .centered(),
             Layout::vertical([Constraint::Ratio(1, 3); 3]).split(frame.area())[1],
         );
-        frame.render_widget(Block::bordered().title(" -PROSPER- "), frame.area());
+        frame.render_widget(Block::bordered().title(TITLE_BAR), frame.area());
     })
     .unwrap();
 }

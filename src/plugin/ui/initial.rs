@@ -1,5 +1,5 @@
 #![allow(clippy::modulo_one)]
-use super::Context;
+use super::{Context, TITLE_BAR};
 use crate::plugin::{
     data::{Data, DataHandle},
     io::{Input, Terminal},
@@ -58,7 +58,7 @@ fn render(
 ) {
     term.draw(|frame: &mut Frame| {
         let data = data_asset.get(&data_handle.0).unwrap();
-        let block = Block::bordered().title(" -PROSPER- ");
+        let block = Block::bordered().title(TITLE_BAR);
         let layout = Layout::vertical([Constraint::Length(1), Constraint::Fill(1)])
             .split(block.inner(frame.area()));
 

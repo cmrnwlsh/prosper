@@ -1,13 +1,14 @@
-use super::{title_block, Context, ForwardTransition};
+use super::{Context, ForwardTransition};
 use crate::plugin::{
     data::LoadState,
     io::{Input, Terminal},
 };
-use bevy::{diagnostic::DiagnosticsStore, prelude::*};
+use bevy::prelude::*;
 use ratatui::{
     crossterm::event::KeyCode,
     layout::{Constraint, Layout},
     text::Text,
+    widgets::Block,
     Frame,
 };
 
@@ -33,11 +34,7 @@ pub fn context(app: &mut App) {
     );
 }
 
-fn render(
-    mut term: ResMut<Terminal>,
-    diagnostics: Res<DiagnosticsStore>,
-    load_state: Res<State<LoadState>>,
-) {
+fn render(mut term: ResMut<Terminal>, load_state: Res<State<LoadState>>) {
     term.draw(|frame: &mut Frame| {
         frame.render_widget(
             Text::raw(format!(
@@ -52,7 +49,7 @@ fn render(
             .centered(),
             Layout::vertical([Constraint::Ratio(1, 3); 3]).split(frame.area())[1],
         );
-        frame.render_widget(title_block(diagnostics), frame.area());
+        frame.render_widget(Block::bordered().title(" -PROSPER- "), frame.area());
     })
     .unwrap();
 }

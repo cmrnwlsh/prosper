@@ -2,10 +2,14 @@ use crate::plugin::{
     io::{Input, Terminal},
     log::LogStore,
 };
-use bevy::{diagnostic::DiagnosticsStore, prelude::*};
-use ratatui::{crossterm::event::KeyCode, widgets::Paragraph, Frame};
+use bevy::prelude::*;
+use ratatui::{
+    crossterm::event::KeyCode,
+    widgets::{Block, Paragraph},
+    Frame,
+};
 
-use super::{title_block, Context};
+use super::Context;
 
 pub fn context(app: &mut App) {
     app.insert_resource(State(0)).add_systems(
@@ -17,17 +21,12 @@ pub fn context(app: &mut App) {
 #[derive(Resource)]
 struct State(u16);
 
-fn render(
-    mut term: ResMut<Terminal>,
-    diagnostics: Res<DiagnosticsStore>,
-    logs: Res<LogStore>,
-    scroll: Res<State>,
-) {
+fn render(mut term: ResMut<Terminal>, logs: Res<LogStore>, scroll: Res<State>) {
     term.draw(|frame: &mut Frame| {
         frame.render_widget(
             Paragraph::new(logs.0.join("\n"))
                 .scroll((scroll.0, 0))
-                .block(title_block(diagnostics)),
+                .block(Block::bordered().title(" -PROSPER- ")),
             frame.area(),
         )
     })

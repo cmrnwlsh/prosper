@@ -3,15 +3,8 @@ mod log;
 mod splash;
 
 use super::io::Input;
-use bevy::{
-    app::PluginGroupBuilder,
-    diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin},
-    prelude::*,
-};
-use ratatui::{
-    crossterm::event::{KeyCode, KeyEvent, KeyEventKind, KeyModifiers},
-    widgets::Block,
-};
+use bevy::{app::PluginGroupBuilder, prelude::*};
+use ratatui::crossterm::event::{KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
 
 pub fn plugin(app: &mut App) {
     app.add_plugins(ContextGroup)
@@ -40,14 +33,14 @@ pub enum Context {
     Log,
 }
 
-#[derive(Resource)]
-struct ContextStack(Vec<Context>);
-
 #[derive(Event, Debug)]
 pub enum ForwardTransition {
     Context { current: Context, target: Context },
     Exit,
 }
+
+#[derive(Resource)]
+struct ContextStack(Vec<Context>);
 
 impl From<(Context, Context)> for ForwardTransition {
     fn from(value: (Context, Context)) -> Self {
@@ -114,14 +107,4 @@ fn listen_back(
             }
         }
     })
-}
-
-pub fn title_block(diagnostics: Res<DiagnosticsStore>) -> Block<'_> {
-    Block::bordered().title(format!(
-        " TPS: {:.2} ",
-        diagnostics
-            .get(&FrameTimeDiagnosticsPlugin::FPS)
-            .and_then(|fps| fps.smoothed())
-            .unwrap_or(f64::NAN)
-    ))
 }

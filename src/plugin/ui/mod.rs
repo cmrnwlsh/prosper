@@ -36,9 +36,9 @@ pub enum Context {
 }
 
 #[derive(Event, Debug)]
-pub enum ForwardTransition {
-    Context { current: Context, target: Context },
-    Exit,
+pub struct ForwardTransition {
+    current: Context,
+    target: Context,
 }
 
 #[derive(Resource)]
@@ -46,7 +46,7 @@ struct ContextStack(Vec<Context>);
 
 impl From<(Context, Context)> for ForwardTransition {
     fn from(value: (Context, Context)) -> Self {
-        Self::Context {
+        Self {
             current: value.0,
             target: value.1,
         }
@@ -65,7 +65,7 @@ fn listen_log(
     })
 }
 
-fn listen_exit(mut events: EventReader<Input>, mut exit: EventWriter<ForwardTransition>) {
+fn listen_exit(mut events: EventReader<Input>, mut exit: EventWriter<AppExit>) {
     events.read().for_each(|ev| {
         if let KeyEvent {
             code: KeyCode::Char('c'),
@@ -74,7 +74,7 @@ fn listen_exit(mut events: EventReader<Input>, mut exit: EventWriter<ForwardTran
             ..
         } = ev.0
         {
-            exit.send(ForwardTransition::Exit);
+            exit.send(AppExit::Success);
         }
     })
 }
@@ -83,15 +83,11 @@ fn process_transition(
     mut events: EventReader<ForwardTransition>,
     mut state: ResMut<NextState<Context>>,
     mut stack: ResMut<ContextStack>,
-    mut exit: EventWriter<AppExit>,
 ) {
     events.read().for_each(|ev| match ev {
-        ForwardTransition::Context { current, target } if target != current => {
+        ForwardTransition { current, target } if target != current => {
             stack.0.push(*current);
             state.set(*target);
-        }
-        ForwardTransition::Exit => {
-            exit.send(AppExit::Success);
         }
         _ => {}
     })
@@ -101,11 +97,14 @@ fn listen_back(
     mut events: EventReader<Input>,
     mut stack: ResMut<ContextStack>,
     mut state: ResMut<NextState<Context>>,
+    mut exit: EventWriter<AppExit>,
 ) {
     events.read().for_each(|ev| {
         if let KeyCode::Esc = ev.0.code {
             if let Some(c) = stack.0.pop() {
                 state.set(c)
+            } else {
+                exit.send(AppExit::Success);
             }
         }
     })

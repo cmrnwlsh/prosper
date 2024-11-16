@@ -1,10 +1,11 @@
-use super::{title_block, Context};
+use super::{title_block, Context, ForwardTransition};
 use crate::plugin::{
     data::LoadState,
     io::{Input, Terminal},
 };
 use bevy::{diagnostic::DiagnosticsStore, prelude::*};
 use ratatui::{
+    crossterm::event::KeyCode,
     layout::{Constraint, Layout},
     text::Text,
     Frame,
@@ -43,7 +44,7 @@ fn render(
                 "{}\n{}",
                 SPLASH,
                 if *load_state.get() == LoadState::Loaded {
-                    "press any key to continue"
+                    "press spacebar to continue"
                 } else {
                     ""
                 }
@@ -56,8 +57,10 @@ fn render(
     .unwrap();
 }
 
-fn listen_input(events: EventReader<Input>, mut state: ResMut<NextState<Context>>) {
-    if !events.is_empty() {
-        state.set(Context::Initial)
-    }
+fn listen_input(mut events: EventReader<Input>, mut next: EventWriter<ForwardTransition>) {
+    events.read().for_each(|ev| {
+        if let KeyCode::Char(' ') = ev.0.code {
+            next.send((Context::Splash, Context::Initial).into());
+        }
+    });
 }

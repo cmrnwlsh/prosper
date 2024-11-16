@@ -20,7 +20,7 @@ use std::{
 pub fn plugin(app: &mut App) {
     app.insert_resource(Terminal::init())
         .add_event::<Input>()
-        .add_systems(Update, read_events);
+        .add_systems(PreUpdate, read_events);
 }
 
 #[derive(Event)]

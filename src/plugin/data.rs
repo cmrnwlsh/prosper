@@ -40,13 +40,13 @@ pub struct Data {
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
-pub struct Item {
-    pub name: String,
-    pub kind: ItemType,
-}
-
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub enum ItemType {
     #[serde(alias = "sword")]
     Sword,
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Item {
+    pub name: String,
+    pub kind: ItemType,
 }

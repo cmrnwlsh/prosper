@@ -12,7 +12,8 @@ use ratatui::{
     Frame,
 };
 
-const TAB_N: usize = 1;
+const TAB_TITLES: [&str; 1] = ["items"];
+const TAB_N: usize = TAB_TITLES.len();
 
 pub fn context(app: &mut App) {
     app.insert_resource(State::default()).add_systems(
@@ -62,7 +63,7 @@ fn render(
             .split(block.inner(frame.area()));
 
         frame.render_widget(block, frame.area());
-        frame.render_widget(Tabs::new(["items"]).select(state.tab), layout[0]);
+        frame.render_widget(Tabs::new(TAB_TITLES).select(state.tab), layout[0]);
         frame.render_widget(
             Paragraph::new(match state.tab {
                 0 => format!("{:#?}", data.items),

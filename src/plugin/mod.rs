@@ -8,7 +8,7 @@ mod ui;
 use bevy::{
     app::{PluginGroup, PluginGroupBuilder, ScheduleRunnerPlugin},
     asset::AssetPlugin,
-    diagnostic::{DiagnosticsPlugin, FrameTimeDiagnosticsPlugin},
+    diagnostic::DiagnosticsPlugin,
     hierarchy::HierarchyPlugin,
     state::app::StatesPlugin,
     MinimalPlugins,
@@ -29,7 +29,6 @@ impl PluginGroup for ProsperPlugins {
             .add(StatesPlugin)
             .add(AssetPlugin::default())
             .add(DiagnosticsPlugin)
-            .add(FrameTimeDiagnosticsPlugin)
             .add(HierarchyPlugin)
             .add(io::plugin)
             .add(ui::plugin)

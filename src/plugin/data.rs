@@ -1,4 +1,4 @@
-use bevy::prelude::*;
+use bevy::{prelude::*, utils::hashbrown::HashMap};
 use bevy_common_assets::toml::TomlAssetPlugin;
 use serde::{Deserialize, Serialize};
 
@@ -36,11 +36,11 @@ pub struct DataHandle(pub Handle<Data>);
 
 #[derive(Asset, TypePath, Serialize, Deserialize, Debug)]
 pub struct Data {
-    pub items: Vec<Item>,
+    pub items: HashMap<String, Item>,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
-pub enum ItemType {
+pub enum ItemKind {
     #[serde(alias = "sword")]
     Sword,
 }
@@ -48,5 +48,5 @@ pub enum ItemType {
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Item {
     pub name: String,
-    pub kind: ItemType,
+    pub kind: ItemKind,
 }

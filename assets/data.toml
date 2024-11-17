@@ -1,3 +1,1 @@
-[[items]]
-name = "test_item"
-kind = "sword"
+items.TEST_ITEM = { name = "test_item", kind = "sword" }

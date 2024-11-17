@@ -1,4 +1,4 @@
-mod components;
+pub mod components;
 
 use bevy::prelude::*;
 use components::{Position, Symbol};

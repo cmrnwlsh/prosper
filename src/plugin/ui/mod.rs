@@ -100,7 +100,7 @@ fn listen_back(
     mut exit: EventWriter<AppExit>,
 ) {
     events.read().for_each(|ev| {
-        if let KeyCode::Esc = ev.0.code {
+        if let KeyCode::Esc | KeyCode::Backspace = ev.0.code {
             if let Some(c) = stack.0.pop() {
                 state.set(c)
             } else {

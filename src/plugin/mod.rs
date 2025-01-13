@@ -33,6 +33,8 @@ impl PluginGroup for ProsperPlugins {
             .add(io::plugin)
             .add(ui::plugin)
             .add(data::plugin)
+            .add(map::plugin)
+            .add(sim::plugin)
             .add(log::plugin)
     }
 }

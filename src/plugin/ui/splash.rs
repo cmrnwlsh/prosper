@@ -57,7 +57,7 @@ fn render(mut term: ResMut<Terminal>, load_state: Res<State<LoadState>>) {
 fn listen_input(mut events: EventReader<Input>, mut next: EventWriter<ForwardTransition>) {
     events.read().for_each(|ev| {
         if let KeyCode::Char(' ') = ev.0.code {
-            next.send((Context::Splash, Context::Initial).into());
+            next.send((Context::Splash, Context::Primary).into());
         }
     });
 }

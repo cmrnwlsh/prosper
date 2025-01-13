@@ -1,5 +1,5 @@
-mod initial;
 mod log;
+mod primary;
 mod splash;
 
 use super::io::Input;
@@ -22,7 +22,7 @@ impl PluginGroup for ContextGroup {
     fn build(self) -> PluginGroupBuilder {
         PluginGroupBuilder::start::<Self>()
             .add(splash::context)
-            .add(initial::context)
+            .add(primary::context)
             .add(log::context)
     }
 }
@@ -31,7 +31,7 @@ impl PluginGroup for ContextGroup {
 pub enum Context {
     #[default]
     Splash,
-    Initial,
+    Primary,
     Log,
 }
 

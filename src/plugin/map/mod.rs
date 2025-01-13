@@ -19,14 +19,31 @@ const MAP: &str = r#"
 ########################################
 "#;
 
-enum Tile {
+pub enum Tile {
     Wall,
     Floor,
     Empty,
 }
 
 #[derive(Resource)]
-struct TileMap(Vec<Vec<Tile>>);
+pub struct TileMap(pub Vec<Vec<Tile>>);
+
+impl TileMap {
+    pub fn symbol_grid(&self) -> Vec<Vec<char>> {
+        self.0
+            .iter()
+            .map(|row| {
+                row.iter()
+                    .map(|tile| match tile {
+                        Tile::Floor => '.',
+                        Tile::Wall => '#',
+                        Tile::Empty => ' ',
+                    })
+                    .collect()
+            })
+            .collect()
+    }
+}
 
 impl Default for TileMap {
     fn default() -> Self {
@@ -45,9 +62,7 @@ impl Default for TileMap {
         )
     }
 }
-pub fn build(app: &mut App) {
-    app.insert_resource(TileMap::default())
-        .add_systems(Startup, init);
-}
 
-fn init(mut commands: Commands) {}
+pub fn plugin(app: &mut App) {
+    app.insert_resource(TileMap::default());
+}

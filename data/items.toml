@@ -1,1 +1,14 @@
-TEST_ITEM = { name = "test_item", kind = "sword" }
+[[i0]]
+name = "iron_sword"
+material = "iron"
+damage = "20"
+
+[[i1]]
+name = "copper_sword"
+material = "copper"
+damage = "10"
+
+[[i2]]
+name = "iron_armor"
+material = "iron"
+resistance = "20"

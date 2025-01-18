@@ -2545,7 +2545,6 @@ dependencies = [
  "delegate",
  "log",
  "ratatui",
- "serde",
  "static-toml",
 ]
 

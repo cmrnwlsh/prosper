@@ -1,8 +1,5 @@
 use super::{Context, ForwardTransition, TITLE_BAR};
-use crate::plugin::{
-    data::LoadState,
-    io::{Input, Terminal},
-};
+use crate::plugin::io::{Input, Terminal};
 use bevy::prelude::*;
 use ratatui::{
     crossterm::event::KeyCode,
@@ -27,26 +24,15 @@ pub fn context(app: &mut App) {
         Update,
         (
             render.run_if(in_state(Context::Splash)),
-            listen_input
-                .run_if(in_state(Context::Splash))
-                .run_if(in_state(LoadState::Loaded)),
+            listen_input.run_if(in_state(Context::Splash)),
         ),
     );
 }
 
-fn render(mut term: ResMut<Terminal>, load_state: Res<State<LoadState>>) {
+fn render(mut term: ResMut<Terminal>) {
     term.draw(|frame: &mut Frame| {
         frame.render_widget(
-            Text::raw(format!(
-                "{}\n{}",
-                SPLASH,
-                if *load_state.get() == LoadState::Loaded {
-                    "press spacebar to continue"
-                } else {
-                    ""
-                }
-            ))
-            .centered(),
+            Text::raw(format!("{}\n{}", SPLASH, "press spacebar to continue")).centered(),
             Layout::vertical([Constraint::Ratio(1, 3); 3]).split(frame.area())[1],
         );
         frame.render_widget(Block::bordered().title(TITLE_BAR), frame.area());

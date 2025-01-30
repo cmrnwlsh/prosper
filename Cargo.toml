@@ -4,11 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-bevy_common_assets = { version = "0.12.0", features = ["toml"] }
 bevy = { version = "0.15.1", default-features = false, features = [
   "bevy_state",
   "multi_threaded",
   "async-io",
+  "serialize"
 ] }
 log = { version = "*", features = [
   "max_level_debug",
@@ -18,7 +18,6 @@ bevy_embedded_assets = "0.12.0"
 better-panic = "0.3.0"
 delegate = "0.13.0"
 ratatui = "0.29.0"
-serde = "1.0.210"
 
 [profile.dev]
 opt-level = 1

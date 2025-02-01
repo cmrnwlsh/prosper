@@ -1,13 +1,15 @@
+mod item;
+
 use bevy::{prelude::*, utils::HashMap};
-use bevy_common_assets::msgpack::MsgPackAssetPlugin;
+use bevy_common_assets::toml::TomlAssetPlugin;
 use serde::Deserialize;
 
-static DATA_PATH: &str = "embedded://data.mpk";
+static DATA_PATH: &str = "embedded://data.toml";
 
 pub struct DataPlugin;
 impl Plugin for DataPlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugins(MsgPackAssetPlugin::<Data>::new(&[DATA_PATH]))
+        app.add_plugins(TomlAssetPlugin::<Data>::new(&[DATA_PATH]))
             .init_state::<LoadState>()
             .add_systems(Startup, load_data)
             .add_systems(Update, poll_data.run_if(in_state(LoadState::Loading)));
@@ -40,13 +42,8 @@ pub enum LoadState {
 
 #[derive(Deserialize, Resource, Asset, TypePath, Debug)]
 pub struct Data {
-    items: HashMap<String, WearableItem>,
+    apparel: HashMap<String, item::Wearable>,
 }
 
 #[derive(Resource)]
 struct DataHandle(Handle<Data>);
-
-#[derive(Deserialize, Debug)]
-pub struct WearableItem {
-    material: String,
-}

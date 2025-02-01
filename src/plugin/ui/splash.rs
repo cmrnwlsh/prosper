@@ -8,7 +8,6 @@ use bevy::{diagnostic::DiagnosticsStore, prelude::*};
 use ratatui::{
     crossterm::event::KeyCode,
     layout::{Constraint, Layout},
-    text::Text,
     widgets::{Block, Paragraph, Wrap},
     Frame,
 };

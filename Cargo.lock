@@ -3218,6 +3218,7 @@ dependencies = [
  "delegate",
  "log",
  "ratatui",
+ "serde",
 ]
 
 [[package]]

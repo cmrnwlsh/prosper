@@ -1,9 +1,8 @@
-pub mod components;
 use bevy::prelude::*;
 
-pub fn plugin(app: &mut App) {
+pub struct MapPlugin;
+impl Plugin for MapPlugin {
+    fn build(&self, app: &mut App) {}
 }
 
-struct SpatialIndex {
-
-}
+struct SpatialIndex {}

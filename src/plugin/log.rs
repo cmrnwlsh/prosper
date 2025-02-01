@@ -13,13 +13,16 @@ use bevy::{
 };
 use std::sync::mpsc::{channel, Receiver, Sender};
 
-pub fn plugin(app: &mut App) {
-    let (sender, receiver) = channel();
-    app.insert_resource(LogStore(vec![]));
-    app.insert_non_send_resource(CapturedLogEvents(receiver));
-    app.add_event::<LogEvent>();
-    app.add_systems(Update, (transfer_log_events, store_logs));
-    registry().with(Some(CaptureLayer(sender))).init();
+pub struct LogPlugin;
+impl Plugin for LogPlugin {
+    fn build(&self, app: &mut App) {
+        let (sender, receiver) = channel();
+        app.insert_resource(LogStore(vec![]));
+        app.insert_non_send_resource(CapturedLogEvents(receiver));
+        app.add_event::<LogEvent>();
+        app.add_systems(Update, (transfer_log_events, store_logs));
+        registry().with(Some(CaptureLayer(sender))).init();
+    }
 }
 
 #[derive(Debug, Event)]

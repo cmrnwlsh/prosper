@@ -14,7 +14,13 @@ use bevy::{
     MinimalPlugins,
 };
 use bevy_embedded_assets::EmbeddedAssetPlugin;
+use data::DataPlugin;
+use io::IoPlugin;
+use log::LogPlugin;
+use map::MapPlugin;
+use sim::SimPlugin;
 use std::time::Duration;
+use ui::UiPlugin;
 
 pub struct ProsperPlugins;
 impl PluginGroup for ProsperPlugins {
@@ -30,10 +36,11 @@ impl PluginGroup for ProsperPlugins {
             .add(AssetPlugin::default())
             .add(DiagnosticsPlugin)
             .add(HierarchyPlugin)
-            .add(io::plugin)
-            .add(ui::plugin)
-            .add(map::plugin)
-            .add(sim::plugin)
-            .add(log::plugin)
+            .add(IoPlugin)
+            .add(UiPlugin)
+            .add(DataPlugin)
+            .add(MapPlugin)
+            .add(SimPlugin)
+            .add(LogPlugin)
     }
 }

@@ -8,17 +8,19 @@ bevy = { version = "0.15.1", default-features = false, features = [
     "bevy_state",
     "multi_threaded",
     "async-io",
-    "serialize"
+    "serialize",
 ] }
 log = { version = "*", features = [
     "max_level_debug",
     "release_max_level_info",
 ] }
+bevy_common_assets = { version = "0.12.0", features = ["toml"] }
 bevy_embedded_assets = "0.12.0"
 better-panic = "0.3.0"
 delegate = "0.13.0"
 ratatui = "0.29.0"
-bevy_common_assets = { version = "0.12.0", features = ["toml"] }
+serde = "*"
+
 
 [profile.dev]
 opt-level = 1

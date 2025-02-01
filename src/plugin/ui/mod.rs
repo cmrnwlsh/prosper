@@ -8,13 +8,16 @@ use ratatui::crossterm::event::{KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
 
 const TITLE_BAR: &str = " -PROSPER- ";
 
-pub fn plugin(app: &mut App) {
-    app.add_plugins(ContextGroup)
-        .init_state::<Context>()
-        .insert_resource(ContextStack(vec![]))
-        .add_event::<ForwardTransition>()
-        .add_systems(Update, (listen_log, listen_exit, listen_back))
-        .add_systems(PostUpdate, process_transition);
+pub struct UiPlugin;
+impl Plugin for UiPlugin {
+    fn build(&self, app: &mut App) {
+        app.add_plugins(ContextGroup)
+            .init_state::<Context>()
+            .insert_resource(ContextStack(vec![]))
+            .add_event::<ForwardTransition>()
+            .add_systems(Update, (listen_log, listen_exit, listen_back))
+            .add_systems(PostUpdate, process_transition);
+    }
 }
 
 struct ContextGroup;

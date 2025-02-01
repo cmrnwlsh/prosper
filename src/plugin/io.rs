@@ -16,11 +16,13 @@ use std::{
     io::{stdout, Stdout},
     panic::set_hook,
 };
-
-pub fn plugin(app: &mut App) {
-    app.insert_resource(Terminal::init())
-        .add_event::<Input>()
-        .add_systems(PreUpdate, read_events);
+pub struct IoPlugin;
+impl Plugin for IoPlugin {
+    fn build(&self, app: &mut App) {
+        app.insert_resource(Terminal::init())
+            .add_event::<Input>()
+            .add_systems(PreUpdate, read_events);
+    }
 }
 
 #[derive(Event)]

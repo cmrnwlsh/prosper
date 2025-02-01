@@ -3,10 +3,25 @@ mod primary;
 mod splash;
 
 use super::io::Input;
-use bevy::{app::PluginGroupBuilder, prelude::*};
+use bevy::{
+    app::PluginGroupBuilder,
+    diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin},
+    prelude::*,
+};
 use ratatui::crossterm::event::{KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
 
 const TITLE_BAR: &str = " -PROSPER- ";
+
+pub fn fps(diag: Res<DiagnosticsStore>) -> String {
+    if let Some(fps) = diag
+        .get(&FrameTimeDiagnosticsPlugin::FPS)
+        .and_then(|fps| fps.smoothed())
+    {
+        format!("{:.2}", fps)
+    } else {
+        "".into()
+    }
+}
 
 pub struct UiPlugin;
 impl Plugin for UiPlugin {

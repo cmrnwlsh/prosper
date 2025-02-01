@@ -1,6 +1,6 @@
-use super::{Context, ForwardTransition, TITLE_BAR};
+use super::{fps, Context, ForwardTransition, TITLE_BAR};
 use crate::plugin::io::{Input, Terminal};
-use bevy::prelude::*;
+use bevy::{diagnostic::DiagnosticsStore, prelude::*};
 use ratatui::{
     crossterm::event::KeyCode,
     layout::{Constraint, Layout},
@@ -29,13 +29,16 @@ pub fn context(app: &mut App) {
     );
 }
 
-fn render(mut term: ResMut<Terminal>) {
+fn render(mut term: ResMut<Terminal>, diag: Res<DiagnosticsStore>) {
     term.draw(|frame: &mut Frame| {
         frame.render_widget(
             Text::raw(format!("{}\n{}", SPLASH, "press spacebar to continue")).centered(),
             Layout::vertical([Constraint::Ratio(1, 3); 3]).split(frame.area())[1],
         );
-        frame.render_widget(Block::bordered().title(TITLE_BAR), frame.area());
+        frame.render_widget(
+            Block::bordered().title(format!("{TITLE_BAR}{} ", fps(diag))),
+            frame.area(),
+        );
     })
     .unwrap();
 }

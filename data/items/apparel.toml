@@ -1,1 +1,2 @@
-test_item = { material = "cloth" }
+test_item1 = { material = "cloth" }
+test_item2 = { material = "iron" }

@@ -16,11 +16,13 @@ pub fn loader(app: &mut App) {
         .add_systems(
             Update,
             (|handle: Res<ApparelHandle>,
-              apparel: Res<Assets<Apparel>>,
+              mut apparel: ResMut<Assets<Apparel>>,
               mut state: ResMut<NextState<LoadState>>| {
-                if let Some(apparel) = apparel.get(handle.0.id()) {
-                    info!("{:#?}", apparel);
-                    state.set(LoadState::Loaded)
+                if let Some(data) = apparel.get(handle.0.id()) {
+                    info!("{:#?}", data);
+                    state.set(LoadState::Loaded);
+                    apparel.remove(handle.0.id());
+                    info!("{:#?}", apparel.get(handle.0.id()));
                 }
             })
             .run_if(in_state(LoadState::Loading)),

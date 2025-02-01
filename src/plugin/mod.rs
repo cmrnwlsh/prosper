@@ -1,3 +1,4 @@
+mod data;
 mod io;
 mod log;
 mod map;
@@ -19,12 +20,12 @@ pub struct ProsperPlugins;
 impl PluginGroup for ProsperPlugins {
     fn build(self) -> PluginGroupBuilder {
         PluginGroupBuilder::start::<Self>()
-            .add(EmbeddedAssetPlugin::default())
             .add_group(
                 MinimalPlugins.set(ScheduleRunnerPlugin::run_loop(Duration::from_secs_f64(
                     1. / 60.,
                 ))),
             )
+            .add(EmbeddedAssetPlugin::default())
             .add(StatesPlugin)
             .add(AssetPlugin::default())
             .add(DiagnosticsPlugin)

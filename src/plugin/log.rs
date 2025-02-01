@@ -25,14 +25,27 @@ impl Plugin for LogPlugin {
     }
 }
 
-#[derive(Debug, Event)]
-struct LogEvent(pub String);
+#[derive(Debug, Event, Clone)]
+pub enum LogEvent {
+    Info(String),
+    Debug(String),
+    Error(String),
+}
+
+impl LogEvent {
+    pub fn message(&self) -> &str {
+        use LogEvent::*;
+        match self {
+            Info(s) | Debug(s) | Error(s) => s.as_ref(),
+        }
+    }
+}
 
 #[derive(Deref, DerefMut)]
 struct CapturedLogEvents(pub Receiver<LogEvent>);
 
 #[derive(Resource)]
-pub struct LogStore(pub Vec<String>);
+pub struct LogStore(pub Vec<LogEvent>);
 
 struct CaptureLayer(pub Sender<LogEvent>);
 impl<S: Subscriber> Layer<S> for CaptureLayer {
@@ -41,16 +54,21 @@ impl<S: Subscriber> Layer<S> for CaptureLayer {
         event.record(&mut CaptureLayerVisitor(&mut message));
         if let Some(message) = message {
             let metadata = event.metadata();
-            if *metadata.level() <= Level::DEBUG {
-                self.0
-                    .send(LogEvent(format!(
-                        "[{}::{}][{}] {}",
-                        metadata.target(),
-                        metadata.line().unwrap_or(0),
-                        metadata.level(),
-                        message
-                    )))
-                    .unwrap();
+            let s = format!(
+                "[{}::{}][{}] {}",
+                metadata.target(),
+                metadata.line().unwrap_or(0),
+                metadata.level(),
+                message
+            );
+            let log = match *metadata.level() {
+                Level::INFO => Some(LogEvent::Info(s)),
+                Level::DEBUG => Some(LogEvent::Debug(s)),
+                Level::ERROR => Some(LogEvent::Error(s)),
+                _ => None,
+            };
+            if let Some(log) = log {
+                self.0.send(log).unwrap();
             }
         }
     }
@@ -67,7 +85,7 @@ impl Visit for CaptureLayerVisitor<'_> {
 
 fn store_logs(mut events: EventReader<LogEvent>, mut log_store: ResMut<LogStore>) {
     for event in events.read() {
-        log_store.0.push(event.0.clone());
+        log_store.0.push(event.clone());
     }
 }
 

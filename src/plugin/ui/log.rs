@@ -1,6 +1,6 @@
 use crate::plugin::{
     io::{Input, Terminal},
-    log::LogStore,
+    log::{LogEvent, LogStore},
 };
 use bevy::{diagnostic::DiagnosticsStore, prelude::*};
 use ratatui::{
@@ -29,10 +29,16 @@ fn render(
 ) {
     term.draw(|frame: &mut Frame| {
         frame.render_widget(
-            Paragraph::new(logs.0.join("\n"))
-                .scroll((scroll.0, 0))
-                .block(Block::bordered().title(format!("{TITLE_BAR}{} ", fps(diag))))
-                .wrap(Wrap { trim: false }),
+            Paragraph::new(
+                logs.0
+                    .iter()
+                    .map(|log| log.message().into())
+                    .collect::<Vec<String>>()
+                    .join("\n"),
+            )
+            .scroll((scroll.0, 0))
+            .block(Block::bordered().title(format!("{TITLE_BAR}{} ", fps(diag))))
+            .wrap(Wrap { trim: false }),
             frame.area(),
         )
     })

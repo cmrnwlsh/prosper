@@ -5,7 +5,7 @@ use crate::plugin::{
 use bevy::{diagnostic::DiagnosticsStore, prelude::*};
 use ratatui::{
     crossterm::event::KeyCode,
-    widgets::{Block, Paragraph},
+    widgets::{Block, Paragraph, Wrap},
     Frame,
 };
 
@@ -31,7 +31,8 @@ fn render(
         frame.render_widget(
             Paragraph::new(logs.0.join("\n"))
                 .scroll((scroll.0, 0))
-                .block(Block::bordered().title(format!("{TITLE_BAR}{} ", fps(diag)))),
+                .block(Block::bordered().title(format!("{TITLE_BAR}{} ", fps(diag))))
+                .wrap(Wrap { trim: false }),
             frame.area(),
         )
     })

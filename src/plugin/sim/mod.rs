@@ -1,5 +1,7 @@
-use super::data::components::{Position, Symbol};
+pub mod components;
+
 use bevy::prelude::*;
+use components::{Position, Symbol};
 
 pub struct SimPlugin;
 impl Plugin for SimPlugin {

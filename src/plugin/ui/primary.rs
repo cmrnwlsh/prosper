@@ -1,6 +1,6 @@
 use crate::plugin::{
-    data::components::{Position, Symbol},
     io::Terminal,
+    sim::components::{Position, Symbol},
 };
 
 use super::{fps, Context, TITLE_BAR};

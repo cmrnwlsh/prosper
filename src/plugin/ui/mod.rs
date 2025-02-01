@@ -77,7 +77,7 @@ fn listen_log(
     ctx: Res<State<Context>>,
 ) {
     events.read().for_each(|ev| {
-        if let KeyCode::Char('`') = ev.0.code {
+        if let KeyCode::Char('`') | KeyCode::Char('~') = ev.0.code {
             next.send((*ctx.get(), Context::Log).into());
         };
     })

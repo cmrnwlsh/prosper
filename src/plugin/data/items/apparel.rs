@@ -20,9 +20,9 @@ pub fn loader(app: &mut App) {
               mut state: ResMut<NextState<LoadState>>| {
                 if let Some(data) = apparel.get(handle.0.id()) {
                     info!("{:#?}", data);
-                    state.set(LoadState::Loaded);
                     apparel.remove(handle.0.id());
                     info!("{:#?}", apparel.get(handle.0.id()));
+                    state.set(LoadState::Loaded);
                 }
             })
             .run_if(in_state(LoadState::Loading)),

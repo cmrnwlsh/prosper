@@ -1,4 +1,3 @@
-mod data;
 mod io;
 mod log;
 mod map;
@@ -7,14 +6,11 @@ mod ui;
 
 use bevy::{
     app::{PluginGroup, PluginGroupBuilder, ScheduleRunnerPlugin},
-    asset::AssetPlugin,
     diagnostic::{DiagnosticsPlugin, FrameTimeDiagnosticsPlugin},
     hierarchy::HierarchyPlugin,
     state::app::StatesPlugin,
     MinimalPlugins,
 };
-use bevy_embedded_assets::EmbeddedAssetPlugin;
-use data::DataPlugin;
 use io::IoPlugin;
 use log::LogPlugin;
 use map::MapPlugin;
@@ -31,15 +27,12 @@ impl PluginGroup for ProsperPlugins {
                     1. / 60.,
                 ))),
             )
-            .add(EmbeddedAssetPlugin::default())
             .add(StatesPlugin)
-            .add(AssetPlugin::default())
             .add(DiagnosticsPlugin)
             .add(FrameTimeDiagnosticsPlugin)
             .add(HierarchyPlugin)
             .add(IoPlugin)
             .add(UiPlugin)
-            .add(DataPlugin)
             .add(MapPlugin)
             .add(SimPlugin)
             .add(LogPlugin)

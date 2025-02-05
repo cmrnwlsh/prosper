@@ -1,6 +1,6 @@
 use crate::plugin::{
     io::{Input, Terminal},
-    log::{LogEvent, LogStore},
+    log::LogStore,
 };
 use bevy::{diagnostic::DiagnosticsStore, prelude::*};
 use ratatui::{

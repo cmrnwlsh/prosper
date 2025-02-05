@@ -1,7 +1,4 @@
-use crate::plugin::{
-    io::Terminal,
-    sim::components::{Position, Symbol},
-};
+use crate::plugin::io::Terminal;
 
 use super::{fps, Context, TITLE_BAR};
 use bevy::{diagnostic::DiagnosticsStore, prelude::*};
@@ -11,11 +8,7 @@ pub fn context(app: &mut App) {
     app.add_systems(Update, render.run_if(in_state(Context::Primary)));
 }
 
-fn render(
-    mut term: ResMut<Terminal>,
-    symbols: Query<(&Position, &Symbol)>,
-    diag: Res<DiagnosticsStore>,
-) {
+fn render(mut term: ResMut<Terminal>, diag: Res<DiagnosticsStore>) {
     term.draw(|frame| {
         let block = Block::bordered()
             .padding(Padding::top(frame.area().height / 4))

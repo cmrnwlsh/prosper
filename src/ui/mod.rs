@@ -8,18 +8,21 @@ use bevy::{
     diagnostic::{DiagnosticsStore, FrameTimeDiagnosticsPlugin},
     prelude::*,
 };
-use ratatui::crossterm::event::{KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
+use ratatui::{
+    crossterm::event::{KeyCode, KeyEvent, KeyEventKind, KeyModifiers},
+    widgets::Block,
+};
 
 const TITLE_BAR: &str = " -PROSPER- ";
 
-pub fn fps(diag: Res<DiagnosticsStore>) -> String {
+pub fn title_block(diag: Res<DiagnosticsStore>) -> Block {
     if let Some(fps) = diag
         .get(&FrameTimeDiagnosticsPlugin::FPS)
         .and_then(|fps| fps.smoothed())
     {
-        format!("{:.2}", fps)
+        Block::bordered().title(format!("{TITLE_BAR}{:.2} ", fps))
     } else {
-        "".into()
+        Block::new()
     }
 }
 

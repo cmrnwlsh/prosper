@@ -1,15 +1,15 @@
-use crate::plugin::{
+use crate::{
     io::{Input, Terminal},
     log::LogStore,
 };
 use bevy::{diagnostic::DiagnosticsStore, prelude::*};
 use ratatui::{
     crossterm::event::KeyCode,
-    widgets::{Block, Paragraph, Wrap},
+    widgets::{Paragraph, Wrap},
     Frame,
 };
 
-use super::{fps, Context, TITLE_BAR};
+use super::{title_block, Context};
 
 pub fn context(app: &mut App) {
     app.insert_resource(State(0)).add_systems(
@@ -37,7 +37,7 @@ fn render(
                     .join("\n"),
             )
             .scroll((scroll.0, 0))
-            .block(Block::bordered().title(format!("{TITLE_BAR}{} ", fps(diag))))
+            .block(title_block(diag))
             .wrap(Wrap { trim: false }),
             frame.area(),
         )

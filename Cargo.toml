@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-bevy = { version = "0.15.1", default-features = false, features = [
+bevy = { version = "0.15.2", default-features = false, features = [
     "bevy_state",
     "multi_threaded",
     "async-io",
@@ -15,7 +15,7 @@ log = { version = "*", features = [
     "release_max_level_info",
 ] }
 better-panic = "0.3.0"
-delegate = "0.13.0"
+delegate = "0.13.2"
 ratatui = "0.29.0"
 
 

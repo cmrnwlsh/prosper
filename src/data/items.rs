@@ -1,8 +1,22 @@
 #![allow(clippy::upper_case_acronyms)]
 
-#[derive(PartialEq, Eq, Hash, Debug)]
+use strum::{EnumCount, EnumIter, EnumProperty, IntoStaticStr};
+
+#[derive(PartialEq, Eq, Hash, Debug, IntoStaticStr, EnumCount, EnumIter, EnumProperty)]
 pub enum Item {
+    #[strum(props(
+        name = "advanced_engine",
+        category_name = "ship_engines",
+        weight = "14",
+        volume = "7"
+    ))]
     AEN,
+    #[strum(props(
+        name = "advanced_fuel_pump",
+        category_name = "ship_engines",
+        weight = "1",
+        volume = "0.25"
+    ))]
     AFP,
     AFR,
     ENG,

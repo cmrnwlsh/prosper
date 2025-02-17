@@ -20,7 +20,7 @@ pub fn title_block(diag: Res<DiagnosticsStore>) -> Block {
         .get(&FrameTimeDiagnosticsPlugin::FPS)
         .and_then(|fps| fps.smoothed())
     {
-        Block::bordered().title(format!("{TITLE_BAR}{:.2} ", fps))
+        Block::bordered().title(format!("{TITLE_BAR}TPS: {:.0} ", fps))
     } else {
         Block::new()
     }

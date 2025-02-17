@@ -1,3 +1,4 @@
+mod data;
 mod io;
 mod log;
 mod sim;
@@ -11,6 +12,7 @@ use bevy::{
     state::app::StatesPlugin,
     MinimalPlugins,
 };
+use data::DataPlugin;
 use io::IoPlugin;
 use log::LogPlugin;
 use sim::SimPlugin;
@@ -33,6 +35,7 @@ impl PluginGroup for ProsperPlugins {
             .add(IoPlugin)
             .add(UiPlugin)
             .add(SimPlugin)
+            .add(DataPlugin)
             .add(LogPlugin)
     }
 }

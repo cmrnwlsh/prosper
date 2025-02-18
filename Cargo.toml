@@ -10,6 +10,8 @@ bevy = { version = "0.15.2", default-features = false, features = [
     "async-io",
     "serialize",
 ] }
+bevy_common_assets = { version = "0.12.0", features = ["msgpack"] }
+bevy_embedded_assets = "0.12.0"
 log = { version = "*", features = [
     "max_level_debug",
     "release_max_level_info",
@@ -17,8 +19,7 @@ log = { version = "*", features = [
 better-panic = "0.3.0"
 delegate = "0.13.2"
 ratatui = "0.29.0"
-strum = { version = "0.27.1", features = ["derive"] }
-strum_macros = "0.27.1"
+serde = "*"
 
 
 [profile.dev]

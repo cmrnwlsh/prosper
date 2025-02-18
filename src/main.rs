@@ -12,6 +12,7 @@ use bevy::{
     state::app::StatesPlugin,
     MinimalPlugins,
 };
+use bevy_embedded_assets::EmbeddedAssetPlugin;
 use data::DataPlugin;
 use io::IoPlugin;
 use log::LogPlugin;
@@ -28,6 +29,8 @@ impl PluginGroup for ProsperPlugins {
                     1. / 60.,
                 ))),
             )
+            .add(EmbeddedAssetPlugin::default())
+            .add(AssetPlugin::default())
             .add(StatesPlugin)
             .add(DiagnosticsPlugin)
             .add(FrameTimeDiagnosticsPlugin)
@@ -41,5 +44,8 @@ impl PluginGroup for ProsperPlugins {
 }
 
 fn main() {
-    App::new().add_plugins(ProsperPlugins).run();
+    App::new()
+        .insert_resource(Time::<Fixed>::from_seconds(1. / 60.))
+        .add_plugins(ProsperPlugins)
+        .run();
 }

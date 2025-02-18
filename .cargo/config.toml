@@ -6,3 +6,6 @@ rustflags = [
   "-Z",
   "share-generics=y",
 ]
+
+[env]
+BEVY_ASSET_PATH = { value = "data", relative = true }

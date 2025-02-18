@@ -44,8 +44,5 @@ impl PluginGroup for ProsperPlugins {
 }
 
 fn main() {
-    App::new()
-        .insert_resource(Time::<Fixed>::from_seconds(1. / 60.))
-        .add_plugins(ProsperPlugins)
-        .run();
+    App::new().add_plugins(ProsperPlugins).run();
 }

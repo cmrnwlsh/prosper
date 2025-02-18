@@ -55,12 +55,12 @@ fn render(
                         .iter()
                         .filter_map(|log| {
                             if let LogEvent::Error(s) = log {
-                                Some(s.clone())
+                                Some(s.as_str())
                             } else {
                                 None
                             }
                         })
-                        .collect::<Vec<String>>()
+                        .collect::<Vec<&str>>()
                         .join("\n")
                 }
             ))

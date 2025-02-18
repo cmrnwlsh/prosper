@@ -41,10 +41,24 @@ pub enum LoadState {
 #[derive(Deserialize, Resource, Asset, TypePath, Debug)]
 pub struct Data {
     items: HashMap<String, Item>,
+    buildings: HashMap<String, Building>,
 }
 
 #[derive(Resource)]
 struct DataHandle(Handle<Data>);
+
+#[derive(Deserialize, Debug)]
+pub enum Expertise {
+    Agriculture,
+    Chemistry,
+    Construction,
+    Electronics,
+    FoodIndustries,
+    FuelRefining,
+    Manufacturing,
+    Metallurgy,
+    ResourceExtraction,
+}
 
 #[derive(Deserialize, Debug)]
 pub struct Item {
@@ -52,4 +66,24 @@ pub struct Item {
     name: String,
     volume: f32,
     weight: f32,
+}
+
+#[derive(Deserialize, Debug)]
+pub struct Building {
+    area_cost: i32,
+    building_costs: Vec<Commodity>,
+    expertise: Option<Expertise>,
+    name: String,
+    recipes: Vec<String>,
+    pioneers: i32,
+    engineers: i32,
+    technicians: i32,
+    settlers: i32,
+    scientists: i32,
+}
+
+#[derive(Deserialize, Debug)]
+pub struct Commodity {
+    amount: i32,
+    ticker: String,
 }

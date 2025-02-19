@@ -42,6 +42,7 @@ pub enum LoadState {
 pub struct Data {
     items: HashMap<String, Item>,
     buildings: HashMap<String, Building>,
+    recipes: HashMap<String, Recipe>,
 }
 
 #[derive(Resource)]
@@ -80,6 +81,14 @@ pub struct Building {
     technicians: i32,
     settlers: i32,
     scientists: i32,
+}
+
+#[derive(Deserialize, Debug)]
+pub struct Recipe {
+    building_ticker: String,
+    inputs: Vec<Commodity>,
+    outputs: Vec<Commodity>,
+    time_ms: u64,
 }
 
 #[derive(Deserialize, Debug)]
